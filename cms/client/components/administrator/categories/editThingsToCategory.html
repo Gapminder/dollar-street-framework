@@ -1,0 +1,36 @@
+<div class="inmodal">
+  <div class="modal-header">
+    <p class="modal-title" >Edit things in category:<br><b>{{::categoryName}}</b></p>
+  </div>
+  <div class="modal-body">
+    <div class="ibox float-e-margins">
+      <div class="ibox-content">
+        <p>All things ({{things.length}})</p>
+
+        <div class="editCategoryThingsContent container-fluid">
+          <div class="things row" ng-repeat="thing in things | orderBy:'thingName'">
+            <div class="col-md-10">{{thing.thingName}}</div>
+            <div class="col-md-2">
+              <a ng-click="addThingToCategory(thing)" class="btn btn-primary btn-circle btn-sm ng-scope"><i class="glyphicon glyphicon-plus"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <p>Things in "{{categoryName}}" ({{selectThings.length}})</p>
+
+        <div class="selectedThings editCategoryThingsContent container-fluid">
+          <div class="things row" ng-repeat="thing in selectThings | orderBy:'thingName'">
+            <div class="col-md-10">{{thing.thingName}}</div>
+            <div class="col-md-2">
+              <a ng-click="removeThingCategory(thing)" class="btn btn-danger btn-circle btn-sm ng-scope"><i class="glyphicon glyphicon-remove"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-w-m btn-primary" ng-click="ok()">Save</button>
+    <button type="button" class="btn btn-w-m btn-default" ng-click="cancel()">Close</button>
+  </div>
+</div>

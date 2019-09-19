@@ -1,0 +1,93 @@
+{
+  "extends": "tslint-config-valorsoft",
+  "rulesDirectory": "../node_modules/codelyzer",
+  "rules": {
+    "component-selector-name": false,
+    "ordered-imports": false,
+    "no-null-keyword": false,
+    "max-file-line-count": [
+      false,
+      300
+    ],
+    "import-blacklist": [
+      false,
+      "lodash"
+    ],
+    "promise-function-async": true,
+    "ban-comma-operator": true,
+    "ban": [
+      true,
+      "fit",
+      "fdescribe",
+      "xit",
+      "xdescribe"
+    ],
+    "no-duplicate-variable": [
+      true,
+      "check-parameters"
+    ],
+    "no-duplicate-switch-case": true,
+    "no-dynamic-delete": true,
+    "no-implicit-dependencies": [true, "dev"],
+    "no-return-await": true,
+    "no-unnecessary-class": [
+      true,
+      "allow-empty-class",
+      "allow-static-only"
+    ],
+    "typeof-compare": false,
+    "prefer-readonly": true,
+    "newline-per-chained-call": false,
+    "arrow-parens": true,
+    "no-console": false,
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-type",
+      "check-typecast",
+      "check-preblock",
+      "check-rest-spread"
+    ],
+    "space-before-function-paren": [true, {"asyncArrow": "always"}],
+    "no-inferred-empty-object-type": false,
+    "no-void-expression": false
+  },
+  "jsRules": {
+    "no-empty": true,
+    "max-file-line-count": [
+      false,
+      300
+    ],
+    "whitespace": [
+      true,
+      "check-separator",
+      "check-rest-spread",
+      "check-type-operator"
+    ],
+    "ban-comma-operator": true,
+    "ban": [
+      true,
+      "fit",
+      "fdescribe",
+      "xit",
+      "xdescribe"
+    ],
+    "no-duplicate-variable": [
+      true,
+      "check-parameters"
+    ],
+    "no-duplicate-switch-case": true,
+    "no-dynamic-delete": true,
+    "no-console": false
+  },
+  "linterOptions": {
+    "exclude": [
+      "tests/**/*.ts",
+      "cms/server/**/*.ts"
+    ]
+  }
+}

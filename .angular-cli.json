@@ -1,0 +1,67 @@
+{
+	"project": {
+		"name": "dollarstreet"
+	},
+	"apps": [
+		{
+			"root": "client/src",
+			"outDir": "dist/client/",
+			"assets": [
+				"assets"
+			],
+			"index": "index.html",
+			"main": "main.ts",
+			"polyfills": "polyfills.ts",
+			"test": "test.ts",
+			"tsconfig": "tsconfig.app.json",
+			"testTsconfig": "tsconfig.spec.json",
+			"prefix": "",
+			"mobile": false,
+			"styles": [
+				"../../node_modules/bootstrap/dist/css/bootstrap.min.css",
+				"./main.css",
+				"../../node_modules/ngx-toastr/toastr.css"
+			],
+			"scripts": [],
+			"environmentSource": "environments/environment.ts",
+			"environments": {
+				"local": "environments/environment.local.ts",
+				"ci.ds": "environments/environment.ci.ds.ts",
+				"dev.ds": "environments/environment.dev.ds.ts",
+				"dev.warehouses": "environments/environment.dev.warehouses.ts",
+				"local.ds": "environments/environment.local.ds.ts",
+				"prod.clinics": "environments/environment.prod.clinics.ts",
+				"prod.ds": "environments/environment.prod.ds.ts",
+				"prod.schools": "environments/environment.prod.schools.ts",
+				"release.ds": "environments/environment.release.ds.ts"
+			}
+		}
+	],
+	"addons": [],
+	"packages": [],
+	"e2e": {
+		"protractor": {
+			"config": "client/protractor.conf.js"
+		}
+	},
+	"lint": [
+		{
+			"project": "client/src/tsconfig.app.json"
+		},
+		{
+			"project": "client/src/tsconfig.spec.json"
+		},
+		{
+			"project": "client/test-e2e/tsconfig.json"
+		}
+	],
+	"test": {
+		"karma": {
+			"config": "./client/karma.conf.js"
+		}
+	},
+	"defaults": {
+		"styleExt": "css",
+		"prefixInterfaces": false
+	}
+}

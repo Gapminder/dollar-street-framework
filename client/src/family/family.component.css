@@ -1,0 +1,12 @@
+.family-container {
+  position: relative;
+}
+
+.street-family-container {
+  width: 100%;
+  background-color: white;
+}
+
+.sign {
+  margin-bottom: 4px;
+}

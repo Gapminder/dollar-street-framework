@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "outDir": "../../../dist/server-puppeteer",
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "checkJs":false,
+    "declaration": false,
+    "moduleResolution": "node",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  },
+  "include": [
+    "server.ts",
+    "index.ts",
+    "../../../common/credential.service.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "../../../dist",
+    "../../../node_modules",
+    "templates/**/*.js"
+  ]
+}

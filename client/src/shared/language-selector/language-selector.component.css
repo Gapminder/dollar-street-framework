@@ -1,0 +1,103 @@
+:host-context(.container-menu) .lang-container {
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.lang-container {
+  display: inline-block;
+  float: right;
+  line-height: 14px;
+  font-size: 14px;
+  margin: 17px 4px;
+}
+
+.lang-container .active-languages {
+  display: inline-block;
+  padding-top: 2px;
+}
+
+.lang-outside {
+  display: inline-block;
+  padding-right: 5px;
+  color: #767d86;
+}
+
+.lang-selector {
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  color: #767d86;
+  padding-left: 5px;
+}
+
+.lang-selector:hover {
+  background-color: #f4f5f5;
+}
+
+.lang-container button {
+  padding: 0;
+  background-color: white;
+  box-shadow: none;
+  float: right;
+}
+
+.icon-btn {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.icon-btn img {
+  height: 6px;
+}
+
+.btn-group .dropdown-menu {
+  left: auto;
+  right: 0;
+  border-radius: 0;
+  padding: 0;
+  border: 1px solid #e4e6e7;
+  box-shadow: 0 0 20px rgba(54, 69, 81, 0.1);
+}
+
+.dropdown-languages {
+  width: 100%;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  :host-context(.header-content) .lang-container {
+    display: none;
+  }
+  :host-context(#main-mobile-menu) .lang-container {
+    display: inline-block;
+  }
+}
+@media (max-width: 599px) {
+  :host-context(.family-header) #main-mobile-menu .menu-icon {
+    width: 48px;
+    height: 55px;
+    margin-top: 0;
+  }
+
+  :host-context(.family-header) .lang-container {
+    display: none;
+  }
+
+  :host-context(.family-header) #main-mobile-menu .lang-container {
+    display: inline-block;
+    margin: 5px 4px;
+  }
+
+  :host-context(.family-header) #main-mobile-menu .lang-container button {
+    background-color: white;
+  }
+
+  :host-context(.header-without-search) .lang-container {
+    display: none;
+  }
+
+  :host-context(.header-without-search) #main-mobile-menu .lang-container {
+    display: inline-block;
+  }
+}

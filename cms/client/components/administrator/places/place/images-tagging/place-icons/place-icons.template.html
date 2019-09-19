@@ -1,0 +1,12 @@
+<div id="place-icons-container">
+
+  <div class="icon-container"
+       ng-repeat="icon in icons"
+       ng-class="{active: activeIconType === icon.type}">
+    <p>{{icon.type}}</p>
+
+    <div class="icon-content"
+         ng-click="selectIcon(icon)"
+         ng-style="{'background': icon.image}"></div>
+  </div>
+</div>

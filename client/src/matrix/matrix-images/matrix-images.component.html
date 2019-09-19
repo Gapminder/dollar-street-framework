@@ -1,0 +1,95 @@
+<div #imagesContainer class="images-container" *ngIf="currentPlaces?.length">
+  <div
+    class="flex-container column-{{ zoom }}"
+    infinite-scroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollThrottle]="0"
+    (scrolled)="onScrollDown()"
+  >
+    <div
+      #imageContent
+      class="image-content"
+      *ngFor="let place of placesArr; let i = index"
+      [style.-ms-flex-order]="i + 1"
+      [style.order]="i + 1"
+      [ngClass]="{ 'no-row': zoom > 5 || !isDesktop, active: prevPlaceId === place?._id, 'pin-mode': isPinMode }"
+      isImageLoaded
+      [imageLoadedUrl]="place?.background"
+      (imageLoadedEvent)="imageIsUploaded(i)"
+      (mouseenter)="hoverImage(place)"
+      (mouseleave)="hoverImage()"
+      (click)="isPinMode ? togglePlaceToSet(place) : toggleImageBlock(place, i)"
+    >
+      <div class="cell">
+        <div class="cell-inner" [ngStyle]="{ 'background-image': place?.isUploaded && toUrl(place?.background) }">
+          <div class="loader-content" *ngIf="!place?.isUploaded">
+            <div class="isLoad">
+              <div class="la-ball-spin la-dark la-2x">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="image-description">
+            <span class="place-image-box-income">{{ currencyUnit?.symbol || '$' }}{{ place?.showIncome }}</span>
+            <span class="place-image-box-country">{{ place?.country }}</span>
+          </div>
+
+          <div *ngIf="isPinMode && !isEmbederShared" [ngClass]="{ pinned: place.pinned }" class="comparison-image">
+            <div class="symbol-position">
+              <span class="symbol" *ngIf="!place.pinned">
+                <svg>
+                  <use xlink:href="#plus"></use>
+                </svg>
+              </span>
+              <span class="symbol" *ngIf="place.pinned">
+                <svg>
+                  <use xlink:href="#check-mark"></use>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <matrix-view-block
+      class="matrix-view-block"
+      *ngIf="showBlock"
+      [itemSize]="itemSize"
+      [place]="familyData"
+      [thing]="thing"
+      [positionInRow]="positionInRow"
+      [style.-ms-flex-order]="imageBlockLocation + 1"
+      [style.order]="imageBlockLocation + 1"
+      (closeBigImageBlock)="closeImageBlock(familyData, indexViewBoxHouse)"
+      (mouseenter)="hoverImage(familyData)"
+      (mouseleave)="hoverImage()"
+    ></matrix-view-block>
+  </div>
+</div>
+
+<div class="xl-text-c" *ngIf="showErrorMsg">
+  <p>
+    {{ 'SORRY_WE_HAVE_NO' | translate }}
+    {{ thingsFilterTitle }}
+    {{ 'IN' | translate }}
+    {{ activeCountries }}
+    {{ 'ON_THIS_INCOME_YET' | translate }}
+  </p>
+  <p>
+    <button
+      (click)="resetIncomeFilter()"
+      class="info-btn"
+      title="{{ 'SEE_ALL' | translate }} {{ thingsFilterTitle }} {{ activeCountries }}"
+    >
+      {{ 'SEE_ALL' | translate }} {{ thingsFilterTitle }} {{ 'IN' | translate }} {{ activeCountries }}
+    </button>
+  </p>
+</div>

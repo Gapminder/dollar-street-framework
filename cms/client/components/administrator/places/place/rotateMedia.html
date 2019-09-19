@@ -1,0 +1,31 @@
+<div class="inmodal">
+  <div class="modal-header">
+    <p class="modal-title">Do you really want rotate this image?</p>
+  </div>
+  <div class="modal-body modalMediaContainer">
+      <img ng-class="retateClass" ng-src="{{imageUrl + imgReload}}">
+
+      <div class="text-center">
+        <button type="button"
+                class="btn btn-success m-t"
+                ng-if="!rotateImage"
+                ng-click="rotate(rotateDegrees)">
+          <span class="glyphicon glyphicon-repeat"></span>
+        </button>
+      </div>
+<!--      <div class="imageRotate" ng-if="!rotateImage">
+        <span ng-click="rotate(rotateDegrees)" class="glyphicon glyphicon-repeat"></span>
+      </div>-->
+      <div ng-if="rotateImage" class="spiner-container">
+        <div class="sk-spinner sk-spinner-three-bounce">
+          <div class="sk-bounce1"></div>
+          <div class="sk-bounce2"></div>
+          <div class="sk-bounce3"></div>
+        </div>
+      </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-w-m btn-danger" ng-click="ok()">Ok</button>
+    <button type="button" class="btn btn-w-m btn-default" ng-click="close()">Cancel</button>
+  </div>
+</div>

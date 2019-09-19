@@ -1,0 +1,39 @@
+FROM base_docker_image
+
+RUN printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
+
+RUN apt-get update
+
+#get & install Ds-server
+RUN mkdir /home/ds-server
+WORKDIR /home/ds-server
+
+COPY ./package.json ./package.json
+COPY ./package-lock.json ./package-lock.json
+
+RUN npm i --production
+RUN npm i webpack@3.12.0 -g
+RUN npm run update:p-queue
+
+COPY ./ ./
+
+ARG NODE_ENV
+ENV NODE_ENV ${NODE_ENV}
+
+ARG MODE_ENV
+ENV MODE_ENV ${MODE_ENV}
+
+RUN npm run build:server
+RUN npm run build:client:${MODE_ENV}:${NODE_ENV}
+RUN npm run build:server-cms
+RUN npm run build:client-cms
+RUN npm run build:server-puppeteer
+
+EXPOSE 443 3001 8080 80 8081 5000 3000
+
+RUN apt-get install -y openssh-server supervisor
+RUN mkdir -p /var/run/sshd /var/log/supervisor
+
+COPY /deployment/supervisor/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+
+CMD ["/usr/bin/supervisord"]

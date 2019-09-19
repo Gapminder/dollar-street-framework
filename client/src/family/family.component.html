@@ -1,0 +1,30 @@
+<div #familyContainer class="family-container">
+  <loader [hidden]="streetFamilyData"></loader>
+
+  <div class="street-family-container">
+    <street-family *ngIf="streetFamilyData" [place]="streetFamilyData"></street-family>
+  </div>
+
+  <family-header
+    (familyExpandBlock)="isOpenFamilyExpandBlock($event)"
+    (streetFamilyData)="streetFamilyData = $event"
+  ></family-header>
+
+  <family-media
+    [zoom]="zoom"
+    [activeImageIndex]="activeImageIndex"
+    [openFamilyExpandBlock]="openFamilyExpandBlock"
+    (activeImageOptions)="activeImageOptions($event)"
+  ></family-media>
+
+  <div *ngIf="isDesktop" class="zoom-column pull-right">
+    <button type="button" class="btn-plus" [disabled]="zoom === 2" (click)="changeZoom(zoom - 1)"></button>
+
+    <button
+      type="button"
+      class="btn-minus"
+      [disabled]="!isDesktop ? zoom === 3 : zoom === 9"
+      (click)="changeZoom(zoom + 1)"
+    ></button>
+  </div>
+</div>

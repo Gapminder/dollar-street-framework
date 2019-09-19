@@ -1,0 +1,7 @@
+diff a/deployment/gcp/prod-mongodb-status.ts b/deployment/gcp/prod-mongodb-status.ts	(rejected hunks)
+@@ -78,3 +78,2 @@ async function sendEmails(error) {
+-    transporter.sendMail(mailOptions, function (err, info) {
+-      if(err)
+-        return reject(err);
++    transporter.sendMail(mailOptions, function(err, info) {
++      if (err) return reject(err);

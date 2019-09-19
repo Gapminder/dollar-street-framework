@@ -1,0 +1,219 @@
+<div class="wrapper wrapper-content ecommerce">
+  <div class="row m-b-lg m-t-lg">
+    <div class="col-md-10">
+      <div class="profile-image">
+        <img ng-click="updateAvatar()" ng-src="{{user.avatar || '/assets/images/default-profile-icon.png'}}" alt="">
+      </div>
+
+      <div class="profile-info">
+        <h2 class="no-margins">{{user.firstName}} {{user.lastName}} ({{user.username}})</h2>
+        <h4 ng-if="user.company">
+          <a ng-if="user.company.link" ng-href="{{user.company.link}}" target="_blank">{{user.company.name}}</a>
+          <span ng-if="!user.company.link">{{user.company.name}}</span>
+        </h4>
+
+        <small>{{user.description}}</small>
+      </div>
+    </div>
+
+    <div class="col-md-2" ng-if="!isAmbassador">
+      <table class="table small m-b-xs">
+        <tbody>
+        <tr>
+          <td>
+            <strong>{{user.placesCount || 0}}</strong> Places
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>{{user.imagesCount || 0}}</strong> Images
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <strong>{{user.videoCount || 0}}</strong> Videos
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div ng-if="loadPage" class="spiner-container">
+          <div class="sk-spinner sk-spinner-three-bounce">
+            <div class="sk-bounce1"></div>
+            <div class="sk-bounce2"></div>
+            <div class="sk-bounce3"></div>
+          </div>
+        </div>
+
+        <div class="ibox-title">
+          <h5>Edit profile:</h5>
+        </div>
+
+        <div class="ibox-content">
+          <form class="form-horizontal" ng-submit="saveProfile(profile)">
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="firstName">First name</label>
+
+              <div class="col-sm-10">
+                <input id="firstName" type="text" class="form-control" required ng-model="profile.firstName">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="lastName">Last name</label>
+
+              <div class="col-sm-10">
+                <input id="lastName" type="text" class="form-control" required ng-model="profile.lastName">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="info">Info about yourself</label>
+
+              <div class="col-sm-10">
+                <input id="info" type="text" class="form-control" ng-model="profile.description">
+              </div>
+            </div>
+
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label">Email</label>
+
+              <div class="col-sm-10">
+                <p class="form-control-static">{{user.email}}</p>
+              </div>
+            </div>
+
+            <div class="form-group" ng-if="isAmbassador">
+              <label class="col-sm-2 control-label" for="type">Select your type</label>
+
+              <div class="col-sm-10">
+                <select id="type"
+                        class="form-control m-b"
+                        name="type"
+                        required
+                        ng-model="profile.type"
+                        ng-options="type._id as type.name for type in userTypes">
+                </select>
+              </div>
+            </div>
+
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="username">Username</label>
+
+              <div class="col-sm-10" ng-class="{'has-error': isExistUsername}">
+                <input id="username"
+                       type="text"
+                       class="form-control"
+                       required
+                       ng-change="checkUsername(profile.username)"
+                       ng-model="profile.username">
+                <span ng-show="isExistUsername" class="help-block m-b-none">This username is already taken.</span>
+              </div>
+            </div>
+
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+              <label for="country" class="col-sm-2 control-label">Country</label>
+
+              <div class="col-sm-10">
+                <select id="country"
+                        class="form-control m-b"
+                        name="country"
+                        required
+                        ng-model="profile.country"
+                        ng-options="country._id as country.country for country in allCountries">
+                  <option value="">Select your country</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="hr-line-dashed"></div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="companyName">Company name</label>
+
+              <div class="col-sm-10">
+                <input id="companyName" type="text" class="form-control" ng-model="profile.company.name">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="companyDescription">Company description</label>
+
+              <div class="col-sm-10">
+                <textarea id="companyDescription" class="form-control"
+                          ng-model="profile.company.description"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label" for="companyLink">Company link</label>
+
+              <div class="col-sm-10">
+                <input id="companyLink" type="url" class="form-control" ng-model="profile.company.link">
+                <span class="help-block m-b-none">For example: http://www.gapminder.org</span>
+              </div>
+            </div>
+
+            <div class="hr-line-dashed"></div>
+
+            <div ng-if="!isAmbassador">
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="google">Google+</label>
+
+                <div class="col-sm-10">
+                  <input id="google" type="url" class="form-control" ng-model="profile.google">
+                  <span class="help-block m-b-none">For example: https://plus.google.com</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="facebook">Facebook</label>
+
+                <div class="col-sm-10">
+                  <input id="facebook" type="url" class="form-control" ng-model="profile.facebook">
+                  <span class="help-block m-b-none">For example: https://www.facebook.com</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="twitter">Twitter</label>
+
+                <div class="col-sm-10">
+                  <input id="twitter" type="url" class="form-control" ng-model="profile.twitter">
+                  <span class="help-block m-b-none">For example: https://twitter.com/</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="linkedIn">LinkedIn</label>
+
+                <div class="col-sm-10">
+                  <input id="linkedIn" type="url" class="form-control" ng-model="profile.linkedIn">
+                  <span class="help-block m-b-none">For example: https://www.linkedin.com</span>
+                </div>
+              </div>
+
+              <div class="hr-line-dashed"></div>
+            </div>
+            <div class="form-group" ng-show="!isSave && !isExistUsername">
+              <div class="col-sm-4 col-sm-offset-2">
+                <button class="btn btn-primary" type="submit">Save changes</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

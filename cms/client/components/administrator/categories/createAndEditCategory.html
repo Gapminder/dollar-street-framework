@@ -1,0 +1,87 @@
+<div class="inmodal">
+  <div class="modal-header">
+    <p class="modal-title" ng-bind-html="title"></p>
+  </div>
+  <form class="form-horizontal"
+        name="category_form"
+        ng-submit="submitCategory(name, description, list, rating)">
+    <div class="modal-body">
+
+
+      <div class="ibox float-e-margins">
+        <div class="ibox-content">
+          <!-- category-->
+          <div class="form-group" ng-class="iconNameFalse? 'has-error' : ''">
+            <label class="col-sm-2 control-label">Category</label>
+
+            <div class="col-sm-10">
+              <input type="text" ng-change="checkedName(name)"
+                     placeholder="Name of category" ng-model="name" class="form-control">
+
+              <div class="m-t-xs" ng-show="iconNameFalse">
+                <small class="text-danger" ng-show="iconNameFalse">Place should be unique</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- description-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Description</label>
+
+            <div class="col-sm-10">
+              <textarea ng-model="description"
+                        placeholder="Description of the category"
+                        class="form-control m-b"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Things</label>
+
+            <div class="col-sm-9">
+              <div ng-if="!ifTingsCategory" class="alert alert-info">
+                This field will be available when editing
+              </div>
+              <div ng-if="ifTingsCategory" ng-repeat="thing in selectThings | orderBy:'thingName'">
+                {{thing.thingName}}
+              </div>
+
+            </div>
+            <div ng-if="ifTingsCategory" class="col-sm-1">
+              <div class="text-right">
+                <button type="button" class="btn btn-primary btn-circle btn-sm" ng-if="ifTingsCategory"
+                        ng-click="editThingsToCategory()"><i class="glyphicon glyphicon-pencil"></i></button>
+              </div>
+
+            </div>
+          </div>
+          <div class="form-group fieldRating">
+            <label class="col-sm-2 control-label">Rating</label>
+            <div class="col-sm-10">
+              <rating class="col-sm-10" ng-model="rating" max="5" state-on="'glyphicon-star'"
+                      state-off="'glyphicon-star-empty'"></rating>
+            </div>
+          </div>
+
+          <div class="form-group">
+              <label class="col-sm-2 control-label">List</label>
+
+              <div class="col-sm-10">
+                <div class="btn-group">
+                  <label class="btn btn-primary" ng-model="list" btn-radio="'black'">Black</label>
+                  <label class="btn btn-primary" ng-model="list" btn-radio="'white'">White</label>
+                </div>
+              </div>
+          </div>
+
+          <div ng-if="errorEnter" class="alert alert-danger" role="alert">Please fill out all fields!</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-w-m btn-primary">Save</button>
+      <button type="button" class="btn btn-w-m" ng-click="cancel()">Close</button>
+    </div>
+  </form>
+</div>

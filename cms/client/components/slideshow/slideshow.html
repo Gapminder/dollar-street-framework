@@ -1,0 +1,54 @@
+<div class="panelNavigation">
+    <div class="container">
+        <div class="form-horizontal" style="overflow: hidden; margin: 5px 0">
+            <div style="float: left; width: 255px;">
+                <label for="inputResolution" class="col-sm-4 control-label">Resolution:</label>
+                <div class="col-sm-8">
+                    <select id="inputResolution" class="form-control input-sm" ng-change="slideshowResolution(data.activeResolution)" ng-model="data.activeResolution" ng-options="resolution.name as resolution.name for resolution in data.slideOptions.resolutions">
+                    </select>
+                </div>
+            </div>
+            <div style="float: left; width: 255px;">
+                <label for="inputTransition" class="col-sm-4 control-label">Transition:</label>
+                <div class="col-sm-8">
+                    <select id="inputTransition" class="form-control input-sm" ng-change="slideshowTransition(data.activeTransition)" ng-model="data.activeTransition" ng-options="transition.value as transition.name for transition in data.slideOptions.transitions">
+                    </select>
+                </div>
+            </div>
+            <div style="float: left; width: 255px;">
+                <label for="inputDuration" class="col-sm-4 control-label">Duration:</label>
+                <div class="col-sm-8">
+                    <select id="inputDuration" class="form-control input-sm" ng-model="data.activeDuration" ng-options="duration.value as duration.value for duration in data.slideOptions.durations">
+                    </select>
+                </div>
+            </div>
+            <div ng-if="choseImgArr.length > 0" style="float: left; width: 255px; text-align: center">
+                <button class="btn btn-primary btn-sm" ng-click="openAllEdit()">Edit images</button>
+            </div>
+            <div style="float: right">
+                <button class="btn btn-primary btn-sm" ng-click="close()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-if="data.loadRash" class="spiner-container">
+  <div class="sk-spinner sk-spinner-three-bounce">
+    <div class="sk-bounce1"></div>
+    <div class="sk-bounce2"></div>
+    <div class="sk-bounce3"></div>
+  </div>
+</div>
+</div>
+<div class="slideshowContainer">
+    <div class="slider">
+        <div ng-click="prev()" class="arrowLeft">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </div>
+        <div ng-click="next()" class="arrowRight">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </div>
+        <div class="slider_container">
+        </div>
+    </div>
+</div>

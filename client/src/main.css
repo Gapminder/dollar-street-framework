@@ -1,0 +1,45 @@
+.zoom-column {
+  position: sticky;
+  right: 32px;
+  bottom: 10px;
+  z-index: 10;
+  transform: translateZ(0);
+}
+
+.zoom-column button {
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 50%;
+  outline: 0;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.32);
+  background: rgba(255, 255, 255, 0.8);
+  background-size: 16px auto !important;
+  position: relative;
+  margin: 4px;
+  transition: all 0.3s ease-out;
+}
+.zoom-column button:hover {
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.8);
+  background: rgb(255, 255, 255);
+}
+.zoom-column button:before,
+.zoom-column button:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 16px;
+  height: 2px;
+  background: #374551;
+}
+.zoom-column button.btn-plus:after {
+  width: 2px;
+  height: 15px;
+}
+
+.zoom-column button[disabled] {
+  cursor: not-allowed;
+  opacity: 0.5;
+}

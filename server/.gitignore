@@ -1,0 +1,27 @@
+/ds.routes.dist
+/node_modules/
+/coverage
+/migrations/.migrate
+npm-debug.log
+*.ipr
+*.iws
+*.iml
+.idea
+
+# new relic log
+newrelic_agent.log
+
+# Ignore Mac DS_Store files
+.DS_Store
+
+# ts generated
+dist
+!src/shorturl-2.d.ts
+
+# logs
+**/*.log
+*.log
+
+# temp api test files
+tests/temp/*
+!tests/temp/fakejpg.jpg

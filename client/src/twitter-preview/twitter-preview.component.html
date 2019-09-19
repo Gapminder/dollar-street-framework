@@ -1,0 +1,22 @@
+<header>
+  <div class="sm-container header-container">
+    <a href="https://twitter.com/home" class="logo">
+      <img src="./assets/img/Twitter_Bird.svg" alt="twitter">
+    </a>
+  </div>
+</header>
+<div class="sm-container mb-40">
+  <div class="card-container">
+    <div *ngIf="imageUrl" class="preview-img">
+      <img class="img-fluid" [src]="imageUrl" alt="See how people really live">
+    </div>
+    <div class="card-content">
+      <p class="title">{{title}}</p>
+      <p>{{description}}</p>
+      <p class="site-url">{{host}}</p>
+    </div>
+  </div>
+  <div class="button-container">
+    <button (click)="openTwitterLink()" class="btn-primary-light" title="Next">Next</button>
+  </div>
+</div>

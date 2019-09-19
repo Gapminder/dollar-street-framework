@@ -1,0 +1,31 @@
+FROM base_docker_image
+
+RUN printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
+
+RUN apt-get update
+
+#get & install Ds-server
+RUN mkdir /home/ds-server
+WORKDIR /home/ds-server
+
+COPY ./package.json ./package.json
+COPY ./package-lock.json ./package-lock.json
+
+RUN npm i --production
+RUN npm run update:p-queue
+
+COPY ./ ./
+
+ARG NODE_ENV
+ENV NODE_ENV ${NODE_ENV}
+
+ARG MODE_ENV
+ENV MODE_ENV ${MODE_ENV}
+
+RUN npm run build:server
+RUN npm run build:client:${MODE_ENV}:${NODE_ENV}
+
+EXPOSE 80 3000
+
+CMD ["npm", "run", "server"]
+

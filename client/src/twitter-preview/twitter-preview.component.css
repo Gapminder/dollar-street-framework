@@ -1,0 +1,77 @@
+.sm-container {
+  max-width: 640px;
+  padding: 0 15px;
+  margin: 0 auto;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+header {
+  color: #14171a;
+  background: #fff;
+  border-bottom: 1px solid #ccd6dd;
+}
+h2.action-information {
+  margin-bottom: 10px;
+  font-size: 21px;
+  font-weight: bold;
+  color: #66757f;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logo {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  min-height: 46px;
+}
+
+.card-container {
+  margin: 15px 0;
+  border-radius: .86em;
+  border: 1px solid #e1e8ed;
+  overflow: hidden;
+}
+
+.preview-img {
+  border-bottom: 1px solid #e1e8ed;
+}
+
+.card-content {
+  padding: 10px 14px;
+}
+.card-content p {
+  margin-bottom: 5px;
+}
+
+.title {
+  max-height: 1.3em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.site-url {
+  text-transform: lowercase;
+  color: #8899A6;
+  max-height: 1.3em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

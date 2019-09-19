@@ -1,0 +1,13 @@
+<div class="inmodal">
+  <div class="modal-header">
+    <p class="modal-title">Do you really want {{action}} this image?</p>
+  </div>
+  <div class="modal-body modalMediaContainer">
+    <img ng-src="{{amazonPath(media,'thumb-')}}">
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-w-m btn-danger" ng-click="ok()">Ok</button>
+    <button type="button" class="btn btn-w-m btn-default" ng-click="close()">Cancel</button>
+  </div>
+</div>
+

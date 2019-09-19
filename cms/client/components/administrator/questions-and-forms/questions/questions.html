@@ -1,0 +1,97 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-12">
+    <h2>Questions</h2>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content ecommerce">
+  <div class="ibox-content m-b-sm border-bottom">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label class="control-label" for="search">Search:</label>
+          <input type="text" id="search"
+                 name="search"
+                 ng-model="search.name"
+                 ng-model-options="{updateOn: 'default blur', debounce: {'default': 123, 'blur': 0 }}"
+                 placeholder="Please enter search term"
+                 class="form-control">
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label class="control-label" for="forms">Select form:</label>
+          <select name="forms" id="forms" class="form-control"
+                  ng-model="form"
+                  ng-options="form.name for form in forms | orderBy:'name'">
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group text-right addItem">
+          <button ng-click="addQuestion()" class="btn btn-primary btn-circle btn-lg" type="button">
+            <i class="fa fa-plus"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content">
+          <div class="table-responsive">
+            <div ng-if="loadPage" class="spiner-container">
+              <div class="sk-spinner sk-spinner-three-bounce">
+                <div class="sk-bounce1"></div>
+                <div class="sk-bounce2"></div>
+                <div class="sk-bounce3"></div>
+              </div>
+            </div>
+            <div class="table-header" ng-show="questions.length || loadPage">
+              <sort-table-header
+                class="table table-striped table-bordered table-hover dataTables-example ng-isolate-scope dataTable"
+                sort="sort" cells="::tableHeader"></sort-table-header>
+            </div>
+            <div class="container-scroll" ng-style="style()" resize>
+              <table class="table table-striped table-bordered table-hover dataTables-example vertical-middle"
+                     infinite-scroll="nextQuestions(18)"
+                     infinite-scroll-container='".container-scroll"'>
+                <tbody>
+                <tr ng-repeat="question in questions">
+                  <td class="col-md-1">{{question.id}}</td>
+                  <td class="col-md-3">{{question.name}}</td>
+                  <td class="col-md-4">{{question.description}}</td>
+                  <td class="col-md-2">
+                    <span ng-repeat="name in question.formsName"> <span
+                      ng-if="$index !== 0">, </span>{{name}}</span>
+                  </td>
+                  <td class="col-md-1">{{question.type}}</td>
+                  <td class="col-md-1 text-center">
+                    <a ng-if="removeField" ng-click="editQuestion(question)"
+                       class="btn btn-primary btn-circle btn-sm">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    <a ng-if="removeField" ng-click="removeQuestions(question)"
+                       class="btn btn-danger btn-circle btn-sm">
+                      <i class="glyphicon glyphicon-remove"></i>
+                    </a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <div ng-if="loadPaging" class="sk-spinner sk-spinner-three-bounce">
+                <div class="sk-bounce1"></div>
+                <div class="sk-bounce2"></div>
+                <div class="sk-bounce3"></div>
+              </div>
+              <div class="alert alert-danger" ng-if="!questions.length&&!loadPage">
+               Questions for this search term not found.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

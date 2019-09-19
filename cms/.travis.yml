@@ -1,0 +1,34 @@
+sudo: false
+language: node_js
+node_js: 8.8.1
+notifications:
+  email: false
+addons:
+  ssh_known_hosts: 52.211.52.39
+stages:
+- name: Precache
+- name: Deploy
+cache:
+  directories:
+  - node_modules
+before_deploy:
+- openssl aes-256-cbc -K $encrypted_f7e1cdd74a19_key -iv $encrypted_f7e1cdd74a19_iv
+  -in id_rsa.enc -out id_rsa -d
+- eval "$(ssh-agent -s)"
+- chmod 600 id_rsa
+- ssh-add id_rsa
+script:
+- echo "skipping tests"
+jobs:
+  fast_finish: true
+  include:
+  - stage: Precache
+    script: true
+    install: npm install
+  - stage: Deploy
+    if: "(branch = development AND type = push)"
+    deploy:
+      provider: script
+      skip_cleanup: true
+      script: ssh -o StrictHostKeyChecking=no -i id_rsa ubuntu@52.211.52.39 /home/ubuntu/www/run_ds_cms_api.sh
+      on: development

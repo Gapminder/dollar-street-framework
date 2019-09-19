@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "outDir": "../dist",
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "allowJs": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+  },
+  "include": [
+    "**/*.ts",
+    "../cms/server/**/*.ts",
+    "../common/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "../cms/server/migrations/applied/00*-**.ts",
+    "../cms/server/migrations/applied/010-**.ts",
+    "../cms/server/migrations/applied/011-**.ts",
+    "../cms/server/migrations/applied/012-**.ts",
+    "../cms/server/migrations/applied/013-**.ts",
+    "src/cron.task.ts",
+    "src/app/crontasks/currency.ts"
+  ]
+}

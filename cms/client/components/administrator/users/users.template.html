@@ -1,0 +1,83 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-12">
+    <h2>Users list</h2>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content ecommerce">
+  <div class="ibox-content m-b-sm border-bottom">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label class="control-label" for="search">Search:</label>
+          <input type="text" id="search"
+                 name="search"
+                 ng-model="search.fullName"
+                 placeholder="Please enter search term"
+                 class="form-control">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content">
+          <div class="table-responsive">
+            <div ng-if="loadPage" class="spiner-container">
+              <div class="sk-spinner sk-spinner-three-bounce">
+                <div class="sk-bounce1"></div>
+                <div class="sk-bounce2"></div>
+                <div class="sk-bounce3"></div>
+              </div>
+            </div>
+
+            <div class="table-header" ng-show="users.length || loadPage">
+              <sort-table-header
+                class="table table-striped table-bordered table-hover dataTables-example dataTable"
+                sort="sort" cells="::tableHeader"></sort-table-header>
+            </div>
+
+            <div class="container-scroll" ng-style="style()" resize>
+              <table class="table table-striped table-bordered table-hover dataTables-example vertical-middle">
+                <tbody>
+                <tr ng-repeat="user in users | filter:search">
+                  <td class="col-md-1">
+                    <a ui-sref="admin.app.user({id: user._id})">
+                      <img class="imageFamily" ng-src="{{user.avatar}}" alt="">
+                    </a>
+                  </td>
+                  <td class="col-md-3">
+                    <a ui-sref="admin.app.user({id: user._id})">
+                      <h4><b>{{user.fullName}}</b></h4>
+                    </a>
+                  </td>
+                  <td class="col-md-2">
+                    {{user.role}}
+                  </td>
+                  <td class="col-md-2">
+                    {{user.email}}
+                  </td>
+                  <td class="col-md-2">
+                    {{user.contentfulId}}
+                  </td>
+                  <td class="col-md-2 text-center">
+                    <a class="btn btn-primary btn-circle btn-sm"
+                       ui-sref="admin.app.user({id: user._id})">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </a>
+                    <a ng-click="removeUser(user)" class="btn btn-danger btn-circle btn-sm">
+                      <i class="glyphicon glyphicon-remove"></i>
+                    </a>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="inmodal excelPopUp">
+  <div class="show-content">
+    <div class="modal-header">
+      <p class="modal-title" ng-if="!isExport">Are you sure you want to export files?</p>
+      <p class="modal-title" ng-if="isExport">Export files</p>
+    </div>
+
+    <div class="button-container" ng-if="!isExport">
+      <a class="btn btn-primary btn-lg"
+         ng-click="export()">Yes</a>
+      <a class="btn btn-primary btn-lg"
+         ng-click="close()">No</a>
+    </div>
+  </div>
+
+  <div class="ibox" ng-if="isExport">
+    <div class="ibox-content">
+      <div class="spiner-example">
+        <div class="sk-spinner sk-spinner-three-bounce">
+          <div class="sk-bounce1"></div>
+          <div class="sk-bounce2"></div>
+          <div class="sk-bounce3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

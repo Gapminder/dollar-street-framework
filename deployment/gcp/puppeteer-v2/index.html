@@ -1,0 +1,5056 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)/dollar-street/matrix?embed=5c40a3db8f687d001ba5eef7 -->
+<html lang="undefined" prefix="og: http://ogp.me/ns#" class="gr__35_195_177_221">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Dollar Street</title>
+    <!--<base href="/dollar-street/">-->
+    <base href="." />
+    <!-- todo: add www.pingdom.com monitoring-->
+    <!-- todo: Enable Google Analytics site search-->
+    <meta name="referrer" content="unsafe-url" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no,width=device-width,minimal-ui" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="twitter:image"
+      content="https://s3-eu-west-1.amazonaws.com/static.dollarstreet.org/dollarstreet-share-image.jpg"
+    />
+    <meta
+      property="og:image"
+      content="https://s3-eu-west-1.amazonaws.com/static.dollarstreet.org/dollarstreet-share-image.jpg"
+    />
+    <meta property="og:title" content="Dollar Street - photos as data to kill country stereotypes" />
+    <meta
+      property="og:description"
+      content="Imagine the world as a street. Everyone lives on Dollar Street. The poorest to the left and the richest on the right. Every else live somewhere in between. Where would you live? Visit Dollar Street and see homes from hundreds of homes from all over the World."
+    />
+    <meta property="og:type" content="article" />
+    <link rel="icon" type="image/png" href="./Dollar Street_files/favicon.png" />
+    <link rel="author" href="http://github.com/Gapminder/dollar-street-framework/graphs/contributors" />
+    <link href="./Dollar Street_files/styles.1154e4dd806a21177b3e.bundle.css" rel="stylesheet" />
+    <style>
+      .container[_ngcontent-c0] {
+        padding-top: 64px;
+        position: relative;
+      }
+      .guide-position[_ngcontent-c0] {
+      }
+      .header-position[_ngcontent-c0] {
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        top: 0;
+        left: 0;
+      }
+    </style>
+    <style>
+      #loader-container[_ngcontent-c4] {
+        position: fixed;
+        overflow: hidden;
+        background-color: #fff;
+        z-index: 1000;
+      }
+      #loader-container[_ngcontent-c4],
+      #loader-container[_ngcontent-c4] .loader-content[_ngcontent-c4] {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      #loader-container[_ngcontent-c4] .loader-content[_ngcontent-c4] {
+        position: absolute;
+        height: 64px;
+        margin: auto;
+        text-align: center;
+      }
+      #loader-container[_ngcontent-c4] .loader-content[_ngcontent-c4] h1[_ngcontent-c4] {
+        text-transform: uppercase;
+        font-family: Font Light, sans-serif;
+      }
+      #loader-container[_ngcontent-c4] .loader[_ngcontent-c4] {
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+      }
+      @media (max-width: 600px) {
+        #loader-container[_ngcontent-c4] .loader-content[_ngcontent-c4] {
+          height: 110px;
+        }
+        #loader-container[_ngcontent-c4] .loader[_ngcontent-c4] {
+          width: 60px;
+          height: 60px;
+        }
+        #loader-container[_ngcontent-c4] .loader-content[_ngcontent-c4] h1[_ngcontent-c4] {
+          font-size: 18px;
+        }
+      }
+    </style>
+    <style>
+      .hidden[_ngcontent-c2] {
+        display: none;
+      }
+      .visible[_ngcontent-c2] {
+        display: block;
+      }
+      .bottom-yellow-border[_ngcontent-c2] {
+        background-color: #fff;
+        border-bottom: 1px solid #ffce00;
+        width: 100%;
+      }
+      .small-container[_ngcontent-c2] {
+        display: block;
+        max-width: 1400px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      family-header[_ngcontent-c2] .header-content[_ngcontent-c2] {
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+      }
+      .family-header[_ngcontent-c2] .heading[_ngcontent-c2] {
+        cursor: pointer;
+        display: inline-block;
+        margin: 18px 0 0;
+        color: #374551;
+        font-size: 22px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .family-header[_ngcontent-c2] .heading[_ngcontent-c2] img[_ngcontent-c2] {
+        width: 8px;
+        margin: 0 12px 0 0;
+        vertical-align: baseline;
+      }
+
+      .without-filters-header[_ngcontent-c2] .heading[_ngcontent-c2] {
+        font-size: 28px;
+        color: #374551;
+        padding-bottom: 1px !important;
+        margin-top: 17px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .header-content[_ngcontent-c2] {
+        vertical-align: top;
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+        z-index: 1;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+      .header-content[_ngcontent-c2] .icon-container[_ngcontent-c2] {
+        position: relative;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 45px;
+        flex: 0 0 45px;
+      }
+      .header-content[_ngcontent-c2] .icon-container[_ngcontent-c2] span[_ngcontent-c2] {
+        color: #303e4b;
+        font-size: 18px;
+        vertical-align: middle;
+      }
+      .filters-position[_ngcontent-c2] {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+      }
+      .filters-container[_ngcontent-c2] {
+        margin-top: 11px;
+      }
+      .filters-container[_ngcontent-c2] .some-filter-container[_ngcontent-c2] > *[_ngcontent-c2],
+      .filters-container[_ngcontent-c2] > span[_ngcontent-c2],
+      .filters-container[_ngcontent-c2] things-filter[_ngcontent-c2] {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .filters-container[_ngcontent-c2] .some-filter-container[_ngcontent-c2] > span[_ngcontent-c2],
+      .filters-container[_ngcontent-c2] > span[_ngcontent-c2] {
+        margin: 0;
+        font-size: 28px;
+        color: #767d86;
+        line-height: 20px;
+      }
+      .some-filter-container[_ngcontent-c2] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+      .place-title[_ngcontent-c2] {
+        margin-top: -6px;
+        margin-right: 10px;
+      }
+      .place-title[_ngcontent-c2] .icon[_ngcontent-c2] {
+        background-size: cover;
+        background-position: 50% 50%;
+        border: 1px solid #ecf0f6;
+        width: 42px;
+        height: 42px;
+        margin: 0 10px 0 5px !important;
+      }
+      .filters-container[_ngcontent-c2] .some-filter-container[_ngcontent-c2] .income-title-mobile[_ngcontent-c2] {
+        display: none;
+      }
+      .place-title[_ngcontent-c2] p[_ngcontent-c2] {
+        line-height: 26px;
+        font-size: 26px;
+        margin: 7px 0 0;
+      }
+
+      .income-title.filter[_ngcontent-c2] {
+        display: block;
+        padding: 7px 10px 6px;
+        background-color: #fff;
+        border: 1px solid #e4e6e7;
+        border-radius: 6px;
+        text-align: left;
+        cursor: pointer;
+        color: #374551;
+        font-size: 24px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        position: relative;
+      }
+      .income-title.currency-filter[_ngcontent-c2] {
+        display: none;
+      }
+      .countries-filter-container[_ngcontent-c2] {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+      }
+      .income-title-container[_ngcontent-c2] {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        padding: 6px 0 0;
+        position: relative;
+      }
+      .header-content[_ngcontent-c2] .icon-container[_ngcontent-c2] img[_ngcontent-c2] {
+        width: 35px;
+        height: 35px;
+        margin: 10px 10px 7px 0;
+        cursor: pointer;
+      }
+      .income-title.filter.opened[_ngcontent-c2] {
+        -webkit-box-shadow: 0 0 10px rgba(55, 69, 81, 0.1);
+        box-shadow: 0 0 10px rgba(55, 69, 81, 0.1);
+      }
+      .income-title.filter[_ngcontent-c2]:after {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid #374551;
+      }
+      .income-title.filter.opened[_ngcontent-c2]:after,
+      .income-title.filter[_ngcontent-c2]:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: calc(50% - 4px);
+        right: 11px;
+      }
+      .income-title.filter.opened[_ngcontent-c2]:after {
+        border-bottom: 7px solid #374551;
+        border-top: 0 solid transparent;
+      }
+      .income-filter-desktop-container[_ngcontent-c2] {
+        position: absolute;
+        z-index: 999;
+        width: 280px;
+        top: 44px;
+        left: 0;
+        background-color: #fff;
+        border: 1px solid #e4e6e7;
+        -webkit-box-shadow: 0 0 10px rgba(55, 69, 81, 0.1);
+        box-shadow: 0 0 10px rgba(55, 69, 81, 0.1);
+        display: none;
+        cursor: auto;
+      }
+      .income-filter-desktop-header[_ngcontent-c2] {
+        border-bottom: 1px solid #e4e6e7;
+        height: 40px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        position: relative;
+        color: #374551;
+      }
+      .income-filter-desktop-header[_ngcontent-c2] span[_ngcontent-c2] {
+        font-size: 22px;
+        display: inline-block;
+        margin-left: 10px;
+        line-height: 40px;
+      }
+      .income-filter-desktop-container[_ngcontent-c2] .info[_ngcontent-c2] {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+      }
+      .income-filter-desktop-container[_ngcontent-c2] .info-link[_ngcontent-c2] {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      .income-filter-desktop-container[_ngcontent-c2] .info[_ngcontent-c2] img[_ngcontent-c2] {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+      }
+      .income-filter-desktop-container[_ngcontent-c2] .top-close-button[_ngcontent-c2] {
+        background: #fff;
+        border: 0;
+        padding: 0;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        right: 4px;
+        top: 4px;
+        z-index: 10;
+      }
+      .income-filter-desktop-container[_ngcontent-c2] .top-close-button[_ngcontent-c2] img[_ngcontent-c2] {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .dropdown-button[_ngcontent-c2] {
+        width: 100%;
+        height: 34px;
+        border: 1px solid #e4e6e7;
+        position: relative;
+        cursor: pointer;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 0 4px;
+        outline: none;
+      }
+      .dropdown-button[_ngcontent-c2] img[_ngcontent-c2] {
+        width: 16px;
+        position: absolute;
+        right: 8px;
+        top: 46%;
+      }
+      .dropdown-button[_ngcontent-c2] .dropdown-container[_ngcontent-c2] {
+        height: 120px;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 100px;
+        -webkit-box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        cursor: auto;
+      }
+      .currency-container[_ngcontent-c2] {
+        height: 152px;
+        width: 100%;
+        overflow-y: scroll;
+      }
+      .income-filter-desktop-content[_ngcontent-c2] .control-section[_ngcontent-c2] .dropdown-container[_ngcontent-c2] {
+        width: 100%;
+      }
+      .dropdown-selected[_ngcontent-c2],
+      .income-filter-desktop-content[_ngcontent-c2] .control-section[_ngcontent-c2] .dropdown-selected[_ngcontent-c2] {
+        display: block;
+        overflow: hidden;
+        color: #374551;
+        width: 100%;
+        position: static;
+        text-align: left;
+        padding-right: 23px;
+      }
+      .currency-unit-cell[_ngcontent-c2] .dropdown-selected[_ngcontent-c2] {
+        text-transform: capitalize;
+      }
+      .income-filter-desktop-content[_ngcontent-c2] .control-section[_ngcontent-c2] .button-icon[_ngcontent-c2] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        left: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 0 5px;
+      }
+      .income-filter-desktop-content[_ngcontent-c2]
+        .control-section[_ngcontent-c2]
+        .button-icon[_ngcontent-c2]
+        img[_ngcontent-c2] {
+        display: inline-block;
+        position: static;
+        width: 16px;
+        height: auto;
+      }
+      .control-section[_ngcontent-c2] .control-label[_ngcontent-c2] {
+        font-size: 14px;
+        color: #767d86;
+        display: block;
+        margin-bottom: 4px;
+        white-space: nowrap;
+      }
+      .dropdown-item[_ngcontent-c2] {
+        cursor: pointer;
+        padding-left: 10px;
+        text-transform: capitalize;
+      }
+      .dropdown-item.selected[_ngcontent-c2],
+      .dropdown-item[_ngcontent-c2]:hover {
+        background-color: #e4e6e7;
+      }
+      .income-filter-desktop-content[_ngcontent-c2] {
+        padding-top: 10px;
+      }
+      .income-filter-desktop-content[_ngcontent-c2] .currency-unit-container[_ngcontent-c2] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+      }
+      .currency-unit-cell[_ngcontent-c2] {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+        flex: 1 1 50%;
+        padding: 0 10px;
+      }
+      .income-filter-desktop-content[_ngcontent-c2] .control-section[_ngcontent-c2] {
+        width: 100%;
+        font-size: 18px;
+      }
+      .income-filter-desktop-content[_ngcontent-c2] .control-section[_ngcontent-c2] span[_ngcontent-c2] {
+        display: inline-block;
+      }
+      .income-filter-desktop-footer[_ngcontent-c2] {
+        height: 40px;
+        border-top: 1px solid #e4e6e7;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding-top: 6px;
+      }
+      .income-filter-desktop-footer[_ngcontent-c2] .ok-button[_ngcontent-c2] {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 65px;
+        flex: 0 0 65px;
+        cursor: pointer;
+        -ms-flex-item-align: center;
+        align-self: center;
+        height: 30px;
+        font-size: 24px;
+        margin: 0 10px;
+        color: #374551;
+      }
+      .income-filter-desktop-footer[_ngcontent-c2] .ok-button[_ngcontent-c2] img[_ngcontent-c2] {
+        margin-bottom: 6px;
+      }
+      .income-filter-desktop-footer[_ngcontent-c2] .close-button[_ngcontent-c2] {
+        display: inline-block;
+        cursor: pointer;
+        -ms-flex-item-align: center;
+        align-self: center;
+        height: 30px;
+        color: #767d86;
+        font-size: 24px;
+        margin-right: 10px;
+      }
+      .income-filter-desktop-content[_ngcontent-c2] .bottom-description[_ngcontent-c2] {
+        font-size: 14px;
+        padding: 0 10px;
+      }
+      .show-levels-container[_ngcontent-c2] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        padding-top: 20px;
+      }
+      .show-levels-container[_ngcontent-c2] .show-levels-label[_ngcontent-c2] {
+        height: 34px;
+        font-size: 18px;
+        display: inline-block;
+        padding: 0 10px 0 20px;
+      }
+
+      .switch[_ngcontent-c2] {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 20px;
+      }
+
+      .switch[_ngcontent-c2] input[_ngcontent-c2] {
+        display: none;
+      }
+
+      .slider[_ngcontent-c2] {
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+      }
+      .slider[_ngcontent-c2],
+      .slider[_ngcontent-c2]:before {
+        position: absolute;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+      .slider[_ngcontent-c2]:before {
+        content: '';
+        height: 14px;
+        width: 14px;
+        left: 4px;
+        bottom: 2px;
+        background-color: #fff;
+      }
+      input[_ngcontent-c2] + .slider[_ngcontent-c2] {
+        border: 1px solid #ccc;
+      }
+      input[_ngcontent-c2]:checked + .slider[_ngcontent-c2] {
+        background-color: #fff;
+        border: 1px solid #ccc;
+      }
+      input[_ngcontent-c2]:checked + .slider[_ngcontent-c2]:before {
+        border: 1px solid #ccc;
+      }
+      input[_ngcontent-c2]:focus + .slider[_ngcontent-c2] {
+        -webkit-box-shadow: 0 0 1px #2196f3;
+        box-shadow: 0 0 1px #2196f3;
+      }
+      input[_ngcontent-c2]:checked + .slider[_ngcontent-c2]:before {
+        -webkit-transform: translateX(36px);
+        transform: translateX(36px);
+      }
+
+      .slider.round[_ngcontent-c2] {
+        border-radius: 34px;
+      }
+      .slider.round[_ngcontent-c2]:before {
+        border-radius: 50%;
+      }
+
+      .menu-container[_ngcontent-c2] {
+        display: block;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 47px;
+        flex: 0 0 47px;
+      }
+      .filters-container[_ngcontent-c2] .some-filter-container[_ngcontent-c2] .accordance-with[_ngcontent-c2] {
+        display: inline-block;
+      }
+      .income-title-text[_ngcontent-c2] {
+        font-size: 22px !important;
+        line-height: 20px;
+      }
+      @media (min-width: 1025px) {
+        .menu-container[_ngcontent-c2] {
+          -ms-flex-preferred-size: 225px;
+          flex-basis: 225px;
+        }
+        .header-content[_ngcontent-c2] .icon-container[_ngcontent-c2] img[_ngcontent-c2] {
+          width: 46px;
+          height: 46px;
+          margin: 9px 27px 9px 0;
+        }
+        .income-title-container[_ngcontent-c2] {
+          padding: 0;
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 80px;
+          flex: 0 0 80px;
+        }
+        .income-title.currency-filter[_ngcontent-c2] {
+          display: block;
+          width: 100%;
+          height: 41px;
+          border: 1px solid #e4e6e7;
+          border-radius: 6px;
+          padding: 9px 35px 10px 14px;
+          color: #394451;
+          font-size: 28px;
+        }
+        .income-title.short-filter[_ngcontent-c2] {
+          display: none;
+        }
+        .some-filter-container[_ngcontent-c2] {
+          display: inline-block;
+          vertical-align: top;
+        }
+      }
+      @media (max-width: 1024px) {
+        countries-filter[_ngcontent-c2] {
+          width: 100%;
+          vertical-align: top;
+          display: inline-block;
+          left: 0;
+          right: 0;
+        }
+        .filters-container[_ngcontent-c2] .some-filter-container[_ngcontent-c2] .accordance-with[_ngcontent-c2] {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          padding: 0 5px;
+        }
+        .income-title.filter.opened[_ngcontent-c2]:after,
+        .income-title.filter[_ngcontent-c2]:after {
+          display: none;
+        }
+        .header-content[_ngcontent-c2] .icon-container[_ngcontent-c2] {
+          display: block;
+        }
+        .filters-container[_ngcontent-c2] {
+          margin-top: 11px;
+          width: 100%;
+        }
+        .filters-container[_ngcontent-c2] .map-things-text[_ngcontent-c2] {
+          display: none;
+        }
+        .filters-container[_ngcontent-c2] .some-filter-container[_ngcontent-c2] > span[_ngcontent-c2] {
+          margin: 0;
+        }
+        .filters-container[_ngcontent-c2] things-filter[_ngcontent-c2] {
+          display: inline-block;
+          vertical-align: middle;
+          width: 100%;
+          margin-bottom: 0;
+        }
+        .filters-container[_ngcontent-c2] .income-title.income-filter-title[_ngcontent-c2],
+        .filters-container[_ngcontent-c2] .some-filter-container[_ngcontent-c2] .mobile-ver[_ngcontent-c2] {
+          display: none;
+        }
+        .family-header[_ngcontent-c2] .heading[_ngcontent-c2] {
+          margin: 11px 0 0;
+          font-size: 20px;
+          width: calc(100% - 250px);
+        }
+        .family-header[_ngcontent-c2] .heading[_ngcontent-c2] img[_ngcontent-c2] {
+          width: 8px;
+          margin: 0 12px -2px 15px;
+        }
+        .without-filters-header[_ngcontent-c2] .heading[_ngcontent-c2] {
+          margin: 16px 0 0;
+          font-size: 24px;
+        }
+      }
+      @media (max-width: 599px) {
+        .family-header.sub-panel-shown[_ngcontent-c2] {
+          background-color: #f6f7f8;
+        }
+        .family-header[_ngcontent-c2] .heading[_ngcontent-c2] {
+          margin: 14px 0 0;
+          font-size: 20px;
+          width: calc(100% - 55px);
+        }
+        .family-header[_ngcontent-c2] .heading[_ngcontent-c2] img[_ngcontent-c2] {
+          width: 8px;
+          margin: 0 10px -1px 8px;
+        }
+        .without-filters-header[_ngcontent-c2] .heading[_ngcontent-c2] {
+          margin: 15px 0 0;
+        }
+      }
+    </style>
+    <style>
+      .main-menu[_ngcontent-c7] {
+        display: none;
+      }
+      .main-mobile-menu[_ngcontent-c7] {
+        display: block;
+      }
+      @media (min-width: 1024px) {
+        .main-menu[_ngcontent-c7] {
+          display: block;
+        }
+        .main-mobile-menu[_ngcontent-c7] {
+          display: none;
+        }
+      }
+      .main-menu[_ngcontent-c7] .menu-icon[_ngcontent-c7] {
+        display: block;
+        width: 62px;
+        height: 62px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .main-menu[_ngcontent-c7] .menu-icon[_ngcontent-c7] img[_ngcontent-c7] {
+        width: 27px;
+        height: 21px;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      .main-menu[_ngcontent-c7] .menu-icon[_ngcontent-c7] img.unactive[_ngcontent-c7] {
+        display: block;
+      }
+      .main-menu[_ngcontent-c7] {
+        z-index: 999;
+      }
+      .main-menu[_ngcontent-c7] > div[_ngcontent-c7] {
+        float: right;
+      }
+      .main-menu[_ngcontent-c7] .open[_ngcontent-c7] .menu-icon[_ngcontent-c7] {
+        background-color: #374551;
+      }
+      .main-menu[_ngcontent-c7] .open[_ngcontent-c7] img.active[_ngcontent-c7] {
+        display: block;
+      }
+      .main-menu[_ngcontent-c7] .open[_ngcontent-c7] img.unactive[_ngcontent-c7] {
+        display: none;
+      }
+      .main-menu[_ngcontent-c7] .dropdown-menu[_ngcontent-c7] {
+        background-color: #374551;
+        left: inherit;
+        right: 0;
+        border: 0;
+        margin: 0;
+        padding: 0;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        width: 285px;
+        z-index: 10;
+      }
+      .main-menu[_ngcontent-c7] .dropdown-menu[_ngcontent-c7] ul[_ngcontent-c7] {
+        padding: 0;
+        margin: 0;
+      }
+      .main-menu[_ngcontent-c7] .dropdown-menu[_ngcontent-c7] li[_ngcontent-c7] {
+        list-style: none;
+        border-bottom: 1px solid #303e4a;
+        -webkit-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+      }
+      .main-menu[_ngcontent-c7] .dropdown-menu[_ngcontent-c7] li[_ngcontent-c7] a[_ngcontent-c7] {
+        text-transform: uppercase;
+        color: #edf0f5;
+        font-size: 18px;
+        display: block;
+        padding: 14px 20px;
+      }
+      .main-menu[_ngcontent-c7] .social-share-content[_ngcontent-c7] span[_ngcontent-c7] {
+        display: inline-block;
+        text-transform: uppercase;
+        color: #edf0f5;
+        font-size: 18px;
+      }
+      .main-menu[_ngcontent-c7] .menu-links[_ngcontent-c7] {
+        font-size: 14px;
+        line-height: 10px;
+        text-decoration: underline;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .main-menu[_ngcontent-c7] .dropdown-menu[_ngcontent-c7] li[_ngcontent-c7]:hover:not(.social-share-container) {
+        background-color: #3d4b58;
+      }
+      .main-menu[_ngcontent-c7] .dropdown-menu[_ngcontent-c7] li[_ngcontent-c7]:hover a[_ngcontent-c7] {
+        color: #fff;
+      }
+      .main-menu[_ngcontent-c7] div.social-share-content[_ngcontent-c7] {
+        padding: 19px 20px;
+      }
+      .main-menu[_ngcontent-c7] div.social-share-content.long-text[_ngcontent-c7] {
+        padding: 5px 32px;
+        text-align: center;
+      }
+      .main-menu[_ngcontent-c7] div.social-share-content.long-text[_ngcontent-c7] span[_ngcontent-c7] {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      .main-menu[_ngcontent-c7] social-share-buttons[_ngcontent-c7] {
+        display: inline-block;
+        vertical-align: top;
+      }
+      .container-menu[_ngcontent-c7] .language-selector[_ngcontent-c7] {
+        width: 100%;
+        padding: 9px 10px 1px !important;
+        overflow: visible !important;
+        position: relative;
+        display: inline-block;
+      }
+      @media (max-width: 1023px) {
+        .main-menu[_ngcontent-c7] .menu-icon[_ngcontent-c7] {
+          width: 47px;
+          height: 56px;
+        }
+        .main-menu[_ngcontent-c7] div.social-share-content[_ngcontent-c7] {
+          padding: 19px 19px;
+        }
+      }
+      .comparisonButton[_ngcontent-c7] {
+        text-transform: uppercase;
+        color: #edf0f5;
+        font-size: 18px;
+        display: block;
+        padding: 14px 20px;
+        background: transparent;
+        border: 0;
+        width: 100%;
+        text-align: left;
+        outline: none;
+      }
+      .comparisonButton.active[_ngcontent-c7] {
+        background-color: #edf0f5;
+        color: #374551;
+      }
+    </style>
+    <style>
+      #main-mobile-menu[_ngcontent-c7] .close-button[_ngcontent-c7] {
+        position: absolute;
+        top: 18px;
+        right: 10px;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] .container-menu[_ngcontent-c7] {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        z-index: 666;
+        height: 100vh;
+        overflow-y: scroll;
+        padding-bottom: 60px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      #main-mobile-menu[_ngcontent-c7] .menu-header-content[_ngcontent-c7] {
+        min-width: 150px;
+        text-align: left;
+        color: #374551;
+        font-size: 24px;
+        line-height: 20px;
+        border-bottom: 1px solid #c6c7c9;
+        background-color: #f6f7f8;
+      }
+      #main-mobile-menu[_ngcontent-c7] .menu-header-content[_ngcontent-c7] img[_ngcontent-c7] {
+        width: 41px;
+        margin: 7px;
+      }
+      #main-mobile-menu[_ngcontent-c7] .menu-header-content[_ngcontent-c7] span[_ngcontent-c7] {
+        display: inline-block;
+        margin-top: 3px;
+        vertical-align: middle;
+      }
+      #main-mobile-menu[_ngcontent-c7] .menu-icon[_ngcontent-c7] {
+        display: block;
+        width: 43px;
+        height: 56px;
+        text-align: center;
+      }
+      #main-mobile-menu[_ngcontent-c7] .menu-icon[_ngcontent-c7] img[_ngcontent-c7] {
+        width: 23px;
+        height: 18px;
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+      }
+      #main-mobile-menu[_ngcontent-c7] .menu-icon[_ngcontent-c7] img.unactive[_ngcontent-c7] {
+        display: block;
+      }
+      #main-mobile-menu[_ngcontent-c7] > div[_ngcontent-c7] {
+        float: right;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] .menu-icon[_ngcontent-c7] {
+        background-color: #374551;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] img.unactive[_ngcontent-c7] {
+        display: none;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] ul[_ngcontent-c7] {
+        padding: 0;
+        margin: 0;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] li[_ngcontent-c7] {
+        position: relative;
+        list-style: none;
+        border-bottom: 1px solid #e4e6e7;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] li[_ngcontent-c7] div[_ngcontent-c7] {
+        padding: 9px 18px 6px;
+        overflow: hidden;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] li[_ngcontent-c7] a[_ngcontent-c7] {
+        color: #374551;
+        font-size: 22px;
+        line-height: 21px;
+        display: block;
+        padding: 14px 20px 13px 8px;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] li[_ngcontent-c7] .thing-apply-icon[_ngcontent-c7] {
+        position: absolute;
+        top: calc(50% - 12px);
+        right: 8px;
+        width: 20px;
+        height: 20px;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] .gapminder[_ngcontent-c7] a[_ngcontent-c7] {
+        font-size: 14px;
+        border-bottom: 0;
+        color: #374551;
+        text-transform: uppercase;
+        text-decoration: underline;
+        line-height: 27px;
+      }
+      #main-mobile-menu[_ngcontent-c7] .feedback-container[_ngcontent-c7] {
+        margin-top: 10px;
+        text-align: center;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] .feedback-icon[_ngcontent-c7] {
+        width: 16px;
+        height: 16px;
+        margin-bottom: 6px;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] .feedback[_ngcontent-c7] {
+        font-size: 14px;
+        border-bottom: 0;
+        color: #374551;
+        padding-left: 10px;
+        text-transform: uppercase;
+        line-height: 27px;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] .gapminder[_ngcontent-c7] {
+        text-align: center;
+        margin-top: 3px;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] .gapminder-img[_ngcontent-c7] {
+        text-align: center;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] .gapminder-img[_ngcontent-c7] img[_ngcontent-c7] {
+        margin-top: 40px;
+        width: 188px;
+        height: 27px;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] li.social-share-container[_ngcontent-c7] {
+        padding: 10px 0 9px;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] li[_ngcontent-c7] div.social-share-content[_ngcontent-c7] {
+        text-align: center;
+        padding: 0 !important;
+      }
+      #main-mobile-menu[_ngcontent-c7] .open[_ngcontent-c7] .share-text[_ngcontent-c7] {
+        display: inline-block;
+        font-size: 14px;
+        color: #374551;
+        text-transform: uppercase;
+        padding: 0 !important;
+        margin-right: 10px;
+        margin-top: 8px;
+        line-height: 14px;
+      }
+      #main-mobile-menu[_ngcontent-c7] social-share-buttons[_ngcontent-c7] {
+        vertical-align: top;
+        display: inline-block;
+        margin-top: 2px;
+      }
+      @media (max-width: 599px) {
+        #main-mobile-menu[_ngcontent-c7] .menu-icon[_ngcontent-c7] {
+          width: 43px;
+          height: 40px;
+          margin-top: 17px;
+        }
+      }
+    </style>
+    <style>
+      .container-menu[_nghost-c8] .lang-container[_ngcontent-c8],
+      .container-menu [_nghost-c8] .lang-container[_ngcontent-c8] {
+        display: inline-block;
+        margin: 5px 0;
+      }
+      .lang-container[_ngcontent-c8] {
+        display: inline-block;
+        float: right;
+        line-height: 14px;
+        font-size: 14px;
+        margin: 17px 4px;
+      }
+      .lang-container[_ngcontent-c8] .active-languages[_ngcontent-c8] {
+        display: inline-block;
+        padding-top: 2px;
+      }
+      .lang-outside[_ngcontent-c8] {
+        display: inline-block;
+        padding-right: 5px;
+        color: #767d86;
+      }
+      .lang-selector[_ngcontent-c8] {
+        width: 100%;
+        cursor: pointer;
+        display: block;
+        color: #767d86;
+        padding-left: 5px;
+      }
+      .lang-selector[_ngcontent-c8]:hover {
+        background-color: #f4f5f5;
+      }
+      .lang-container[_ngcontent-c8] button[_ngcontent-c8] {
+        padding: 0;
+        background-color: #fff;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        float: right;
+      }
+      .icon-btn[_ngcontent-c8] {
+        display: inline-block;
+      }
+      .icon-btn[_ngcontent-c8] img[_ngcontent-c8] {
+        height: 6px;
+      }
+      .btn-group[_ngcontent-c8] .dropdown-menu[_ngcontent-c8] {
+        left: auto;
+        right: 0;
+        border-radius: 0;
+        padding: 0;
+        border: 1px solid #e4e6e7;
+        -webkit-box-shadow: 0 0 20px rgba(54, 69, 81, 0.1);
+        box-shadow: 0 0 20px rgba(54, 69, 81, 0.1);
+      }
+      .dropdown-languages[_ngcontent-c8] {
+        width: 100%;
+        line-height: 24px;
+        font-size: 14px;
+      }
+      @media (max-width: 1024px) {
+        .header-content[_nghost-c8] .lang-container[_ngcontent-c8],
+        .header-content [_nghost-c8] .lang-container[_ngcontent-c8] {
+          display: none;
+        }
+        #main-mobile-menu[_nghost-c8] .lang-container[_ngcontent-c8],
+        #main-mobile-menu [_nghost-c8] .lang-container[_ngcontent-c8] {
+          display: inline-block;
+        }
+      }
+      @media (max-width: 599px) {
+        .family-header[_nghost-c8] #main-mobile-menu[_ngcontent-c8] .menu-icon[_ngcontent-c8],
+        .family-header [_nghost-c8] #main-mobile-menu[_ngcontent-c8] .menu-icon[_ngcontent-c8] {
+          width: 48px;
+          height: 55px;
+          margin-top: 0;
+        }
+        .family-header[_nghost-c8] .lang-container[_ngcontent-c8],
+        .family-header [_nghost-c8] .lang-container[_ngcontent-c8] {
+          display: none;
+        }
+        .family-header[_nghost-c8] #main-mobile-menu[_ngcontent-c8] .lang-container[_ngcontent-c8],
+        .family-header [_nghost-c8] #main-mobile-menu[_ngcontent-c8] .lang-container[_ngcontent-c8] {
+          display: inline-block;
+          margin: 5px 4px;
+        }
+        .family-header[_nghost-c8]
+          #main-mobile-menu[_ngcontent-c8]
+          .lang-container[_ngcontent-c8]
+          button[_ngcontent-c8],
+        .family-header
+          [_nghost-c8]
+          #main-mobile-menu[_ngcontent-c8]
+          .lang-container[_ngcontent-c8]
+          button[_ngcontent-c8] {
+          background-color: #fff;
+        }
+        .header-without-search[_nghost-c8] .lang-container[_ngcontent-c8],
+        .header-without-search [_nghost-c8] .lang-container[_ngcontent-c8] {
+          display: none;
+        }
+        .header-without-search[_nghost-c8] #main-mobile-menu[_ngcontent-c8] .lang-container[_ngcontent-c8],
+        .header-without-search [_nghost-c8] #main-mobile-menu[_ngcontent-c8] .lang-container[_ngcontent-c8] {
+          display: inline-block;
+        }
+      }
+    </style>
+    <style>
+      #main-mobile-menu[_nghost-c9] .share-button[_ngcontent-c9] svg[_ngcontent-c9],
+      #main-mobile-menu [_nghost-c9] .share-button[_ngcontent-c9] svg[_ngcontent-c9] {
+        height: 24px;
+        width: 24px;
+        vertical-align: middle;
+      }
+      #main-mobile-menu[_nghost-c9] .share-button[_ngcontent-c9] .cls-1[_ngcontent-c9],
+      #main-mobile-menu [_nghost-c9] .share-button[_ngcontent-c9] .cls-1[_ngcontent-c9] {
+        fill: #374551;
+      }
+      .main-menu[_nghost-c9] .share-button[_ngcontent-c9] svg[_ngcontent-c9],
+      .main-menu [_nghost-c9] .share-button[_ngcontent-c9] svg[_ngcontent-c9] {
+        width: 21px;
+        height: 21px;
+      }
+      .main-menu[_nghost-c9] .share-button[_ngcontent-c9] .cls-1[_ngcontent-c9],
+      .main-menu [_nghost-c9] .share-button[_ngcontent-c9] .cls-1[_ngcontent-c9] {
+        fill: #e0e7ef;
+      }
+      .share-button-container[_ngcontent-c9] {
+        padding: 0 8px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+      }
+      .share-button-container[_ngcontent-c9] > div[_ngcontent-c9] {
+        margin: 0 8px;
+        cursor: pointer;
+      }
+      @media (max-width: 1023px) {
+        .main-menu[_nghost-c9] .share-button[_ngcontent-c9] svg[_ngcontent-c9],
+        .main-menu [_nghost-c9] .share-button[_ngcontent-c9] svg[_ngcontent-c9] {
+          height: 22px;
+          width: 22px;
+        }
+        .main-menu[_nghost-c9] .share-button[_ngcontent-c9] svg[_ngcontent-c9] .cls-1[_ngcontent-c9],
+        .main-menu [_nghost-c9] .share-button[_ngcontent-c9] svg[_ngcontent-c9] .cls-1[_ngcontent-c9] {
+          fill: #edf0f5;
+        }
+      }
+    </style>
+    <style>
+      .footer[_ngcontent-c3] {
+        overflow: hidden;
+        padding-top: 100px;
+      }
+      .footer[_ngcontent-c3] .container[_ngcontent-c3] > div[_ngcontent-c3] {
+        float: left;
+      }
+      .footer[_ngcontent-c3] .cc-container[_ngcontent-c3] {
+        margin-top: 8px;
+        width: calc((100% - 630px) / 2);
+      }
+      .footer[_ngcontent-c3] .social-follow-buttons-container[_ngcontent-c3] {
+        width: calc((100% - 630px) / 2);
+        position: relative;
+      }
+      .footer[_ngcontent-c3] .description-container[_ngcontent-c3] {
+        width: 630px;
+      }
+      .footer[_ngcontent-c3] .cc-container[_ngcontent-c3] img[_ngcontent-c3] {
+        height: 30px;
+      }
+      .footer[_ngcontent-c3] .logo-container[_ngcontent-c3] img[_ngcontent-c3] {
+        cursor: pointer;
+        width: 46px;
+      }
+      .footer[_ngcontent-c3] .logo-container[_ngcontent-c3] p[_ngcontent-c3] {
+        color: #374551;
+        font-size: 30px;
+        margin: 13px 0 18px;
+        line-height: 26px;
+        font-family: Font Bold, sans-serif;
+      }
+      .footer[_ngcontent-c3] .links[_ngcontent-c3] {
+        line-height: 20px;
+        margin-bottom: 16px;
+      }
+      .footer[_ngcontent-c3] .links[_ngcontent-c3] a[_ngcontent-c3] {
+        color: #374551;
+        font-size: 21px;
+      }
+      .footer[_ngcontent-c3] .links[_ngcontent-c3] .dividers-before[_ngcontent-c3]:before {
+        margin: 0 15px -5px 10px;
+      }
+      .footer[_ngcontent-c3] .links[_ngcontent-c3] .dividers-after[_ngcontent-c3]:after,
+      .footer[_ngcontent-c3] .links[_ngcontent-c3] .dividers-before[_ngcontent-c3]:before {
+        content: '';
+        width: 1px;
+        display: inline-block;
+        height: 22px;
+        background-color: #2e4350;
+      }
+      .footer[_ngcontent-c3] .links[_ngcontent-c3] .dividers-after[_ngcontent-c3]:after {
+        margin: 0 10px -5px 10px;
+      }
+      .footer[_ngcontent-c3] .description-content[_ngcontent-c3] {
+        color: #767d86;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      .footer[_ngcontent-c3] .description-content[_ngcontent-c3] div[_ngcontent-c3] p {
+        margin: 0;
+      }
+      .footer[_ngcontent-c3] .description-content[_ngcontent-c3] > p[_ngcontent-c3] {
+        display: none;
+        margin: 5px 0 0;
+      }
+      .footer[_ngcontent-c3] .description-content[_ngcontent-c3] a[_ngcontent-c3] {
+        color: #767d86;
+        text-decoration: underline;
+      }
+      .footer[_ngcontent-c3] .description-container[_ngcontent-c3] {
+        text-align: center;
+      }
+      .footer[_ngcontent-c3] .valor[_ngcontent-c3] {
+        font-size: 13px;
+        line-height: 15px;
+        text-align: right;
+        position: absolute;
+        right: 16px;
+        bottom: 60px;
+      }
+      .footer[_ngcontent-c3] .valor[_ngcontent-c3] .developed[_ngcontent-c3] {
+        color: #767d86;
+      }
+      .footer[_ngcontent-c3] .valor[_ngcontent-c3] .valor-name[_ngcontent-c3] {
+        color: #767d86;
+        text-decoration: underline;
+      }
+      .footer[_ngcontent-c3] .valor[_ngcontent-c3] .valor-name[_ngcontent-c3]:hover {
+        color: #d41511;
+        text-decoration: underline;
+      }
+      .footer[_ngcontent-c3] .gapminder[_ngcontent-c3] {
+        margin-top: 21px;
+        text-align: center;
+        float: none;
+        width: 100%;
+      }
+      .footer[_ngcontent-c3] .gapminder[_ngcontent-c3] img[_ngcontent-c3] {
+        width: 188px;
+        height: 27px;
+      }
+      .footer[_ngcontent-c3] .container[_ngcontent-c3] {
+        position: relative;
+        padding-bottom: 60px;
+      }
+      @media (max-width: 1023px) {
+        .footer[_ngcontent-c3] .container[_ngcontent-c3] {
+          width: 100%;
+          padding: 25px 10px 60px !important;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+        }
+        .footer[_ngcontent-c3] .cc-container[_ngcontent-c3] {
+          margin: 0;
+          -webkit-box-ordinal-group: 0;
+          -ms-flex-order: 0;
+          order: 0;
+          -webkit-box-flex: 2;
+          -ms-flex-positive: 2;
+          flex-grow: 2;
+        }
+        .footer[_ngcontent-c3] .social-follow-buttons-container[_ngcontent-c3] {
+          -webkit-box-ordinal-group: 1;
+          -ms-flex-order: 1;
+          order: 1;
+          -webkit-box-flex: 2;
+          -ms-flex-positive: 2;
+          flex-grow: 2;
+        }
+        .footer[_ngcontent-c3] .description-container[_ngcontent-c3] {
+          width: 640px;
+          margin: 30px auto 0;
+          -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 2;
+          order: 2;
+        }
+        .footer[_ngcontent-c3] .gapminder[_ngcontent-c3] {
+          width: 100%;
+          margin: 30px auto 0;
+          -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 3;
+          order: 3;
+        }
+      }
+      @media (max-width: 991px) {
+        .footer[_ngcontent-c3] {
+          padding-top: 40px;
+        }
+      }
+      @media (max-width: 599px) {
+        .footer[_ngcontent-c3] .container[_ngcontent-c3] {
+          width: 100%;
+          padding: 25px 5px 51px !important;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+        }
+        .footer[_ngcontent-c3] .logo-container[_ngcontent-c3] p[_ngcontent-c3] {
+          font-size: 26px;
+          margin: 13px 0 30px;
+          line-height: 22px;
+        }
+        .footer[_ngcontent-c3] .cc-container[_ngcontent-c3] {
+          display: none;
+        }
+        .footer[_ngcontent-c3] .social-follow-buttons-container[_ngcontent-c3] {
+          width: 100%;
+          -webkit-box-ordinal-group: 1;
+          -ms-flex-order: 1;
+          order: 1;
+          float: none !important;
+        }
+        .footer[_ngcontent-c3] .description-container[_ngcontent-c3] {
+          width: 100%;
+          margin: 0;
+          -webkit-box-ordinal-group: 0;
+          -ms-flex-order: 0;
+          order: 0;
+        }
+        .footer[_ngcontent-c3] .gapminder[_ngcontent-c3] {
+          width: 100%;
+          margin: 30px auto 25px;
+          -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 2;
+          order: 2;
+        }
+        .footer[_ngcontent-c3] .links[_ngcontent-c3] {
+          margin-bottom: 22px;
+        }
+        .footer[_ngcontent-c3] .links[_ngcontent-c3] a[_ngcontent-c3] {
+          font-size: 18px;
+          margin: 0 3px;
+        }
+        .footer[_ngcontent-c3] .links[_ngcontent-c3] .dividers-after[_ngcontent-c3]:after,
+        .footer[_ngcontent-c3] .links[_ngcontent-c3] .dividers-before[_ngcontent-c3]:before {
+          display: none;
+        }
+        .footer[_ngcontent-c3] .description-content[_ngcontent-c3] {
+          font-size: 12px;
+        }
+        .footer[_ngcontent-c3] .description-content[_ngcontent-c3] > p[_ngcontent-c3] {
+          display: block;
+        }
+        .footer[_ngcontent-c3] .valor[_ngcontent-c3] {
+          position: static;
+          width: 100%;
+          -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 3;
+          order: 3;
+        }
+        .footer[_ngcontent-c3] .valor[_ngcontent-c3] div[_ngcontent-c3] {
+          display: inline;
+        }
+        .footer[_ngcontent-c3] .valor[_ngcontent-c3] a[_ngcontent-c3] {
+          text-decoration: underline;
+        }
+      }
+    </style>
+    <style>
+      .follow-button-container[_ngcontent-c10] {
+        text-align: right;
+        margin-top: 11px;
+        white-space: nowrap;
+        position: absolute;
+        right: 0;
+      }
+      .follow-button-container[_ngcontent-c10] .follow-button[_ngcontent-c10] {
+        display: inline-block;
+        margin-left: 17px;
+      }
+      .follow-button-container[_ngcontent-c10] .follow-text[_ngcontent-c10] {
+        font-size: 18px;
+        vertical-align: middle;
+        cursor: default;
+        width: auto;
+        margin: 2px -7px 0 0;
+        line-height: 18px;
+      }
+      @media (max-width: 599px) {
+        .follow-button-container[_ngcontent-c10] {
+          text-align: center;
+          margin-top: 24px;
+          position: static;
+        }
+        .follow-button-container[_ngcontent-c10] .follow-text[_ngcontent-c10] {
+          font-size: 16px;
+        }
+      }
+    </style>
+    <style>
+      matrix-images[_ngcontent-c11] {
+        display: block;
+      }
+      .matrix-container[_ngcontent-c11] {
+        position: relative;
+      }
+      .zoom-column[_ngcontent-c11] {
+        position: fixed;
+        right: 32px;
+        bottom: 10px;
+        z-index: 10;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+      .zoom-column.stop[_ngcontent-c11] {
+        position: absolute;
+        bottom: 36px;
+      }
+      .zoom-column[_ngcontent-c11] button[_ngcontent-c11] {
+        width: 28px;
+        height: 28px;
+        border: none;
+        border-radius: 50%;
+        outline: 0;
+        -webkit-box-shadow: 0 0 3.9px 0.1px rgba(0, 0, 0, 0.32);
+        box-shadow: 0 0 3.9px 0.1px rgba(0, 0, 0, 0.32);
+        background: hsla(0, 0%, 100%, 0.8) 50% no-repeat;
+        background-size: 16px auto !important;
+        position: relative;
+        margin: 4px;
+      }
+      .zoom-column[_ngcontent-c11] button[disabled][_ngcontent-c11] {
+        cursor: not-allowed;
+        opacity: 0.5;
+      }
+      .sign[_ngcontent-c11] {
+        margin-bottom: 4px;
+      }
+      .street-and-title-container[_ngcontent-c11] {
+        width: 100%;
+      }
+      .street-and-title-container[_ngcontent-c11],
+      .street-container[_ngcontent-c11],
+      .street-container[_ngcontent-c11] .street-content[_ngcontent-c11] {
+        position: relative;
+        width: 100%;
+      }
+      .street-container[_ngcontent-c11] {
+        top: -1px;
+        -webkit-transition: top 0.2s ease-out;
+        transition: top 0.2s ease-out;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+      .street-container[_ngcontent-c11] .street-content[_ngcontent-c11] > *[_ngcontent-c11] {
+        display: inline-block;
+        width: 100%;
+        vertical-align: top;
+      }
+      .street-container[_ngcontent-c11] street[_ngcontent-c11] {
+        position: relative;
+        z-index: 1;
+      }
+      .street-container[_ngcontent-c11] street-mobile[_ngcontent-c11] {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+      .short-title[_ngcontent-c11] {
+        font-size: 16px;
+        color: #374551;
+        text-align: center;
+        display: none;
+        padding-top: 5px;
+        padding-bottom: 1px;
+      }
+      .short-title[_ngcontent-c11] span[_ngcontent-c11] {
+        color: #767d86;
+      }
+      .heart-container[_ngcontent-c11] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        z-index: 2;
+      }
+      .logo[_ngcontent-c11] {
+        width: 30px;
+        height: 30px;
+      }
+      .quick-guide-btn[_ngcontent-c11] {
+        display: inline-block;
+        cursor: pointer;
+        float: right;
+        margin-right: 25px;
+        margin-top: 15px;
+      }
+      .heart-container[_ngcontent-c11] .heart-circle[_ngcontent-c11] {
+        width: 23px;
+        height: 23px;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        cursor: pointer;
+      }
+      .heart-circle[_ngcontent-c11] .close-img[_ngcontent-c11] {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: hsla(0, 0%, 100%, 0.6);
+        -webkit-box-shadow: 0 0 1px #333;
+        box-shadow: 0 0 1px #333;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .heart-circle[_ngcontent-c11] svg[_ngcontent-c11] {
+        width: 50%;
+        height: 50%;
+        fill: #333;
+        stroke: #333;
+        stroke-width: 4px;
+      }
+      .street-pinned-container[_ngcontent-c11] {
+        position: relative;
+        padding-bottom: 10px;
+      }
+      .street-pinned-container[_ngcontent-c11] span[_ngcontent-c11] {
+        color: #374551;
+        font-size: 14px;
+        position: absolute;
+        z-index: 9999;
+        text-transform: uppercase;
+      }
+      .street-pinned-container[_ngcontent-c11] .poorest[_ngcontent-c11] {
+        bottom: -5px;
+        left: 20px;
+      }
+      .street-pinned-container[_ngcontent-c11] .richest[_ngcontent-c11] {
+        bottom: -5px;
+        right: 20px;
+      }
+      .pin-container[_ngcontent-c11] {
+        width: 100%;
+        height: auto;
+        background-color: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        -webkit-box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.3);
+      }
+      .embed-bg[_ngcontent-c11] {
+        background-color: #394450;
+      }
+      .pin-container[_ngcontent-c11] .pin-info-text[_ngcontent-c11] {
+        width: 100%;
+      }
+      .pin-container[_ngcontent-c11] .pin-info-text[_ngcontent-c11],
+      .pin-container[_ngcontent-c11] .pin-info-text-2[_ngcontent-c11] {
+        color: #344450;
+        font-size: 20px;
+        text-align: center;
+        height: 100%;
+        padding-top: 140px;
+      }
+      .pin-container[_ngcontent-c11] .pin-info-text-2[_ngcontent-c11] {
+        padding-left: 60px;
+      }
+      .pin-container[_ngcontent-c11] .places-container[_ngcontent-c11] {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        position: relative;
+        padding: 10px 20px;
+        min-height: 64px;
+        max-height: 60vh;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .grey-bg[_ngcontent-c11] {
+        background-color: #394450;
+      }
+      .embed-footer-text[_ngcontent-c11] {
+        text-align: center;
+        margin: 0 auto;
+        padding: 0 10px 10px;
+        max-width: 990px;
+      }
+      .embed-footer-text[_ngcontent-c11] p[_ngcontent-c11] {
+        margin: 0;
+      }
+      .pin-body-wrap[_ngcontent-c11] {
+        text-align: center;
+      }
+      .pin-body[_ngcontent-c11] {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        max-width: 100%;
+        position: relative;
+      }
+      .pin-body.fullsize[_ngcontent-c11] {
+        display: block;
+        width: 100%;
+      }
+      .pin-body[_ngcontent-c11]:not(.fullsize) .street-pinned-wrap[_ngcontent-c11] {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      .pin-body[_ngcontent-c11]:not(.fullsize) {
+        padding-bottom: 70px;
+      }
+      .places-container[_ngcontent-c11] .embed-close-button[_ngcontent-c11] {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 14px;
+        height: 14px;
+        cursor: pointer;
+        background-color: #394450;
+      }
+      .places-container[_ngcontent-c11] .embed-close-button[_ngcontent-c11] svg[_ngcontent-c11] {
+        width: 100%;
+        height: 100%;
+      }
+      .places-container[_ngcontent-c11] .pin-place[_ngcontent-c11] {
+        margin: 0 5px;
+        max-width: 27%;
+        position: relative;
+        max-height: calc(60vh - 20px);
+      }
+      .places-container.large-images[_ngcontent-c11] .pin-place[_ngcontent-c11] {
+        max-width: 50%;
+      }
+      .fullsize[_ngcontent-c11] .places-container.large-images[_ngcontent-c11] .pin-place[_ngcontent-c11] {
+        max-width: 300px;
+      }
+      .pin-place[_ngcontent-c11] .image-backgroung[_ngcontent-c11] {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      .pin-place[_ngcontent-c11] .image-backgroung[_ngcontent-c11] svg[_ngcontent-c11] {
+        margin: auto;
+        display: block;
+        width: 48px;
+        height: 48px;
+        max-width: 40%;
+        max-height: 40%;
+        fill: #727a82;
+      }
+      .pin-place[_ngcontent-c11] .place-image[_ngcontent-c11] {
+        position: relative;
+        display: block;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+      .places-container[_ngcontent-c11] .image-description[_ngcontent-c11] {
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 15px 9px 6px;
+        font-size: 20px;
+        line-height: 20px;
+        font-weight: 700;
+        text-align: left;
+        text-shadow: 0 0 10px #000;
+      }
+      .places-container[_ngcontent-c11] .place-image-box-country[_ngcontent-c11],
+      .places-container[_ngcontent-c11] .place-image-box-income[_ngcontent-c11] {
+        color: #fff;
+        display: block;
+      }
+      .places-container[_ngcontent-c11] .place-image-box-income[_ngcontent-c11] {
+        letter-spacing: 1px;
+      }
+      .places-container[_ngcontent-c11] .place-image-time-unit[_ngcontent-c11] {
+        text-transform: lowercase;
+      }
+      .places-container[_ngcontent-c11] .extend-area[_ngcontent-c11] {
+        font-size: 50px;
+        width: 15%;
+        text-align: center;
+        font-family: Font Light;
+      }
+      .pin-container[_ngcontent-c11] .pin-place[_ngcontent-c11] {
+        position: relative;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .pin-container[_ngcontent-c11] .pin-place[_ngcontent-c11] img[_ngcontent-c11] {
+        max-width: 100%;
+        max-height: calc(60vh - 20px);
+      }
+      .pin-places-placeholder[_ngcontent-c11] {
+        text-align: center;
+        font-size: 28px;
+        font-family: Font Light;
+        padding: 25px 0 0;
+      }
+      .pin-places-placeholder[_ngcontent-c11] .placeholder-title[_ngcontent-c11] {
+        font-size: 38px;
+        font-weight: 700;
+      }
+      .pin-places-placeholder[_ngcontent-c11] .placeholder-symbol[_ngcontent-c11] {
+        font-size: 50px;
+      }
+      .shared-completed-section[_ngcontent-c11] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .shared-ready-section[_ngcontent-c11] {
+        background-color: #000;
+        color: #fff;
+        font-weight: 700;
+      }
+      .shared-ready-section[_ngcontent-c11] .loader-content[_ngcontent-c11] {
+        height: 58px;
+        margin: auto;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .shared-ready-section[_ngcontent-c11] .loader-content[_ngcontent-c11] .in-process[_ngcontent-c11] {
+        height: 38px;
+        line-height: 38px;
+        display: inline-block;
+      }
+      .shared-ready-section[_ngcontent-c11] .isLoad[_ngcontent-c11] {
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+      }
+      .pin-footer[_ngcontent-c11] {
+        width: 100%;
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+      }
+      .pin-footer-row[_ngcontent-c11] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 10px 0;
+        background-color: #000;
+        color: #fff;
+      }
+      .pin-footer-row[_ngcontent-c11] .shared-completed-section[_ngcontent-c11] {
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+      }
+      .pin-footer-row[_ngcontent-c11] .share-close-buttons[_ngcontent-c11] {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 38px;
+        flex: 0 0 38px;
+        text-align: right;
+      }
+      .pin-footer[_ngcontent-c11] .pin-footer-edit[_ngcontent-c11] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background-color: #000;
+        padding: 10px 0;
+      }
+      .pin-mode-close[_ngcontent-c11] {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 12px;
+        right: 14px;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .pin-mode-close[_ngcontent-c11] img[_ngcontent-c11] {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .pin-mode-guide-btn[_ngcontent-c11] {
+        border: 0;
+        margin: 0;
+        padding: 0;
+        background: transparent;
+        position: absolute;
+        font-size: 14px;
+        top: 52px;
+        right: 15px;
+      }
+      .pin-mode-guide-btn[_ngcontent-c11],
+      .pin-mode-guide-btn[_ngcontent-c11]:active,
+      .pin-mode-guide-btn[_ngcontent-c11]:focus {
+        outline: none;
+      }
+      .pin-footer[_ngcontent-c11] .pin-footer-edit[_ngcontent-c11] span[_ngcontent-c11] {
+        display: inline-block;
+        cursor: pointer;
+      }
+      .pin-footer[_ngcontent-c11] .pin-footer-share[_ngcontent-c11] {
+        -webkit-box-orient: vertical;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+      }
+      .pin-footer-paragraph[_ngcontent-c11] div[_ngcontent-c11],
+      .pin-footer[_ngcontent-c11] .pin-footer-share[_ngcontent-c11] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-direction: normal;
+      }
+      .pin-footer-paragraph[_ngcontent-c11] div[_ngcontent-c11] {
+        -webkit-box-orient: horizontal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      .pin-footer-share[_ngcontent-c11] img[_ngcontent-c11] {
+        width: 64px;
+        height: 64px;
+      }
+      .pin-footer-share[_ngcontent-c11] .shared-ready-section[_ngcontent-c11] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: relative;
+      }
+      .pin-footer-share[_ngcontent-c11] p[_ngcontent-c11] {
+        min-width: 818px;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        margin: 0 auto;
+        -ms-flex-item-align: center;
+        align-self: center;
+        text-align: center;
+      }
+      .pin-footer-share[_ngcontent-c11] h3[_ngcontent-c11] {
+        text-align: center;
+        margin: 0;
+      }
+      .pin-footer-share[_ngcontent-c11] .share-buttons-container[_ngcontent-c11] {
+        height: 38px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+        padding: 5px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .share-buttons-container[_ngcontent-c11] button[_ngcontent-c11] {
+        background: transparent;
+        padding: 0;
+        margin: 0 0 0 10px;
+        border: 0;
+      }
+      .pin-footer-share[_ngcontent-c11] .share-buttons-container[_ngcontent-c11] span[_ngcontent-c11] {
+        width: 46px;
+        font-size: 18px;
+        vertical-align: baseline;
+        display: inline-block;
+        font-weight: 700;
+      }
+      .pin-footer-share[_ngcontent-c11] .shared-btn[_ngcontent-c11] {
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 5px;
+        text-align: center;
+        overflow: hidden;
+        -webkit-box-shadow: inset 0 0 6px #000;
+        box-shadow: inset 0 0 6px #000;
+      }
+      .pin-footer-share[_ngcontent-c11] .shared-btn[_ngcontent-c11] svg[_ngcontent-c11] {
+        vertical-align: top;
+      }
+      .share-link-button[_ngcontent-c11] {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        position: relative;
+      }
+      .share-link-button[_ngcontent-c11] .clipboardNotice[_ngcontent-c11] {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        width: 80px;
+        margin: 0 0 0 -40px;
+        color: #fff;
+        font-size: 14px;
+        padding: 2px 5px;
+        background-color: rgba(0, 0, 0, 0.6);
+        text-align: center;
+        border-radius: 5px;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+        opacity: 0;
+      }
+      .share-link-button[_ngcontent-c11] .clipboardNotice.show[_ngcontent-c11] {
+        opacity: 1;
+      }
+      .pin-footer-share[_ngcontent-c11] .share-link-container[_ngcontent-c11] {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: center;
+        -webkit-box-flex: 2;
+        -ms-flex: 2 1 100%;
+        flex: 2 1 100%;
+        padding: 5px;
+      }
+      .pin-footer-share[_ngcontent-c11] .download-link-container[_ngcontent-c11],
+      .pin-footer-share[_ngcontent-c11] .share-link-container[_ngcontent-c11] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-box-pack: center;
+        justify-content: center;
+      }
+      .pin-footer-share[_ngcontent-c11] .download-link-container[_ngcontent-c11] {
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: center;
+      }
+      .pin-footer-share[_ngcontent-c11] .share-close-buttons[_ngcontent-c11] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+        flex: 1 1 100%;
+        padding: 0 10px;
+      }
+      .pin-footer-share[_ngcontent-c11] .share-link-container[_ngcontent-c11] input[_ngcontent-c11] {
+        width: 390px;
+        height: 38px;
+        border: 1px solid #9c9fa4;
+        background-color: #fff;
+        font-size: 18px;
+        border-radius: 2px;
+        -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        padding: 0 5px;
+        color: #000;
+      }
+      .pin-header[_ngcontent-c11] {
+        padding-top: 10px;
+      }
+      .pin-header.text-center[_ngcontent-c11],
+      .pin-title[_ngcontent-c11] {
+        text-align: center;
+      }
+      .pin-title[_ngcontent-c11] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .pin-title[_ngcontent-c11] .title-body[_ngcontent-c11] {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 28px;
+      }
+      .pin-title[_ngcontent-c11] .title-icon[_ngcontent-c11] {
+        display: inline-block;
+      }
+      .pin-title[_ngcontent-c11] .title-text[_ngcontent-c11] {
+        display: inline-block;
+        padding-left: 15px;
+      }
+      .pin-title[_ngcontent-c11] .title-text[_ngcontent-c11] .title-name[_ngcontent-c11],
+      .pin-title[_ngcontent-c11] .title-text[_ngcontent-c11] .title-project[_ngcontent-c11] {
+        display: block;
+      }
+      .pin-title[_ngcontent-c11] .title-text[_ngcontent-c11] .title-name[_ngcontent-c11] {
+        font-size: 26px;
+        line-height: 26px;
+      }
+      .pin-container-inner[_ngcontent-c11] {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        margin: 5px;
+      }
+      .pin-container-inner.with-border[_ngcontent-c11] {
+        border: 2px solid #374551;
+      }
+      .pin-header.white-font[_ngcontent-c11] p[_ngcontent-c11],
+      .street-pinned-container.white-font[_ngcontent-c11] span[_ngcontent-c11] {
+        color: #fff;
+      }
+      .street-pinned-container[_ngcontent-c11] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      .street-pinned-cell[_ngcontent-c11] {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+        flex: 0 1 100%;
+        position: relative;
+      }
+      .pin-header[_ngcontent-c11] p[_ngcontent-c11] {
+        display: inline-block;
+        padding-left: 20px;
+        font-size: 28px;
+        line-height: 44px;
+        color: #374551;
+        margin: 0;
+      }
+      .pin-header[_ngcontent-c11] .buttons-container[_ngcontent-c11] {
+        float: right;
+        height: 100%;
+        padding-right: 20px;
+      }
+      .pin-header[_ngcontent-c11] .buttons-container[_ngcontent-c11] span[_ngcontent-c11] {
+        display: inline-block;
+        width: 48px;
+        height: 100%;
+        border-left: 1px solid #333d48;
+        cursor: pointer;
+        position: relative;
+      }
+      .pin-header[_ngcontent-c11] span[_ngcontent-c11] svg[_ngcontent-c11] {
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: 14px;
+        top: 14px;
+      }
+      .pin-header[_ngcontent-c11] .done-share-button[_ngcontent-c11] {
+        height: 32px;
+        width: 132px;
+        color: #fff;
+        float: right;
+        cursor: pointer;
+        border: 1px solid #fff;
+        display: inline-block;
+        margin-top: 6px;
+        font-size: 18px;
+        text-align: center;
+        line-height: 32px;
+        margin-right: 24px;
+      }
+      .street-container[_ngcontent-c11] {
+        top: 93px;
+        left: 0;
+        right: 0;
+        z-index: 8;
+        background-color: #fff;
+        position: fixed;
+        height: 69px;
+        width: 100%;
+      }
+      .grid-container[_ngcontent-c11] {
+        padding-top: 106px;
+      }
+      .desktop-view[_ngcontent-c11] .grid-container[_ngcontent-c11] {
+        padding-top: 69px;
+      }
+      .pin-bottom-button[_ngcontent-c11] {
+        background: transparent;
+        padding: 0 10px;
+        min-width: 86px;
+        height: 38px;
+        display: inline-block;
+        color: #fff;
+        font-size: 20px;
+        line-height: 36px;
+        cursor: pointer;
+        margin: 0 10px;
+        text-align: center;
+        border: 0;
+        white-space: nowrap;
+        font-weight: 700;
+        border-radius: 2px;
+        -webkit-transition: background-color 0.4s;
+        transition: background-color 0.4s;
+      }
+      .pin-bottom-button[_ngcontent-c11]:hover {
+        background-color: #394450;
+        color: #fff;
+      }
+      .download-footer-text[_ngcontent-c11],
+      .shared-footer-text[_ngcontent-c11] {
+        display: none;
+        text-align: center;
+        font-size: 20px;
+        padding: 0 0 15px;
+      }
+      .download-link-text[_ngcontent-c11] {
+        color: #07c;
+      }
+      .for-download[_ngcontent-c11] .image-description[_ngcontent-c11],
+      .for-download[_ngcontent-c11] .place-image-box-country[_ngcontent-c11] {
+        font-size: 28px;
+        line-height: 28px;
+      }
+      .for-download[_ngcontent-c11] .pin-header[_ngcontent-c11],
+      .for-screenshot[_ngcontent-c11] .pin-header[_ngcontent-c11] {
+        padding: 7px;
+      }
+      .for-download[_ngcontent-c11] .download-footer-text[_ngcontent-c11] {
+        display: block;
+      }
+      .for-download[_ngcontent-c11] .pin-title[_ngcontent-c11] .title-text[_ngcontent-c11] .title-name[_ngcontent-c11] {
+        font-size: 36px;
+        line-height: 36px;
+      }
+      .for-download.places-lenght-3[_ngcontent-c11]
+        .pin-title[_ngcontent-c11]
+        .title-text[_ngcontent-c11]
+        .title-name[_ngcontent-c11] {
+        font-size: 42px;
+        line-height: 42px;
+      }
+      .for-download.places-lenght-4[_ngcontent-c11]
+        .pin-title[_ngcontent-c11]
+        .title-text[_ngcontent-c11]
+        .title-name[_ngcontent-c11] {
+        font-size: 46px;
+        line-height: 46px;
+      }
+      .for-download.places-lenght-5[_ngcontent-c11]
+        .pin-title[_ngcontent-c11]
+        .title-text[_ngcontent-c11]
+        .title-name[_ngcontent-c11] {
+        font-size: 50px;
+        line-height: 50px;
+      }
+      .for-download.places-lenght-6[_ngcontent-c11]
+        .pin-title[_ngcontent-c11]
+        .title-text[_ngcontent-c11]
+        .title-name[_ngcontent-c11] {
+        font-size: 56px;
+        line-height: 56px;
+      }
+      .for-download.places-lenght-2[_ngcontent-c11] .logo[_ngcontent-c11] {
+        width: 38px;
+        height: 38px;
+      }
+      .for-download.places-lenght-3[_ngcontent-c11] .logo[_ngcontent-c11] {
+        width: 44px;
+        height: 44px;
+      }
+      .for-download.places-lenght-4[_ngcontent-c11] .logo[_ngcontent-c11] {
+        width: 48px;
+        height: 48px;
+      }
+      .for-download.places-lenght-5[_ngcontent-c11] .logo[_ngcontent-c11] {
+        width: 52px;
+        height: 52px;
+      }
+      .for-download.places-lenght-6[_ngcontent-c11] .logo[_ngcontent-c11] {
+        width: 54px;
+        height: 54px;
+      }
+      .for-download[_ngcontent-c11] .embed-footer-text[_ngcontent-c11] p[_ngcontent-c11] {
+        display: none;
+      }
+      .for-screenshot[_ngcontent-c11] {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .for-download[_ngcontent-c11] .embed-preview-content-position[_ngcontent-c11],
+      .for-screenshot[_ngcontent-c11] .embed-preview-content-position[_ngcontent-c11] {
+        width: 100%;
+      }
+      .for-screenshot[_ngcontent-c11] .places-container.large-images[_ngcontent-c11] .pin-place[_ngcontent-c11] {
+        max-width: 48%;
+      }
+      .for-screenshot[_ngcontent-c11] .download-footer-text[_ngcontent-c11] {
+        display: none;
+      }
+      .for-screenshot[_ngcontent-c11] .shared-footer-text[_ngcontent-c11] {
+        display: block;
+        font-size: 30px;
+      }
+      .pin-container[_ngcontent-c11] .for-screenshot[_ngcontent-c11] .places-container[_ngcontent-c11] {
+        max-height: 100%;
+        padding: 0 20px;
+      }
+      .for-download[_ngcontent-c11] .pin-mode-close[_ngcontent-c11],
+      .for-screenshot[_ngcontent-c11] .pin-mode-close[_ngcontent-c11] {
+        display: none;
+      }
+      .pin-container[_ngcontent-c11] .for-download[_ngcontent-c11] .places-container[_ngcontent-c11],
+      .pin-container[_ngcontent-c11] .for-screenshot[_ngcontent-c11] .places-container[_ngcontent-c11] {
+        max-height: none;
+      }
+      .for-screenshot[_ngcontent-c11] .embed-footer-text[_ngcontent-c11] p[_ngcontent-c11] {
+        font-size: 26px;
+        line-height: 26px;
+        margin-top: 10px;
+        display: none;
+      }
+      .for-screenshot[_ngcontent-c11] .street-pinned-container[_ngcontent-c11] span[_ngcontent-c11] {
+        font-size: 26px;
+        bottom: -21px;
+      }
+      .for-download[_ngcontent-c11] .pin-place[_ngcontent-c11],
+      .for-screenshot[_ngcontent-c11] .pin-place[_ngcontent-c11] {
+        max-height: 100%;
+        max-width: 100%;
+      }
+      .for-download.places-lenght-3[_ngcontent-c11] .pin-place[_ngcontent-c11],
+      .for-screenshot.places-lenght-3[_ngcontent-c11] .pin-place[_ngcontent-c11] {
+        width: 45%;
+      }
+      .pin-container[_ngcontent-c11]
+        .for-download.places-lenght-2[_ngcontent-c11]
+        .pin-place[_ngcontent-c11]
+        img[_ngcontent-c11],
+      .pin-container[_ngcontent-c11]
+        .for-screenshot.places-lenght-2[_ngcontent-c11]
+        .pin-place[_ngcontent-c11]
+        img[_ngcontent-c11] {
+        width: 100%;
+        height: 100%;
+        max-height: none;
+      }
+      @media (max-width: 1023px) {
+        .place-image-box-country[_ngcontent-c11] {
+          font-size: 18px;
+          line-height: 20px;
+          font-weight: 400;
+        }
+      }
+      @media (max-width: 700px) {
+        .street-container.fixed[_ngcontent-c11] {
+          position: fixed;
+          z-index: 10;
+          top: 0;
+        }
+        .street-container.fixed[_ngcontent-c11] .short-title[_ngcontent-c11] {
+          display: block;
+        }
+        .desktop-view[_ngcontent-c11] .street-and-title-container[_ngcontent-c11] {
+          top: 106px;
+        }
+      }
+      @media (max-width: 599px) {
+        .place-image-box-country[_ngcontent-c11],
+        .place-image-box-income[_ngcontent-c11] {
+          font-size: 14px;
+          line-height: 14px;
+          font-weight: 400;
+        }
+      }
+      @media (min-width: 850px) {
+        .pin-footer-row[_ngcontent-c11] .shared-completed-section[_ngcontent-c11] {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-flex: 0;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+        }
+        .pin-footer-share[_ngcontent-c11] .download-link-container[_ngcontent-c11] {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 160px;
+          flex: 0 0 160px;
+          padding: 0 10px;
+        }
+        .pin-footer-share[_ngcontent-c11] .share-buttons-container[_ngcontent-c11] {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 230px;
+          flex: 0 0 230px;
+          padding: 0 10px;
+        }
+        .pin-footer-share[_ngcontent-c11] .share-link-container[_ngcontent-c11] {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 1 410px;
+          flex: 0 1 410px;
+          padding: 0 10px;
+          min-width: 170px;
+        }
+        .pin-footer-share[_ngcontent-c11] .share-link-button[_ngcontent-c11] {
+          -ms-flex-preferred-size: 100px;
+          flex-basis: 100px;
+        }
+      }
+      @media (min-width: 850px) {
+        .pin-footer-row[_ngcontent-c11] {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+        }
+        .pin-footer-row[_ngcontent-c11] .share-close-buttons[_ngcontent-c11] {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 0 110px;
+          flex: 0 0 110px;
+        }
+      }
+      @media (min-width: 1025px) {
+        .street-container[_ngcontent-c11] {
+          top: 64px;
+        }
+        .grid-container[_ngcontent-c11] {
+          padding-top: 72px;
+        }
+      }
+      .dots-animation[_ngcontent-c11] {
+        display: inline-block;
+      }
+      .dots-animation[_ngcontent-c11] .dot-middle[_ngcontent-c11] {
+        -webkit-animation: dotsAnimationMiddle 3s infinite;
+        animation: dotsAnimationMiddle 3s infinite;
+        display: inline-block;
+      }
+      .dots-animation[_ngcontent-c11] .dot-last[_ngcontent-c11] {
+        -webkit-animation: dotsAnimationLaft 3s infinite;
+        animation: dotsAnimationLaft 3s infinite;
+        display: inline-block;
+      }
+      @-webkit-keyframes dotsAnimationMiddle {
+        0% {
+          opacity: 0;
+        }
+        33%,
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes dotsAnimationMiddle {
+        0% {
+          opacity: 0;
+        }
+        33%,
+        to {
+          opacity: 1;
+        }
+      }
+      @-webkit-keyframes dotsAnimationLaft {
+        0% {
+          opacity: 0;
+        }
+        66%,
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes dotsAnimationLaft {
+        0% {
+          opacity: 0;
+        }
+        66%,
+        to {
+          opacity: 1;
+        }
+      }
+      @media (min-width: 1400px) {
+        .places-container[_ngcontent-c11] .image-description[_ngcontent-c11],
+        .places-container[_ngcontent-c11] .image-description.one-row[_ngcontent-c11] {
+          font-size: 28px;
+          line-height: 28px;
+        }
+      }
+    </style>
+    <style>
+      #things-filter[_ngcontent-c5] .close-button[_ngcontent-c5] {
+        width: 15px;
+        margin: -6px -3px 0 0;
+        cursor: pointer;
+      }
+      #things-filter[_ngcontent-c5] {
+        display: inline-block;
+        vertical-align: bottom;
+        width: 100%;
+      }
+      #things-filter[_ngcontent-c5],
+      #things-filter[_ngcontent-c5] .things-filter-button[_ngcontent-c5] {
+        position: relative;
+      }
+      #things-filter[_ngcontent-c5] .things-filter-button[_ngcontent-c5] .things-filter-button-content[_ngcontent-c5] {
+        background-color: #fff;
+        border: 1px solid #e4e6e7;
+        border-radius: 6px;
+        min-width: 150px;
+        text-align: left;
+        padding: 9px 35px 10px 14px;
+        cursor: pointer;
+        color: #374551;
+        font-size: 28px;
+        line-height: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      #things-filter[_ngcontent-c5]
+        .things-filter-button[_ngcontent-c5]
+        .things-filter-button-content[_ngcontent-c5]
+        img[_ngcontent-c5] {
+        width: 25px;
+        height: 25px;
+        float: left;
+        margin: -3px 10px 0 0;
+      }
+      #things-filter[_ngcontent-c5]
+        .things-filter-button[_ngcontent-c5]
+        .things-filter-button-content[_ngcontent-c5]
+        span.arrow[_ngcontent-c5] {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid #374551;
+        position: absolute;
+        top: calc(50% - 3.5px);
+        right: 11px;
+      }
+      #things-filter.open-things-filter[_ngcontent-c5]
+        .things-filter-button[_ngcontent-c5]
+        .things-filter-button-content[_ngcontent-c5] {
+        -webkit-box-shadow: 0 0 10px rgba(55, 69, 81, 0.1);
+        box-shadow: 0 0 10px rgba(55, 69, 81, 0.1);
+      }
+      #things-filter.open-things-filter[_ngcontent-c5]
+        .things-filter-button[_ngcontent-c5]
+        .things-filter-button-content[_ngcontent-c5]
+        span.arrow[_ngcontent-c5] {
+        border-bottom: 7px solid #374551;
+        border-top: 0 solid transparent;
+        position: absolute;
+        top: 18px;
+        right: 11px;
+      }
+      #things-filter[_ngcontent-c5] .things-filter-container[_ngcontent-c5] .popular-things-container[_ngcontent-c5],
+      #things-filter[_ngcontent-c5] .things-filter-container[_ngcontent-c5] .related-things-container[_ngcontent-c5] {
+        border-right: 1px solid #e4e6e7;
+      }
+      #things-filter[_ngcontent-c5] .things-filter-container[_ngcontent-c5] {
+        background-color: #fff;
+        border: 1px solid #e4e6e7;
+        -webkit-box-shadow: 0 0 10px rgba(55, 69, 81, 0.1);
+        box-shadow: 0 0 10px rgba(55, 69, 81, 0.1);
+        position: absolute;
+        top: 100%;
+        margin-top: 5px;
+        left: 0;
+        width: 768px;
+        z-index: 99;
+        overflow: hidden;
+        height: 517px;
+        display: none;
+      }
+      #things-filter[_ngcontent-c5] .things-filter-container[_ngcontent-c5] .title[_ngcontent-c5] {
+        color: #767d86;
+        font-size: 24px;
+        line-height: 20px;
+        margin: 20px 10px 15px;
+      }
+      #things-filter[_ngcontent-c5] .things-filter-container[_ngcontent-c5] > div[_ngcontent-c5] {
+        float: left;
+        height: 100%;
+        padding-bottom: 10px;
+      }
+      #things-filter[_ngcontent-c5] .things-filter-container[_ngcontent-c5] .popular-things-container[_ngcontent-c5],
+      #things-filter[_ngcontent-c5] .things-filter-container[_ngcontent-c5] .related-things-container[_ngcontent-c5] {
+        width: 226px;
+      }
+      #things-filter[_ngcontent-c5] .other-things-container[_ngcontent-c5] {
+        width: calc(100% - 452px);
+      }
+      #things-filter[_ngcontent-c5] .thing-content[_ngcontent-c5] {
+        padding: 5px 11px 5px 11px;
+        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+      }
+      #things-filter[_ngcontent-c5] .thing-content.empty[_ngcontent-c5] {
+        cursor: default;
+      }
+      #things-filter[_ngcontent-c5] .thing-content[_ngcontent-c5]:hover {
+        cursor: pointer;
+        background-color: #f4f5f5;
+      }
+      #things-filter[_ngcontent-c5] .thing-content[_ngcontent-c5] .thing-icon-container[_ngcontent-c5] {
+        float: left;
+        width: 28px;
+        margin-right: 15px;
+        position: relative;
+        min-height: 28px;
+      }
+      #things-filter[_ngcontent-c5] .thing-content[_ngcontent-c5] img[_ngcontent-c5] {
+        position: absolute;
+        top: 0;
+        width: 28px;
+        height: 28px;
+      }
+      #things-filter[_ngcontent-c5] .thing-content[_ngcontent-c5] span[_ngcontent-c5] {
+        color: #374551;
+        font-size: 22px;
+        line-height: 30px;
+        display: block;
+        float: left;
+        width: calc(100% - 50px);
+      }
+      #things-filter[_ngcontent-c5] .thing-content.empty[_ngcontent-c5] span[_ngcontent-c5] {
+        color: #a9a9a9;
+      }
+      #things-filter[_ngcontent-c5] .things-search[_ngcontent-c5] {
+        position: relative;
+        margin: 15px 11px;
+      }
+      #things-filter[_ngcontent-c5] .things-search[_ngcontent-c5] input[_ngcontent-c5]:focus {
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.12);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.12);
+      }
+      #things-filter[_ngcontent-c5] .things-search[_ngcontent-c5] input[_ngcontent-c5] {
+        font-size: 18px;
+        color: #374551;
+        padding: 0 30px 0 20px;
+        background-color: #fff;
+        border: 1px solid #9c9fa4;
+        border-radius: 16px;
+        text-align: left;
+      }
+      #things-filter[_ngcontent-c5] .things-search[_ngcontent-c5] img[_ngcontent-c5] {
+        position: absolute;
+        top: 8px;
+        right: 14px;
+        font-size: 18px;
+        color: #767d86;
+        width: 18px;
+      }
+      #things-filter[_ngcontent-c5] .popular-things-content[_ngcontent-c5],
+      #things-filter[_ngcontent-c5] .related-things-content[_ngcontent-c5] {
+        overflow-y: auto;
+        height: calc(100% - 58px);
+        margin-right: 11px;
+      }
+      #things-filter[_ngcontent-c5] .other-things-content[_ngcontent-c5] {
+        overflow-y: auto;
+        height: calc(100% - 108px);
+        margin-right: 11px;
+      }
+      #things-filter.open-things-filter[_ngcontent-c5] .things-filter-container[_ngcontent-c5] {
+        display: block;
+      }
+      .things-filter-button-content[_ngcontent-c5] span[_ngcontent-c5] {
+        cursor: pointer;
+      }
+      .things-filter-button[_ngcontent-c5] .thing-pop-up[_ngcontent-c5] {
+        position: absolute;
+        top: 100%;
+        left: -7px;
+        z-index: 999;
+        padding-top: 3px;
+        display: none;
+        text-align: left;
+      }
+      .things-filter-button.exist[_ngcontent-c5]:hover .thing-pop-up[_ngcontent-c5],
+      .things-filter-button[_ngcontent-c5]:hover .thing-pop-up[_ngcontent-c5] {
+        display: block;
+      }
+      .things-filter-button[_ngcontent-c5] .thing-pop-up[_ngcontent-c5] span[_ngcontent-c5] {
+        width: 50px;
+        height: 10px;
+        position: relative;
+        overflow: hidden;
+        display: block;
+      }
+      .things-filter-button[_ngcontent-c5] .thing-pop-up[_ngcontent-c5] span[_ngcontent-c5]:after {
+        content: '';
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        background: #fff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 5px;
+        left: 0;
+        right: 0;
+        -webkit-box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+        box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+        margin: auto;
+      }
+      .things-filter-button[_ngcontent-c5] .thing-pop-up-content[_ngcontent-c5] {
+        width: 450px;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 20px 15px;
+        -webkit-box-shadow: 0 2px 12.04px 1.96px rgba(0, 0, 0, 0.28);
+        box-shadow: 0 2px 12.04px 1.96px rgba(0, 0, 0, 0.28);
+      }
+      .things-filter-button[_ngcontent-c5] .thing-pop-up-content[_ngcontent-c5] p[_ngcontent-c5] {
+        font-family: Font Light, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #5f6a74;
+        margin-bottom: 0;
+      }
+      #countries-filter[_ngcontent-c5] .countries-search[_ngcontent-c5] input[_ngcontent-c5]:focus {
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.12);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.12);
+      }
+      .things-filter-button[_ngcontent-c5] .thing-pop-up-content[_ngcontent-c5] p[_ngcontent-c5] a[_ngcontent-c5] {
+        color: #b04514;
+        font-family: Font Regular, sans-serif;
+      }
+      [_ngcontent-c5]::-webkit-scrollbar {
+        width: 8px;
+        margin: 0;
+      }
+      [_ngcontent-c5]::-webkit-input-placeholder {
+        color: #767d86;
+        font-family: Font Regular, sans-serif;
+      }
+
+      [_ngcontent-c5]:-moz-placeholder,
+      [_ngcontent-c5]::-moz-placeholder {
+        color: #767d86;
+        font-family: Font Regular, sans-serif;
+      }
+
+      [_ngcontent-c5]:-ms-input-placeholder {
+        color: #767d86;
+        font-family: Font Regular, sans-serif;
+      }
+
+      [_ngcontent-c5]::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: #ced1d5;
+      }
+      @media (max-height: 600px), (max-width: 1400px) {
+        #things-filter[_ngcontent-c5] .things-filter-container[_ngcontent-c5] {
+          margin-top: 2px;
+          width: 700px;
+          height: 425px;
+        }
+        .close-button[_ngcontent-c5] {
+          width: 15px;
+          margin-right: 3px;
+          margin-top: 0;
+        }
+        #things-filter[_ngcontent-c5] .things-search[_ngcontent-c5] {
+          position: relative;
+          margin: 5px 11px;
+        }
+        #things-filter[_ngcontent-c5] .things-filter-container[_ngcontent-c5] .title[_ngcontent-c5] {
+          color: #767d86;
+          font-size: 20px;
+          line-height: 16px;
+          margin: 10px;
+        }
+        #things-filter[_ngcontent-c5] .thing-content[_ngcontent-c5] .thing-icon-container[_ngcontent-c5] {
+          float: left;
+          width: 22px;
+          margin-right: 7px;
+          position: relative;
+          min-height: 22px;
+        }
+        #things-filter[_ngcontent-c5] .thing-content[_ngcontent-c5] img[_ngcontent-c5] {
+          position: absolute;
+          top: 0;
+          width: 22px;
+          height: 22px;
+        }
+        #things-filter[_ngcontent-c5] .thing-content[_ngcontent-c5] span[_ngcontent-c5] {
+          color: #374551;
+          font-size: 18px;
+          line-height: 23px;
+          display: block;
+          float: left;
+          width: calc(100% - 50px);
+        }
+        #things-filter[_ngcontent-c5] .things-filter-container[_ngcontent-c5] > div[_ngcontent-c5] {
+          padding-bottom: 0;
+        }
+        #things-filter[_ngcontent-c5] .other-things-content[_ngcontent-c5] {
+          height: calc(100% - 87px);
+        }
+      }
+      @media (max-width: 1023px) {
+        #things-filter[_ngcontent-c5]
+          .things-filter-button[_ngcontent-c5]
+          .things-filter-button-content[_ngcontent-c5] {
+          font-size: 24px;
+          padding: 6px 30px 6px 11px;
+        }
+        #things-filter[_ngcontent-c5]
+          .things-filter-button[_ngcontent-c5]
+          .things-filter-button-content[_ngcontent-c5]
+          img[_ngcontent-c5] {
+          width: 23px;
+          margin: -3px 9px 0 0;
+        }
+      }
+      @media (max-width: 600px) {
+        things-filter[_nghost-c5] {
+          max-width: 100%;
+        }
+      }
+    </style>
+    <style>
+      .close-button[_ngcontent-c5] {
+        position: absolute;
+        top: 18px;
+        right: 15px;
+        cursor: pointer;
+      }
+      [_ngcontent-c5]::-webkit-scrollbar {
+        width: 8px;
+      }
+      [_ngcontent-c5]::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: #ced1d5;
+      }
+      #things-filter-mobile[_ngcontent-c5] {
+        display: inline-block;
+        position: relative;
+        vertical-align: bottom;
+        width: 100%;
+      }
+      #things-filter-mobile[_ngcontent-c5] .tabs-header-container[_ngcontent-c5] {
+        border-bottom: 1px solid #e4e6e7;
+        padding: 0 20px;
+      }
+      #things-filter-mobile[_ngcontent-c5] .tabs-header-container[_ngcontent-c5] span[_ngcontent-c5] {
+        color: #767d86;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 30px;
+        display: inline-block;
+        padding: 10px 10px;
+        position: relative;
+        cursor: pointer;
+      }
+      #things-filter-mobile[_ngcontent-c5] .tabs-header-container[_ngcontent-c5] span.active[_ngcontent-c5]:before {
+        content: '';
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #ffcb34;
+      }
+      #things-filter-mobile[_ngcontent-c5] .tabs-header-container[_ngcontent-c5] span.active[_ngcontent-c5] {
+        color: #374551;
+      }
+      #things-filter-mobile[_ngcontent-c5] .container-filter[_ngcontent-c5] {
+        display: none;
+      }
+      #things-filter-mobile.open-things-filter[_ngcontent-c5] .container-filter[_ngcontent-c5] {
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        z-index: 667;
+        height: 100vh;
+      }
+      #things-filter-mobile[_ngcontent-c5]
+        .thing-filter-header[_ngcontent-c5]
+        .thing-filter-header-content[_ngcontent-c5] {
+        min-width: 150px;
+        text-align: left;
+        padding: 16px 35px 20px 20px;
+        color: #374551;
+        height: 55px;
+        font-size: 24px;
+        line-height: 20px;
+        border-bottom: 1px solid #c6c7c9;
+      }
+      #things-filter-mobile[_ngcontent-c5]
+        .thing-filter-header[_ngcontent-c5]
+        .thing-filter-header-content[_ngcontent-c5]
+        img[_ngcontent-c5] {
+        width: 25px;
+        height: 25px;
+        float: left;
+        margin: -3px 10px 0 0;
+      }
+      #things-filter-mobile[_ngcontent-c5] .things-filter-button[_ngcontent-c5] {
+        position: relative;
+      }
+      #things-filter-mobile[_ngcontent-c5]
+        .things-filter-button[_ngcontent-c5]
+        .things-filter-button-content[_ngcontent-c5] {
+        background-color: #fff;
+        border: 1px solid #e4e6e7;
+        border-radius: 6px;
+        min-width: 150px;
+        text-align: left;
+        padding: 7px 35px 4px 14px;
+        color: #374551;
+        font-size: 24px;
+        line-height: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      #things-filter-mobile[_ngcontent-c5]
+        .things-filter-button[_ngcontent-c5]
+        .things-filter-button-content[_ngcontent-c5]
+        img[_ngcontent-c5] {
+        width: 25px;
+        height: 25px;
+        float: left;
+        margin: -3px 10px 0 0;
+      }
+      #things-filter-mobile[_ngcontent-c5]
+        .things-filter-button[_ngcontent-c5]
+        .things-filter-button-content[_ngcontent-c5]
+        span.arrow[_ngcontent-c5] {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid #374551;
+        position: absolute;
+        top: 18px;
+        right: 11px;
+      }
+      #things-filter-mobile.open-things-filter[_ngcontent-c5]
+        .things-filter-button[_ngcontent-c5]
+        .things-filter-button-content[_ngcontent-c5] {
+        -webkit-box-shadow: 0 0 10px rgba(55, 69, 81, 0.1);
+        box-shadow: 0 0 10px rgba(55, 69, 81, 0.1);
+      }
+      #things-filter-mobile.open-things-filter[_ngcontent-c5]
+        .things-filter-button[_ngcontent-c5]
+        .things-filter-button-content[_ngcontent-c5]
+        span.arrow[_ngcontent-c5] {
+        border-bottom: 7px solid #374551;
+        border-top: 0 solid transparent;
+        position: absolute;
+        top: 18px;
+        right: 11px;
+      }
+      #things-filter-mobile[_ngcontent-c5] .thing-filter-header[_ngcontent-c5] {
+        width: 100%;
+        height: 55px;
+        background-color: #f6f7f8;
+      }
+      #things-filter-mobile[_ngcontent-c5] .tabs-content-container[_ngcontent-c5] {
+        position: relative;
+        overflow-y: auto;
+      }
+      #things-filter-mobile[_ngcontent-c5]
+        .search-container[hidden][_ngcontent-c5]
+        + .tabs-header-container[_ngcontent-c5]
+        + .tabs-content-container[_ngcontent-c5] {
+        height: calc(100% - 106px);
+        overflow-y: auto;
+      }
+      #things-filter-mobile[_ngcontent-c5] .thing-content[_ngcontent-c5] {
+        padding: 0 11px 4px 24px;
+        position: relative;
+        border-bottom: 1px solid #e4e6e7;
+        width: 100%;
+      }
+      #things-filter-mobile[_ngcontent-c5] .thing-content[_ngcontent-c5]:last-child {
+        border-bottom: 0;
+      }
+      #things-filter-mobile[_ngcontent-c5] .thing-content[_ngcontent-c5]:hover {
+        background-color: #f4f5f5;
+      }
+      #things-filter-mobile[_ngcontent-c5] .thing-content[_ngcontent-c5] .thing-icon-container[_ngcontent-c5] {
+        position: relative;
+        top: 12px;
+      }
+      #things-filter-mobile[_ngcontent-c5] .thing-content[_ngcontent-c5] .thing-apply-icon[_ngcontent-c5] {
+        position: absolute;
+        top: calc(50% - 12px);
+        right: 20px;
+        width: 20px;
+        height: 20px;
+      }
+      #things-filter-mobile[_ngcontent-c5]
+        .thing-content[_ngcontent-c5]
+        .thing-apply-icon[_ngcontent-c5]
+        img[_ngcontent-c5] {
+        position: relative;
+        top: 0;
+        width: 20px;
+        height: 20px;
+      }
+      #things-filter-mobile[_ngcontent-c5] .thing-content[_ngcontent-c5] img[_ngcontent-c5] {
+        position: relative;
+        top: 0;
+        width: 24px;
+        height: 24px;
+      }
+      #things-filter-mobile[_ngcontent-c5] .thing-content[_ngcontent-c5] span[_ngcontent-c5] {
+        color: #374551;
+        font-size: 22px;
+        line-height: 30px;
+        display: block;
+        width: calc(100% - 50px);
+        margin-top: -14px;
+        margin-bottom: 3px;
+        margin-left: 35px;
+        cursor: pointer;
+      }
+      #things-filter-mobile[_ngcontent-c5] .thing-content.empty[_ngcontent-c5] span[_ngcontent-c5] {
+        color: #a9a9a9;
+      }
+      #things-filter-mobile[_ngcontent-c5] .things-search[_ngcontent-c5] {
+        position: relative;
+        margin: 15px 20px 5px;
+      }
+      #things-filter-mobile[_ngcontent-c5] .things-search[_ngcontent-c5] input[_ngcontent-c5]:focus {
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.12);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.12);
+      }
+      #things-filter-mobile[_ngcontent-c5] .things-search[_ngcontent-c5] input[_ngcontent-c5] {
+        font-size: 18px;
+        color: #767d86;
+        padding: 3px 35px 3px 20px;
+        background-color: #fff;
+        border: 1px solid #9c9fa4;
+        border-radius: 16px;
+        text-align: left;
+        width: 100%;
+      }
+      #things-filter-mobile[_ngcontent-c5] .things-search[_ngcontent-c5] img[_ngcontent-c5] {
+        position: absolute;
+        top: 8px;
+        right: 14px;
+        width: 18px;
+      }
+      #things-filter-mobile.open-things-filter[_ngcontent-c5] .things-filter-container[_ngcontent-c5] {
+        display: block;
+      }
+      #things-filter-mobile[_ngcontent-c5] .things-filter-button[_ngcontent-c5] .thing-pop-up[_ngcontent-c5] {
+        position: absolute;
+        top: 100%;
+        left: -7px;
+        z-index: 999;
+        padding-top: 3px;
+        display: none;
+        text-align: left;
+      }
+      #things-filter-mobile[_ngcontent-c5]
+        .things-filter-button.exist[_ngcontent-c5]:hover
+        .thing-pop-up[_ngcontent-c5],
+      #things-filter-mobile[_ngcontent-c5] .things-filter-button[_ngcontent-c5]:hover .thing-pop-up[_ngcontent-c5] {
+        display: block;
+      }
+      #things-filter-mobile[_ngcontent-c5]
+        .things-filter-button[_ngcontent-c5]
+        .thing-pop-up[_ngcontent-c5]
+        span[_ngcontent-c5] {
+        width: 50px;
+        height: 10px;
+        position: relative;
+        overflow: hidden;
+        display: block;
+      }
+      #things-filter-mobile[_ngcontent-c5]
+        .things-filter-button[_ngcontent-c5]
+        .thing-pop-up[_ngcontent-c5]
+        span[_ngcontent-c5]:after {
+        content: '';
+        position: absolute;
+        width: 13px;
+        height: 13px;
+        background: #fff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 5px;
+        left: 0;
+        right: 0;
+        -webkit-box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+        box-shadow: -1px -1px 10px -2px rgba(0, 0, 0, 0.5);
+        margin: auto;
+      }
+      #things-filter-mobile[_ngcontent-c5] .things-filter-button[_ngcontent-c5] .thing-pop-up-content[_ngcontent-c5] {
+        width: 450px;
+        background-color: #fff;
+        border-radius: 4px;
+        padding: 20px 15px;
+        -webkit-box-shadow: 0 2px 12.04px 1.96px rgba(0, 0, 0, 0.28);
+        box-shadow: 0 2px 12.04px 1.96px rgba(0, 0, 0, 0.28);
+      }
+      #things-filter-mobile[_ngcontent-c5]
+        .things-filter-button[_ngcontent-c5]
+        .thing-pop-up-content[_ngcontent-c5]
+        p[_ngcontent-c5] {
+        font-family: Font Light, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #5f6a74;
+        margin-bottom: 0;
+      }
+      #things-filter-mobile[_ngcontent-c5]
+        #countries-filter[_ngcontent-c5]
+        .countries-search[_ngcontent-c5]
+        input[_ngcontent-c5]:focus {
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.12);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.12);
+      }
+      #things-filter-mobile[_ngcontent-c5]
+        .things-filter-button[_ngcontent-c5]
+        .thing-pop-up-content[_ngcontent-c5]
+        p[_ngcontent-c5]
+        a[_ngcontent-c5] {
+        color: #0567bf;
+        font-family: Font Regular, sans-serif;
+      }
+      @media (min-width: 1024px) {
+        #things-filter-mobile[_ngcontent-c5]
+          .things-filter-button[_ngcontent-c5]
+          .things-filter-button-content[_ngcontent-c5] {
+          padding: 8px 35px 9px 14px;
+          font-size: 28px;
+          line-height: 20px;
+        }
+      }
+      @media (max-width: 701px) {
+        #things-filter-mobile[_ngcontent-c5]
+          .things-filter-button[_ngcontent-c5]
+          .things-filter-button-content[_ngcontent-c5] {
+        }
+      }
+      @media (max-width: 700px) {
+        #things-filter-mobile[_ngcontent-c5]
+          .things-filter-button[_ngcontent-c5]
+          .things-filter-button-content[_ngcontent-c5] {
+          max-width: 100%;
+        }
+        #things-filter-mobile[_ngcontent-c5] {
+          display: inline-block;
+          position: relative;
+          vertical-align: bottom;
+          width: 100%;
+        }
+        #things-filter-mobile[_ngcontent-c5] .close-button[_ngcontent-c5] {
+          position: absolute;
+          top: 18px;
+          right: 8px;
+        }
+        #things-filter-mobile[_ngcontent-c5] .tabs-header-container[_ngcontent-c5] span[_ngcontent-c5] {
+          font-size: 24px;
+          padding: 10px 14px;
+        }
+        #things-filter-mobile[_ngcontent-c5]
+          .thing-filter-header[_ngcontent-c5]
+          .thing-filter-header-content[_ngcontent-c5] {
+          padding: 18px 35px 14px 8px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+        #things-filter-mobile[_ngcontent-c5] .things-filter-button[_ngcontent-c5] {
+          position: relative;
+          width: 100%;
+        }
+        #things-filter-mobile[_ngcontent-c5]
+          .things-filter-button[_ngcontent-c5]
+          .things-filter-button-content[_ngcontent-c5] {
+          text-align: left;
+          padding: 7px 29px 6px 12px;
+        }
+        #things-filter-mobile[_ngcontent-c5]
+          .things-filter-button[_ngcontent-c5]
+          .things-filter-button-content[_ngcontent-c5]
+          img[_ngcontent-c5] {
+          width: 23px;
+          float: left;
+          margin: -3px 9px 0 0;
+          position: static;
+        }
+        #things-filter-mobile.open-things-filter[_ngcontent-c5]
+          .things-filter-button[_ngcontent-c5]
+          .things-filter-button-content[_ngcontent-c5]
+          span.arrow[_ngcontent-c5],
+        #things-filter-mobile[_ngcontent-c5]
+          .things-filter-button[_ngcontent-c5]
+          .things-filter-button-content[_ngcontent-c5]
+          span.arrow[_ngcontent-c5] {
+          display: none;
+        }
+        #things-filter-mobile[_ngcontent-c5] .tabs-content-container[_ngcontent-c5] {
+          height: calc(100% - 160px);
+        }
+        .tabs-content-container-two-rows[_ngcontent-c5] {
+          height: calc(100% - 209px) !important;
+        }
+        #things-filter-mobile[_ngcontent-c5] .thing-content[_ngcontent-c5] {
+          padding: 0 18px 4px 12px;
+        }
+        #things-filter-mobile[_ngcontent-c5] .thing-content[_ngcontent-c5] .thing-apply-icon[_ngcontent-c5] {
+          position: absolute;
+          top: calc(50% - 10px);
+          right: 8px;
+          width: 20px;
+          height: 20px;
+        }
+        #things-filter-mobile[_ngcontent-c5] .things-search[_ngcontent-c5] {
+          position: relative;
+          margin: 15px 8px 5px;
+        }
+      }
+      @media (max-width: 568px) {
+        #things-filter-mobile[_ngcontent-c5] .tabs-header-container[_ngcontent-c5] span[_ngcontent-c5] {
+          color: #767d86;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 30px;
+          display: inline-block;
+          padding: 10px 10px;
+          position: relative;
+        }
+        #things-filter-mobile[_ngcontent-c5] .tabs-header-container[_ngcontent-c5] {
+          border-bottom: 1px solid #e4e6e7;
+          padding: 0 10px;
+        }
+      }
+    </style>
+    <style>
+      #countries-filter-mobile[_ngcontent-c6] {
+        display: inline-block;
+        position: relative;
+        vertical-align: bottom;
+        margin-bottom: 5px;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .countries-filter-button[_ngcontent-c6] {
+        background-color: #fff;
+        border: 1px solid #e4e6e7;
+        border-radius: 6px;
+        padding: 7px 30px 6px 11px;
+        position: relative;
+        cursor: pointer;
+        color: #374551;
+        font-size: 24px;
+        line-height: 20px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      #countries-filter-mobile.open-countries-filter[_ngcontent-c6] .countries-filter-button[_ngcontent-c6] {
+        -webkit-box-shadow: 0 0 10px rgba(46, 67, 80, 0.1);
+        box-shadow: 0 0 10px rgba(46, 67, 80, 0.1);
+      }
+      #countries-filter-mobile[_ngcontent-c6] .countries-filter-button[_ngcontent-c6] span.arrow[_ngcontent-c6] {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid #374551;
+        position: absolute;
+        top: 18px;
+        right: 11px;
+      }
+      #countries-filter-mobile.open-countries-filter[_ngcontent-c6]
+        .countries-filter-button[_ngcontent-c6]
+        span.arrow[_ngcontent-c6] {
+        border-bottom: 7px solid #374551;
+        border-top: 0 solid transparent;
+        position: absolute;
+        top: 18px;
+        right: 11px;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .countries-filter-container[_ngcontent-c6] {
+        display: none;
+        overflow: hidden;
+      }
+      #countries-filter-mobile.open-countries-filter[_ngcontent-c6] .countries-filter-container[_ngcontent-c6] {
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        z-index: 667;
+        height: 100%;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .regions-container[_ngcontent-c6] {
+        display: inline-block;
+        padding: 0 20px;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .underline-k[_ngcontent-c6] {
+        width: 100%;
+        border-bottom: 1px solid #e4e6e7;
+        -webkit-transition: max-height 0.8s ease-in;
+        transition: max-height 0.8s ease-in;
+        overflow: hidden;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .regions-container[_ngcontent-c6] .title[_ngcontent-c6] {
+        height: 38px;
+        border-bottom: 0;
+        background-color: #fff;
+        color: #384651;
+        font-size: 24px;
+        line-height: 20px;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .title-container[_ngcontent-c6] {
+        height: 55px;
+        border-bottom: 1px solid #c6c7c9;
+        background-color: #f6f7f8;
+        color: #374551;
+        padding: 19px 20px 18px;
+        margin-bottom: 16px;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .title-container[_ngcontent-c6] .title[_ngcontent-c6] {
+        font-size: 24px;
+        line-height: 26px;
+        display: inline-block;
+        width: 90%;
+        overflow: hidden;
+        white-space: nowrap;
+        margin-top: -4px;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .all-filter[_ngcontent-c6] {
+        color: #374551;
+        font-size: 24px;
+        line-height: 20px;
+        margin: 0 20px 0 40px;
+        cursor: pointer;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .countries-search[_ngcontent-c6] {
+        width: 100%;
+        position: relative;
+        margin-bottom: 19px;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .countries-search[_ngcontent-c6] input[_ngcontent-c6] {
+        font-size: 18px;
+        color: #374551;
+        padding: 0 30px 0 20px;
+        background-color: #fff;
+        border: 1px solid #9c9fa4;
+        border-radius: 16px;
+        text-align: left;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .countries-search[_ngcontent-c6] input[_ngcontent-c6]:focus {
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.12);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.12);
+      }
+      #countries-filter-mobile[_ngcontent-c6] .countries-search[_ngcontent-c6] img[_ngcontent-c6] {
+        position: absolute;
+        right: 14px;
+        bottom: 7px;
+        font-size: 18px;
+        color: #767d86;
+        width: 18px;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .pointer-search-container[_ngcontent-c6] {
+        padding: 0 20px;
+        width: 100%;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .pointer-container[_ngcontent-c6] {
+        cursor: pointer;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .pointer-container[_ngcontent-c6] div[_ngcontent-c6] {
+        width: 20px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+      }
+      #countries-filter-mobile[_ngcontent-c6]
+        .button-container[_ngcontent-c6]
+        .pointer-container[_ngcontent-c6]
+        img[_ngcontent-c6] {
+        width: 19px !important;
+        vertical-align: text-top;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .pointer-container[_ngcontent-c6] .white-background[_ngcontent-c6] {
+        background: #fff;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .pointer-container[_ngcontent-c6] .check[_ngcontent-c6] {
+        width: 22px;
+        position: absolute;
+        top: 3px;
+        left: 2px;
+        opacity: 0;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .pointer-container[_ngcontent-c6] .active[_ngcontent-c6] {
+        opacity: 1;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .pointer-container[_ngcontent-c6] span[_ngcontent-c6] {
+        color: #374551;
+        font-size: 24px;
+        line-height: 10px;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .pointer-container[_ngcontent-c6] .normal[_ngcontent-c6] {
+        display: inline-block;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .pointer-container[_ngcontent-c6] .shorten[_ngcontent-c6] {
+        display: none;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .country-content[_ngcontent-c6] {
+        padding: 10px 20px;
+        position: relative;
+        border-bottom: 1px solid #e4e6e7;
+        width: 100%;
+        cursor: pointer;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .country-content[_ngcontent-c6] .name[_ngcontent-c6] {
+        margin-left: 10px;
+        color: #384651;
+        font-size: 22px;
+        line-height: 21px;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .countries-container[_ngcontent-c6] {
+        height: calc(100% - 220px);
+        overflow-y: auto;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .countries-container.close-regions-section[_ngcontent-c6] {
+        height: calc(100% - 181px);
+      }
+      #countries-filter-mobile[_ngcontent-c6]
+        .regions-container[_ngcontent-c6]
+        .countries-container[_ngcontent-c6]
+        [_ngcontent-c6]:hover {
+        background-color: #f4f5f5;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .regions-container[_ngcontent-c6] span.name[_ngcontent-c6] {
+        color: #384651;
+        font-size: 20px;
+        line-height: 17px;
+        margin-top: 5px;
+        width: calc(100% - 20px);
+        float: right;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .country-content.empty[_ngcontent-c6] {
+        cursor: default;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .country-content.empty[_ngcontent-c6] span[_ngcontent-c6] {
+        color: #d5dbdf;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .regions-container[_ngcontent-c6] .empty[_ngcontent-c6] {
+        cursor: default;
+        color: #d5dbdf;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .button-container[_ngcontent-c6] {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 56px;
+        float: none;
+        clear: both;
+        text-align: center;
+        -webkit-box-shadow: 0 -2px 3.9px 0.1px rgba(0, 0, 0, 0.14);
+        box-shadow: 0 -2px 3.9px 0.1px rgba(0, 0, 0, 0.14);
+        background-color: #f6f7f8;
+        color: #767d86;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .button-container[_ngcontent-c6] .decreaseFontSize[_ngcontent-c6] {
+        font-size: 18px;
+        padding: 3px 5px !important;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .button-container[_ngcontent-c6] .decreaseFontSize.okay[_ngcontent-c6] {
+        padding: 1px 5px !important;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .button-container[_ngcontent-c6] button[_ngcontent-c6] {
+        color: #2e4350;
+        font-size: 24px;
+        line-height: 20px;
+        border: 0;
+        background: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        padding: 5px 40px;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .button-container[_ngcontent-c6] button[_ngcontent-c6]:focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .button-container[_ngcontent-c6] img[_ngcontent-c6] {
+        width: 24px;
+        margin: 10px 9px 15px 0;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .country-content[_ngcontent-c6] .selected[_ngcontent-c6],
+      #countries-filter-mobile[_ngcontent-c6] .title[_ngcontent-c6] .selected[_ngcontent-c6] {
+        width: 15px;
+        height: 11px;
+        float: left;
+        margin: 5px 1px;
+        display: block;
+        position: absolute;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .regions-container[_ngcontent-c6] .selected[_ngcontent-c6] {
+        width: 15px;
+        height: 11px;
+        float: left;
+        margin: 3px 1px;
+        display: block;
+        position: absolute;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .regions-container[_ngcontent-c6] .not-selected[_ngcontent-c6] {
+        width: 13px;
+        margin-top: -2px;
+        float: left;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .title[_ngcontent-c6] .regions-names[_ngcontent-c6] {
+        margin-left: 4px;
+      }
+      #countries-filter-mobile[_ngcontent-c6]
+        .country-content[_ngcontent-c6]
+        .selected[_ngcontent-c6]
+        img[_ngcontent-c6],
+      #countries-filter-mobile[_ngcontent-c6] .title[_ngcontent-c6] .selected[_ngcontent-c6] img[_ngcontent-c6] {
+        width: 100%;
+        display: none;
+      }
+      #countries-filter-mobile[_ngcontent-c6]
+        .country-content.active[_ngcontent-c6]
+        .selected[_ngcontent-c6]
+        img[_ngcontent-c6],
+      #countries-filter-mobile[_ngcontent-c6] .title.active[_ngcontent-c6] .selected[_ngcontent-c6] img[_ngcontent-c6] {
+        display: block;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .country-content[_ngcontent-c6] .not-selected[_ngcontent-c6],
+      #countries-filter-mobile[_ngcontent-c6] .title[_ngcontent-c6] .not-selected[_ngcontent-c6] {
+        width: 13px;
+        float: left;
+      }
+      #countries-filter-mobile[_ngcontent-c6]
+        .country-content[_ngcontent-c6]
+        .not-selected[_ngcontent-c6]
+        img[_ngcontent-c6],
+      #countries-filter-mobile[_ngcontent-c6] .title[_ngcontent-c6] .not-selected[_ngcontent-c6] img[_ngcontent-c6] {
+        width: 100%;
+      }
+      #countries-filter-mobile[_ngcontent-c6]
+        .country-content.active[_ngcontent-c6]
+        .not-selected[_ngcontent-c6]
+        img[_ngcontent-c6],
+      #countries-filter-mobile[_ngcontent-c6]
+        .title.active[_ngcontent-c6]
+        .not-selected[_ngcontent-c6]
+        img[_ngcontent-c6] {
+        display: block;
+        margin-top: 5px;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .cancel[_ngcontent-c6] {
+        color: #767d86 !important;
+      }
+      #countries-filter-mobile[_ngcontent-c6] .close-button[_ngcontent-c6] {
+        width: 19px;
+        margin: 0;
+        cursor: pointer;
+      }
+      [_ngcontent-c6]::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      [_ngcontent-c6]::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: #ced1d5;
+      }
+      [_ngcontent-c6]::-webkit-input-placeholder {
+        color: #767d86;
+        font-family: Font Regular, sans-serif;
+      }
+
+      [_ngcontent-c6]:-moz-placeholder,
+      [_ngcontent-c6]::-moz-placeholder {
+        color: #767d86;
+        font-family: Font Regular, sans-serif;
+      }
+
+      [_ngcontent-c6]:-ms-input-placeholder {
+        color: #767d86;
+        font-family: Font Regular, sans-serif;
+      }
+
+      @media (min-width: 1025px) {
+        #countries-filter-mobile[_ngcontent-c6] .countries-filter-button[_ngcontent-c6] {
+          text-align: center;
+          padding: 9px 35px 10px 14px;
+          font-size: 28px;
+          line-height: 20px;
+        }
+      }
+      @media (max-width: 800px) {
+        #countries-filter-mobile[_ngcontent-c6] .countries-filter-button[_ngcontent-c6] {
+          max-width: 210px;
+        }
+      }
+      @media (max-width: 680px) {
+        .countries-filter-button[_ngcontent-c6] {
+          max-width: 140px;
+        }
+      }
+      @media (max-width: 1024px) {
+        #countries-filter-mobile[_ngcontent-c6] {
+          width: 100%;
+          margin: 6px 0;
+        }
+        .countries-filter-button[_ngcontent-c6] {
+          min-width: 100%;
+        }
+        .countries-filter-button[_ngcontent-c6] span.arrow[_ngcontent-c6],
+        .open-countries-filter[_ngcontent-c6] .countries-filter-button[_ngcontent-c6] span.arrow[_ngcontent-c6] {
+          display: none;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .countries-search[_ngcontent-c6] input[_ngcontent-c6] {
+          padding: 0 30px;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .regions-container[_ngcontent-c6]:nth-child(2n),
+        #countries-filter-mobile[_ngcontent-c6] .regions-container[_ngcontent-c6]:nth-child(odd) {
+          width: 50%;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .pointer-container[_ngcontent-c6] {
+          display: inline-block;
+          padding: 0;
+          float: left;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .pointer-container[_ngcontent-c6] div[_ngcontent-c6] {
+          margin: 0;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .pointer-container[_ngcontent-c6] .normal[_ngcontent-c6] {
+          display: none;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .pointer-container[_ngcontent-c6] .shorten[_ngcontent-c6] {
+          display: inline-block;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .button-container[_ngcontent-c6] button[_ngcontent-c6] {
+          padding: 2px 10px !important;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .button-container[_ngcontent-c6] .cancel[_ngcontent-c6] {
+          margin-top: 15px;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .button-container[_ngcontent-c6] .okay[_ngcontent-c6] {
+          margin-top: -1px;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .button-container[_ngcontent-c6] button[_ngcontent-c6]:last-child {
+          float: right;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .button-container[_ngcontent-c6] img[_ngcontent-c6] {
+          width: 19px;
+          margin: 15px 8px 20px 0;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .button-container[_ngcontent-c6] .ok-img[_ngcontent-c6] {
+          width: 24px;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .pointer-container[_ngcontent-c6] .check[_ngcontent-c6] {
+          width: 19px;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .pointer-search-container[_ngcontent-c6],
+        #countries-filter-mobile[_ngcontent-c6] .regions-container[_ngcontent-c6] {
+          padding: 0 6px;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .countries-container[_ngcontent-c6] {
+          height: calc(100% - 260px);
+        }
+        #countries-filter-mobile[_ngcontent-c6] .countries-container.close-regions-section[_ngcontent-c6] {
+          height: calc(100% - 183px);
+        }
+        #countries-filter-mobile[_ngcontent-c6] .country-content[_ngcontent-c6] {
+          padding: 10px 6px;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .title-container[_ngcontent-c6] {
+          padding: 18px 8px;
+        }
+        #countries-filter-mobile[_ngcontent-c6] .button-container[_ngcontent-c6] button[_ngcontent-c6] {
+          padding: 5px 40px 0 40px;
+        }
+      }
+    </style>
+    <style>
+      #countries-filter[_ngcontent-c6] {
+        display: inline-block;
+        position: relative;
+        vertical-align: bottom;
+      }
+      #countries-filter[_ngcontent-c6] .countries-filter-button[_ngcontent-c6] {
+        background-color: #fff;
+        border: 1px solid #e4e6e7;
+        border-radius: 6px;
+        min-width: 150px;
+        overflow: hidden;
+        text-align: center;
+        padding: 9px 35px 10px 14px;
+        position: relative;
+        cursor: pointer;
+        color: #374551;
+        font-size: 28px;
+        line-height: 20px;
+      }
+      #countries-filter.open-countries-filter[_ngcontent-c6] .countries-filter-button[_ngcontent-c6] {
+        -webkit-box-shadow: 0 0 10px rgba(46, 67, 80, 0.1);
+        box-shadow: 0 0 10px rgba(46, 67, 80, 0.1);
+      }
+      #countries-filter[_ngcontent-c6] .countries-filter-button[_ngcontent-c6] span.arrow[_ngcontent-c6] {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 7px solid #374551;
+        position: absolute;
+        top: calc(50% - 3.5px);
+        right: 11px;
+      }
+      #countries-filter.open-countries-filter[_ngcontent-c6]
+        .countries-filter-button[_ngcontent-c6]
+        span.arrow[_ngcontent-c6] {
+        border-bottom: 7px solid #374551;
+        border-top: 0 solid transparent;
+        position: absolute;
+        top: calc(50% - 3.5px) !important;
+        right: 11px;
+      }
+      #countries-filter[_ngcontent-c6] .countries-filter-container[_ngcontent-c6] {
+        background-color: #fff;
+        border: 1px solid #e4e6e7;
+        -webkit-box-shadow: 0 0 10px rgba(46, 67, 80, 0.1);
+        box-shadow: 0 0 10px rgba(46, 67, 80, 0.1);
+        position: absolute;
+        top: 100%;
+        margin-top: 5px;
+        width: 787px;
+        height: 548px;
+        z-index: 99;
+        display: none;
+      }
+      #countries-filter.open-countries-filter[_ngcontent-c6]
+        .countries-filter-container.full-screen-filter[_ngcontent-c6] {
+        overflow: hidden;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0;
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+        display: block;
+        z-index: 500;
+        height: 100vh;
+      }
+      #countries-filter.open-countries-filter[_ngcontent-c6] .countries-filter-container[_ngcontent-c6] {
+        display: block;
+      }
+      #countries-filter[_ngcontent-c6] .regions-container[_ngcontent-c6] {
+        border: 1px solid #e4e6e7;
+        width: 25%;
+        padding: 7px 5px 5px 0;
+        float: left;
+        height: calc(100% - 130px);
+      }
+      #countries-filter[_ngcontent-c6] .regions-container[_ngcontent-c6] .title[_ngcontent-c6] {
+        color: #384651;
+        font-size: 24px;
+        line-height: 20px;
+        margin: 0;
+        padding: 9px 11px 13px 11px;
+        cursor: pointer;
+      }
+      #countries-filter[_ngcontent-c6] .title[_ngcontent-c6] {
+        color: #767d86;
+        font-size: 24px;
+        line-height: 20px;
+        margin: 20px 11px 15px;
+      }
+      #countries-filter[_ngcontent-c6] .all-filter[_ngcontent-c6] {
+        color: #374551;
+        font-size: 24px;
+        line-height: 20px;
+        margin: 0 20px 0 40px;
+        cursor: pointer;
+      }
+      #countries-filter[_ngcontent-c6] .countries-search[_ngcontent-c6] {
+        width: 300px;
+        position: relative;
+        margin-bottom: 19px;
+        display: inline-block;
+      }
+      #countries-filter[_ngcontent-c6] .countries-search[_ngcontent-c6] input[_ngcontent-c6] {
+        font-size: 18px;
+        color: #374551;
+        padding: 0 30px 0 20px;
+        background-color: #fff;
+        border: 1px solid #9c9fa4;
+        border-radius: 16px;
+        text-align: left;
+      }
+      #countries-filter[_ngcontent-c6] .countries-search[_ngcontent-c6] input[_ngcontent-c6]:focus {
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.12);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.12);
+      }
+      #countries-filter[_ngcontent-c6] .countries-search[_ngcontent-c6] img[_ngcontent-c6] {
+        position: absolute;
+        top: 8px;
+        right: 14px;
+        bottom: 7px;
+        font-size: 18px;
+        color: #767d86;
+        width: 18px;
+      }
+      #countries-filter[_ngcontent-c6] .pointer-search-container[_ngcontent-c6] {
+        padding: 0 11px;
+        width: 100%;
+      }
+      #countries-filter[_ngcontent-c6] .pointer-container[_ngcontent-c6] {
+        display: inline-block;
+        padding-right: 38px;
+        cursor: pointer;
+      }
+      #countries-filter[_ngcontent-c6] .pointer-container[_ngcontent-c6] div[_ngcontent-c6] {
+        width: 20px;
+        position: relative;
+        display: inline-block;
+        vertical-align: super;
+        margin-right: 8px;
+      }
+      #countries-filter[_ngcontent-c6] .pointer-container[_ngcontent-c6] img[_ngcontent-c6] {
+        width: 100%;
+      }
+      #countries-filter[_ngcontent-c6] .pointer-container[_ngcontent-c6] .check[_ngcontent-c6] {
+        width: 22px;
+        position: absolute;
+        top: 0;
+        left: 2px;
+        opacity: 0;
+      }
+      #countries-filter[_ngcontent-c6] .pointer-container[_ngcontent-c6] .active[_ngcontent-c6] {
+        opacity: 1;
+      }
+      #countries-filter[_ngcontent-c6] .pointer-container[_ngcontent-c6] span[_ngcontent-c6] {
+        color: #384651;
+        font-size: 24px;
+        line-height: 10px;
+      }
+      #countries-filter[_ngcontent-c6] .regions-container[_ngcontent-c6] .country-content[_ngcontent-c6] {
+        overflow: hidden;
+        position: relative;
+        padding: 6px 0 12px 11px;
+        margin-right: 7px;
+        cursor: pointer;
+      }
+      #countries-filter[_ngcontent-c6] .regions-container[_ngcontent-c6] .countries-container[_ngcontent-c6] {
+        height: calc(100% - 50px);
+        overflow-y: auto;
+        margin-top: 5px;
+      }
+      #countries-filter[_ngcontent-c6]
+        .regions-container[_ngcontent-c6]
+        .countries-container[_ngcontent-c6]
+        [_ngcontent-c6]:hover {
+        background-color: #f4f5f5;
+      }
+      #countries-filter[_ngcontent-c6] .regions-container[_ngcontent-c6] span.name[_ngcontent-c6] {
+        color: #384651;
+        font-size: 20px;
+        line-height: 17px;
+        margin-top: 5px;
+        display: block;
+        width: calc(100% - 20px);
+        float: right;
+      }
+      #countries-filter[_ngcontent-c6] .regions-container[_ngcontent-c6] .country-content.empty[_ngcontent-c6] {
+        cursor: default;
+      }
+      #countries-filter[_ngcontent-c6]
+        .regions-container[_ngcontent-c6]
+        .country-content.empty[_ngcontent-c6]
+        span[_ngcontent-c6] {
+        color: #d5dbdf;
+      }
+      #countries-filter[_ngcontent-c6] .regions-container[_ngcontent-c6] .empty[_ngcontent-c6] {
+        cursor: default;
+        color: #d5dbdf;
+      }
+      #countries-filter[_ngcontent-c6] .button-container[_ngcontent-c6] {
+        width: 100%;
+        float: none;
+        clear: both;
+        text-align: right;
+        padding-top: 2px;
+      }
+      #countries-filter[_ngcontent-c6] .button-container[_ngcontent-c6] button[_ngcontent-c6] {
+        color: #2e4350;
+        font-size: 24px;
+        line-height: 20px;
+        border: 0;
+        background: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        padding-right: 27px;
+        display: inline-block;
+      }
+      #countries-filter[_ngcontent-c6] .button-container[_ngcontent-c6] button[_ngcontent-c6]:focus {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+      }
+      #countries-filter[_ngcontent-c6] .button-container[_ngcontent-c6] img[_ngcontent-c6] {
+        margin: 15px 9px 15px 0;
+      }
+      #countries-filter[_ngcontent-c6] .button-container[_ngcontent-c6] .ok-img[_ngcontent-c6] {
+        width: 24px;
+        padding-bottom: 7px;
+      }
+      #countries-filter[_ngcontent-c6] .country-content[_ngcontent-c6] .selected[_ngcontent-c6],
+      #countries-filter[_ngcontent-c6] .title[_ngcontent-c6] .selected[_ngcontent-c6] {
+        width: 15px;
+        height: 11px;
+        float: left;
+        margin: 8px 1px;
+        display: block;
+        position: absolute;
+      }
+      #countries-filter[_ngcontent-c6] .title[_ngcontent-c6] .regions-names[_ngcontent-c6] {
+        margin-left: 6px;
+      }
+      #countries-filter[_ngcontent-c6] .regions-container[_ngcontent-c6] h3[_ngcontent-c6]:hover {
+        background-color: #f4f5f5;
+      }
+      #countries-filter[_ngcontent-c6] .country-content[_ngcontent-c6] .selected[_ngcontent-c6] img[_ngcontent-c6],
+      #countries-filter[_ngcontent-c6] .title[_ngcontent-c6] .selected[_ngcontent-c6] img[_ngcontent-c6] {
+        width: 100%;
+        display: none;
+      }
+      #countries-filter[_ngcontent-c6]
+        .country-content.active[_ngcontent-c6]
+        .selected[_ngcontent-c6]
+        img[_ngcontent-c6],
+      #countries-filter[_ngcontent-c6] .title.active[_ngcontent-c6] .selected[_ngcontent-c6] img[_ngcontent-c6] {
+        display: block;
+      }
+      #countries-filter[_ngcontent-c6] .country-content[_ngcontent-c6] .not-selected[_ngcontent-c6],
+      #countries-filter[_ngcontent-c6] .title[_ngcontent-c6] .not-selected[_ngcontent-c6] {
+        width: 13px;
+        float: left;
+      }
+      #countries-filter[_ngcontent-c6] .title[_ngcontent-c6] .not-selected[_ngcontent-c6] img[_ngcontent-c6] {
+        width: 100%;
+        margin-top: 0;
+      }
+      #countries-filter[_ngcontent-c6] .country-content[_ngcontent-c6] .not-selected[_ngcontent-c6] img[_ngcontent-c6] {
+        width: 100%;
+        margin-top: 5px;
+      }
+      #countries-filter[_ngcontent-c6]
+        .country-content.active[_ngcontent-c6]
+        .not-selected[_ngcontent-c6]
+        img[_ngcontent-c6],
+      #countries-filter[_ngcontent-c6] .title.active[_ngcontent-c6] .not-selected[_ngcontent-c6] img[_ngcontent-c6] {
+        display: block;
+        margin-top: 8px;
+      }
+      .cancel[_ngcontent-c6] {
+        color: #767d86 !important;
+      }
+      .close-button[_ngcontent-c6] {
+        width: 15px;
+        margin: -6px 3px 0 0;
+        cursor: pointer;
+      }
+      [_ngcontent-c6]::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      [_ngcontent-c6]::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-color: #ced1d5;
+      }
+      [_ngcontent-c6]::-webkit-input-placeholder {
+        color: #767d86;
+        font-family: Font Regular, sans-serif;
+      }
+
+      [_ngcontent-c6]:-moz-placeholder,
+      [_ngcontent-c6]::-moz-placeholder {
+        color: #767d86;
+        font-family: Font Regular, sans-serif;
+      }
+
+      [_ngcontent-c6]:-ms-input-placeholder {
+        color: #767d86;
+        font-family: Font Regular, sans-serif;
+      }
+
+      @media (max-width: 1023px) {
+        #countries-filter[_ngcontent-c6] .countries-filter-button[_ngcontent-c6] {
+          font-size: 24px;
+          padding: 6px 30px 6px 11px;
+        }
+      }
+      @media (max-height: 600px), (max-width: 1400px) {
+        .close-button[_ngcontent-c6] {
+          margin-right: 3px;
+          margin-top: 0;
+        }
+        .form-control[_ngcontent-c6] {
+          height: 30px;
+        }
+        #countries-filter[_ngcontent-c6] .countries-filter-container[_ngcontent-c6] {
+          margin-top: 2px;
+          width: 700px;
+          height: 425px;
+        }
+        #countries-filter[_ngcontent-c6] .regions-container[_ngcontent-c6] {
+          height: calc(100% - 90px);
+          padding: 5px 5px 5px 0;
+        }
+        #countries-filter[_ngcontent-c6] .regions-container[_ngcontent-c6] .countries-container[_ngcontent-c6] {
+          height: calc(100% - 30px);
+        }
+        #countries-filter[_ngcontent-c6] .regions-container[_ngcontent-c6] .title[_ngcontent-c6] {
+          font-size: 20px;
+          line-height: 16px;
+          margin: 0;
+          padding: 0 0 10px 11px;
+          cursor: pointer;
+        }
+        #countries-filter[_ngcontent-c6] .title[_ngcontent-c6] {
+          font-size: 20px;
+          line-height: 16px;
+          margin: 10px 10px 5px 10px;
+        }
+        #countries-filter[_ngcontent-c6] .all-filter[_ngcontent-c6] {
+          color: #374551;
+          font-size: 20px;
+          line-height: 16px;
+          margin: 0 20px 0 40px;
+        }
+        #countries-filter[_ngcontent-c6] .pointer-container[_ngcontent-c6] span[_ngcontent-c6] {
+          font-size: 20px;
+          line-height: 6px;
+        }
+        #countries-filter[_ngcontent-c6] .pointer-container[_ngcontent-c6] {
+          margin-top: 4px;
+        }
+        #countries-filter[_ngcontent-c6] .pointer-container[_ngcontent-c6] div[_ngcontent-c6] {
+          width: 16px;
+          margin-right: 8px;
+        }
+        #countries-filter[_ngcontent-c6] .pointer-container[_ngcontent-c6] .check[_ngcontent-c6] {
+          width: 18px;
+          top: 3px;
+        }
+        #countries-filter[_ngcontent-c6] .countries-search[_ngcontent-c6] {
+          margin-bottom: 5px;
+        }
+        #countries-filter[_ngcontent-c6] .countries-search[_ngcontent-c6] img[_ngcontent-c6] {
+          top: 7px;
+          right: 14px;
+          bottom: 7px;
+          font-size: 18px;
+          width: 18px;
+        }
+        #countries-filter[_ngcontent-c6] .regions-container[_ngcontent-c6] span.name[_ngcontent-c6] {
+          font-size: 16px;
+          line-height: 14px;
+          margin-top: 8px;
+          width: calc(100% - 20px);
+        }
+        #countries-filter[_ngcontent-c6] .regions-container[_ngcontent-c6] .country-content[_ngcontent-c6] {
+          padding: 5px 0 5px 11px;
+          margin-right: 7px;
+        }
+        #countries-filter[_ngcontent-c6] .button-container[_ngcontent-c6] {
+          padding-top: 5px;
+        }
+        #countries-filter[_ngcontent-c6] .button-container[_ngcontent-c6] button[_ngcontent-c6] {
+          font-size: 20px;
+          line-height: 16px;
+          padding-right: 20px;
+        }
+        #countries-filter[_ngcontent-c6] .button-container[_ngcontent-c6] img[_ngcontent-c6] {
+          margin: 0 9px 0 0;
+          padding-top: 2px;
+        }
+        #countries-filter[_ngcontent-c6] .button-container[_ngcontent-c6] .ok-img[_ngcontent-c6] {
+          padding-bottom: 7px;
+        }
+      }
+    </style>
+    <style>
+      quick-guide[_nghost-c1] {
+        display: block;
+        position: relative;
+      }
+      .quick-guide-container[_ngcontent-c1] {
+        position: relative;
+        background: #d5eaf6 url(./DollarStreet_files/clouds.jpg) 50% no-repeat;
+        border-bottom: 1px solid #c6c7c9;
+        padding: 50px 0 0;
+        background-size: auto 100%;
+        text-align: center;
+      }
+      .quick-guide-container[_ngcontent-c1] .quick-guide-content[_ngcontent-c1] {
+        width: 75%;
+        margin: 0 auto;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .quick-guide-container[_ngcontent-c1] .guide-logo-container[_ngcontent-c1] {
+        position: absolute;
+        width: 290px;
+        bottom: 0;
+      }
+      .quick-guide-container[_ngcontent-c1] .guide-logo-container[_ngcontent-c1] img[_ngcontent-c1] {
+        width: 100%;
+      }
+      .quick-guide-container[_ngcontent-c1] .quick-guide-description-container[_ngcontent-c1] {
+        width: 74%;
+        float: right;
+        margin-left: 10px;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .quick-guide-container[_ngcontent-c1] h1[_ngcontent-c1] {
+        font-size: 48px;
+        line-height: 48px;
+        margin: -6px 0 0;
+        text-transform: uppercase;
+        font-family: Font Bold, sans-serif;
+      }
+      .quick-guide-container[_ngcontent-c1] .guide-description[_ngcontent-c1] {
+        font-size: 21px;
+        line-height: 29px;
+        margin: 14px 0 13px;
+      }
+      .quick-guide-container[_ngcontent-c1] .guide-description[_ngcontent-c1] p {
+        margin: 0;
+      }
+      .quick-guide-container[_ngcontent-c1] h2[_ngcontent-c1] {
+        font-size: 36px;
+        line-height: 36px;
+        margin: 0;
+      }
+      .quick-guide-container[_ngcontent-c1] h2[_ngcontent-c1] span[_ngcontent-c1] {
+        font-family: Font Regular Italic, sans-serif;
+        background: url(./DollarStreet_files/underline.svg) no-repeat 100% calc(100% - 2px);
+        padding: 0 4px 0 2px;
+        margin: 0 -4px 0 -2px;
+        background-size: 100%;
+      }
+      .quick-guide-container[_ngcontent-c1] .button-container[_ngcontent-c1] {
+        margin-top: 22px;
+      }
+      .quick-guide-container[_ngcontent-c1] button[_ngcontent-c1] {
+        color: #374551;
+        background-color: #fff;
+        border: 1px solid #e4e6e7;
+        border-radius: 8px;
+        font-size: 24px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        outline: none;
+        padding: 4px 35px;
+      }
+      .quick-guide-container[_ngcontent-c1] button.bg-orange[_ngcontent-c1] {
+        background-color: #f8ca45;
+        border: 0;
+        margin-right: 11px;
+      }
+      .quick-guide-container[_ngcontent-c1] > img[_ngcontent-c1] {
+        width: 19px;
+        position: absolute;
+        top: 22px;
+        right: 22px;
+        cursor: pointer;
+      }
+      @media (max-width: 1400px) {
+        .quick-guide-container[_ngcontent-c1] .quick-guide-content[_ngcontent-c1] {
+          width: 81%;
+        }
+        .quick-guide-container[_ngcontent-c1] {
+          padding: 20px 0 0;
+        }
+        .quick-guide-container[_ngcontent-c1] .quick-guide-description-container[_ngcontent-c1] {
+          margin-bottom: 18px;
+        }
+        .quick-guide-container[_ngcontent-c1] .guide-logo-container[_ngcontent-c1] {
+          width: 200px;
+        }
+        .quick-guide-container[_ngcontent-c1] h1[_ngcontent-c1] {
+          font-size: 40px;
+          line-height: 40px;
+          margin: -6px 0 0;
+          text-transform: uppercase;
+          font-family: Font Bold, sans-serif;
+        }
+        .quick-guide-container[_ngcontent-c1] h2[_ngcontent-c1] {
+          font-size: 30px;
+          line-height: 30px;
+        }
+        .quick-guide-container[_ngcontent-c1] button[_ngcontent-c1] {
+          padding: 0 30px;
+        }
+        .quick-guide-container[_ngcontent-c1] .guide-description[_ngcontent-c1] {
+          font-size: 18px;
+          line-height: 24px;
+          margin: 10px 0;
+        }
+      }
+      @media (max-width: 1024px) {
+        .quick-guide-container[_ngcontent-c1] {
+          padding: 5px 0 0;
+        }
+        .quick-guide-container[_ngcontent-c1] .quick-guide-content[_ngcontent-c1] {
+          width: 90%;
+        }
+        .quick-guide-container[_ngcontent-c1] .guide-logo-container[_ngcontent-c1] {
+          width: 160px;
+          left: 5%;
+        }
+        .quick-guide-container[_ngcontent-c1] h1[_ngcontent-c1] {
+          font-size: 36px;
+          line-height: 36px;
+          margin: -6px 0 0;
+          text-transform: uppercase;
+          font-family: Font Bold, sans-serif;
+        }
+        .quick-guide-container[_ngcontent-c1] h2[_ngcontent-c1] {
+          font-size: 28px;
+          line-height: 26px;
+        }
+        .quick-guide-container[_ngcontent-c1] button[_ngcontent-c1] {
+          padding: 0 30px;
+        }
+        .quick-guide-container[_ngcontent-c1] .guide-description[_ngcontent-c1] {
+          font-size: 18px;
+          line-height: 20px;
+          margin: 7px 0;
+        }
+        .quick-guide-container[_ngcontent-c1] .quick-guide-description-container[_ngcontent-c1] {
+          margin-left: 0;
+          margin-bottom: 7px;
+        }
+        .quick-guide-container[_ngcontent-c1] > img[_ngcontent-c1] {
+          right: 10px;
+          top: 10px;
+        }
+        .quick-guide-container[_ngcontent-c1] .button-container[_ngcontent-c1] {
+          margin-top: 15px;
+        }
+      }
+      @media (max-width: 870px) {
+        .quick-guide-container[_ngcontent-c1] .quick-guide-content[_ngcontent-c1] {
+          width: 95%;
+        }
+        .quick-guide-container[_ngcontent-c1] .guide-description[_ngcontent-c1] {
+          font-size: 16px;
+        }
+        .quick-guide-container[_ngcontent-c1] h2[_ngcontent-c1] {
+          font-size: 24px;
+          line-height: 20px;
+        }
+        .quick-guide-container[_ngcontent-c1] button[_ngcontent-c1] {
+          padding: 0 10px;
+          font-size: 20px;
+          padding: 3px 10px;
+        }
+      }
+      @media (max-width: 750px) {
+        .quick-guide-container[_ngcontent-c1] .quick-guide-content[_ngcontent-c1] {
+          width: 100%;
+        }
+        .quick-guide-container[_ngcontent-c1] .guide-logo-container[_ngcontent-c1] {
+          width: 140px;
+          left: 2%;
+        }
+        .quick-guide-container[_ngcontent-c1] .guide-description[_ngcontent-c1] {
+          font-size: 15px;
+          margin: 2px 0;
+        }
+        .quick-guide-container[_ngcontent-c1] h2[_ngcontent-c1] {
+          font-size: 22px;
+          line-height: 18px;
+        }
+      }
+      @media (max-width: 667px) {
+        .quick-guide-container[_ngcontent-c1] .quick-guide-description-container[_ngcontent-c1] {
+          margin-top: 5px;
+        }
+        .quick-guide-container[_ngcontent-c1] .guide-description[_ngcontent-c1] {
+          font-size: 15px;
+          margin: 2px 0;
+        }
+        .quick-guide-container[_ngcontent-c1] h2[_ngcontent-c1] {
+          font-size: 20px;
+          line-height: 16px;
+        }
+        .quick-guide-container[_ngcontent-c1] .guide-logo-container[_ngcontent-c1] {
+          left: 5px;
+        }
+        .quick-guide-container[_ngcontent-c1] .button-container[_ngcontent-c1] {
+          margin-top: 10px;
+        }
+        .quick-guide-container[_ngcontent-c1] button[_ngcontent-c1] {
+          padding: 0 10px;
+          font-size: 20px;
+          padding: 2px 10px;
+        }
+      }
+      @media (max-width: 600px) {
+        .quick-guide-container[_ngcontent-c1] .quick-guide-content[_ngcontent-c1] {
+          width: 100%;
+          margin: 0 auto;
+          overflow: hidden;
+        }
+        .quick-guide-container[_ngcontent-c1] .guide-logo-container[_ngcontent-c1] {
+          display: none;
+        }
+        .quick-guide-container[_ngcontent-c1] {
+          width: 100%;
+          text-align: center;
+        }
+        .quick-guide-container[_ngcontent-c1] .quick-guide-description-container[_ngcontent-c1] {
+          width: 100%;
+          margin: 0;
+          text-align: center;
+        }
+        .quick-guide-container[_ngcontent-c1] > img[_ngcontent-c1] {
+          top: 10px;
+          right: 10px;
+        }
+        .quick-guide-container[_ngcontent-c1] h1[_ngcontent-c1] {
+          font-size: 32px;
+        }
+        .quick-guide-container[_ngcontent-c1] h2[_ngcontent-c1] {
+          font-size: 27px;
+          line-height: 27px;
+          margin-top: 12px;
+        }
+        .quick-guide-container[_ngcontent-c1] .guide-description[_ngcontent-c1] {
+          font-size: 11px;
+          line-height: 18px;
+          padding-top: 3px;
+        }
+        .quick-guide-container[_ngcontent-c1] .button-container[_ngcontent-c1] {
+          margin: 20px 0 25px;
+        }
+        .quick-guide-container[_ngcontent-c1] button[_ngcontent-c1] {
+          font-size: 20px;
+          padding: 4px 10px;
+        }
+      }
+    </style>
+    <style>
+      .street-box[_ngcontent-c12] {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        padding: 0 25px 4px;
+      }
+      .street-box[_ngcontent-c12] svg.chart[_ngcontent-c12] {
+        min-width: 100%;
+        height: 65px;
+        vertical-align: top;
+        text-align: left;
+        position: relative;
+      }
+      .test[_ngcontent-c12] {
+        position: relative;
+        height: 50px;
+        width: 100%;
+        -webkit-transform-origin: 0 0 0 !important;
+        transform-origin: 0 0 0 !important;
+      }
+      .icon-group[_ngcontent-c12] {
+        width: 16px;
+        height: 15px;
+      }
+      svg.icon-backgroung-house[_ngcontent-c12] {
+        width: 28px;
+        height: 25px;
+      }
+      .left-scroll[_ngcontent-c12],
+      .right-scroll[_ngcontent-c12] {
+        cursor: pointer;
+      }
+      @media (max-width: 1023px) {
+        .street-box[_ngcontent-c12] {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    </style>
+    <style>
+      .images-container[_ngcontent-c15] {
+        overflow: hidden;
+        padding: 0 17px 17px;
+      }
+      .image-content[_ngcontent-c15] {
+        position: relative;
+        float: left;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        padding: 5px;
+        cursor: pointer;
+      }
+      .image-content[_ngcontent-c15] .cell[_ngcontent-c15] {
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        position: relative;
+      }
+      .image-content[_ngcontent-c15] .cell-inner[_ngcontent-c15] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-box-shadow: 0.6px 0.8px 2.9px 0.1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0.6px 0.8px 2.9px 0.1px rgba(0, 0, 0, 0.2);
+      }
+      .image-content.pin-mode[_ngcontent-c15]:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        opacity: 0;
+      }
+      .heart-container[_ngcontent-c15] {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+      }
+      .comparison-image[_ngcontent-c15],
+      .heart-container[_ngcontent-c15] {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      .comparison-image[_ngcontent-c15] {
+        position: relative;
+        z-index: 2;
+      }
+      .comparison-image[_ngcontent-c15],
+      .comparison-image[_ngcontent-c15] .symbol-position[_ngcontent-c15] {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .comparison-image[_ngcontent-c15] .symbol-position[_ngcontent-c15] {
+        font-size: 40px;
+        font-weight: 700;
+        width: 50px;
+        height: 50px;
+        background: hsla(0, 0%, 100%, 0.6);
+        border-radius: 50%;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-transition: background-color 0.4s;
+        transition: background-color 0.4s;
+      }
+      .comparison-image[_ngcontent-c15]:hover .symbol-position[_ngcontent-c15] {
+        background: #fff;
+      }
+      .comparison-image[_ngcontent-c15] .symbol[_ngcontent-c15] {
+        width: 50px;
+        height: 50px;
+        color: #fff;
+        -webkit-transition: color 0.4s;
+        transition: color 0.4s;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+      }
+      .comparison-image.pinned[_ngcontent-c15] .symbol-position[_ngcontent-c15] {
+        background: #fff;
+      }
+      .comparison-image.pinned[_ngcontent-c15] .symbol[_ngcontent-c15] {
+        fill: #0f0;
+        color: #0f0;
+      }
+      .symbol[_ngcontent-c15] svg[_ngcontent-c15] {
+        display: block;
+        max-width: 70%;
+        max-height: 70%;
+        fill: #fff;
+        -webkit-transition: all 0.4s;
+        transition: all 0.4s;
+        stroke-linecap: round;
+      }
+      .comparison-image[_ngcontent-c15]:not(.pinned):hover .symbol[_ngcontent-c15] svg[_ngcontent-c15] {
+        fill: rgba(60, 60, 60, 0.3);
+      }
+      .pinned[_ngcontent-c15] svg[_ngcontent-c15] {
+        fill: rgba(45, 196, 50, 0.8);
+      }
+      .flex-container[_ngcontent-c15] {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        position: relative;
+      }
+      .flex-container.column-2[_ngcontent-c15] .image-content[_ngcontent-c15] {
+        width: 50%;
+      }
+      .flex-container.column-3[_ngcontent-c15] .image-content[_ngcontent-c15] {
+        width: 33.33%;
+      }
+      .flex-container.column-4[_ngcontent-c15] .image-content[_ngcontent-c15] {
+        width: 25%;
+      }
+      .flex-container.column-5[_ngcontent-c15] .image-content[_ngcontent-c15] {
+        width: 20%;
+      }
+      .flex-container.column-6[_ngcontent-c15] .image-content[_ngcontent-c15] {
+        width: 16.66%;
+        padding: 2.5px;
+      }
+      .flex-container.column-7[_ngcontent-c15] .image-content[_ngcontent-c15] {
+        width: 14.28%;
+        padding: 2.5px;
+      }
+      .flex-container.column-8[_ngcontent-c15] .image-content[_ngcontent-c15] {
+        width: 12.5%;
+        padding: 2.5px;
+      }
+      .flex-container.column-9[_ngcontent-c15] .image-content[_ngcontent-c15] {
+        width: 11.11%;
+        padding: 1px;
+      }
+      .flex-container.column-10[_ngcontent-c15] .image-content[_ngcontent-c15] {
+        width: 10%;
+        padding: 1px;
+      }
+      .flex-container.column-6[_ngcontent-c15],
+      .flex-container.column-7[_ngcontent-c15],
+      .flex-container.column-8[_ngcontent-c15] {
+        padding: 0 2.5px;
+      }
+      .flex-container.column-9[_ngcontent-c15],
+      .flex-container.column-10[_ngcontent-c15] {
+        padding: 0 4px;
+      }
+      .image-description[_ngcontent-c15] {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 15px 9px 6px;
+        font-size: 20px;
+        background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(hsla(0, 0%, 100%, 0)));
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), hsla(0, 0%, 100%, 0));
+      }
+      .place-image-box-country[_ngcontent-c15],
+      .place-image-box-income[_ngcontent-c15] {
+        color: #fff;
+        display: block;
+        font-weight: 700;
+      }
+      .image-content.no-row[_ngcontent-c15] .place-image-box-country[_ngcontent-c15],
+      .image-content.no-row[_ngcontent-c15] .place-image-box-income[_ngcontent-c15] {
+        float: none !important;
+        padding: 0 !important;
+        display: block;
+      }
+      .xl-text-c[_ngcontent-c15] {
+        text-align: center;
+        font-size: xx-large;
+        margin: 40px 0 50px 0;
+      }
+      .matrix-view-block[_ngcontent-c15] {
+        width: 100%;
+        display: block;
+      }
+      .image-content[_ngcontent-c15] .loader-content[_ngcontent-c15] {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        height: 64px;
+        margin: auto;
+        text-align: center;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+      .image-content[_ngcontent-c15] .isLoad[_ngcontent-c15] {
+        width: 64px;
+        height: 64px;
+        display: inline-block;
+      }
+      @media (min-width: 1023px) {
+        .place-image-box-country[_ngcontent-c15] {
+          font-size: 20px;
+          line-height: 20px;
+        }
+        .place-image-box-income[_ngcontent-c15] {
+          font-size: 20px;
+          line-height: 24px;
+        }
+      }
+      @media (max-width: 1023px) {
+        .place-image-box-country[_ngcontent-c15] {
+          font-size: 18px;
+          line-height: 20px;
+          font-weight: 400;
+        }
+        .place-image-box-income[_ngcontent-c15] {
+          font-size: 18px;
+          line-height: 22px;
+        }
+        .images-container[_ngcontent-c15] {
+          overflow: hidden;
+          padding: 0 5px 10px;
+        }
+      }
+      @media (max-width: 599px) {
+        .images-container[_ngcontent-c15] {
+          overflow: hidden;
+          padding: 0 2.5px 10px;
+        }
+        .flex-container.column-3[_ngcontent-c15] .image-content[_ngcontent-c15] {
+          width: 33.33%;
+        }
+        .image-content[_ngcontent-c15] {
+          padding: 2.5px;
+        }
+        .place-image-box-country[_ngcontent-c15],
+        .place-image-box-income[_ngcontent-c15] {
+          font-size: 14px;
+          line-height: 14px;
+          font-weight: 400;
+        }
+      }
+      @media (min-width: 1400px) {
+        .place-image-box-country[_ngcontent-c15],
+        .place-image-box-income[_ngcontent-c15] {
+          font-size: 28px;
+          line-height: 28px;
+        }
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./Dollar Street_files/latin-script.css" />
+    <link rel="stylesheet" type="text/css" href="./Dollar Street_files/latin-script.css" />
+    <style>
+      .street-pinned-box-container[_ngcontent-c13] {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        padding: 0 22px;
+        height: 64px;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+      .street-pinned-box-container[_ngcontent-c13] svg[_ngcontent-c13] {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      @media (max-width: 1023px) {
+        .street-pinned-box-container[_ngcontent-c13] {
+          padding: 0 10px;
+        }
+      }
+      @media (max-width: 599px) {
+        .street-pinned-box-container[_ngcontent-c13] {
+          padding: 0 5px;
+        }
+      }
+    </style>
+  </head>
+  <body id="scrollBackToTop" class="matrix" data-gr-c-s-loaded="true">
+    <script id="twitter-wjs" src="./Dollar Street_files/widgets.js"></script>
+    <script id="facebook-jssdk" src="./Dollar Street_files/sdk.js"></script>
+    <script async="" src="./Dollar Street_files/analytics.js"></script>
+    <script>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+      ga('create', 'UA-120231406-1', 'auto');
+      ga('create', 'GTM-K3P4WHR', 'auto');
+    </script>
+    <link rel="stylesheet" href="./Dollar Street_files/ball-spin.css" />
+    <link rel="stylesheet" href="./Dollar Street_files/style.css" />
+    <div id="fb-root"></div>
+    <!--TODO: connect intl-->
+    <script src="./Dollar Street_files/polyfill.min.js"></script>
+    <!-- script files will be inserted by html-webpack-plugin -->
+    <script type="text/javascript" src="./Dollar Street_files/inline.d5fb9283e42b8a2c5be9.bundle.js"></script>
+    <script type="text/javascript" src="./Dollar Street_files/polyfills.84188ee9674a6345a01d.bundle.js"></script>
+    <script type="text/javascript" src="./Dollar Street_files/main.c0220f6b657e5afd823e.bundle.js"></script>
+    <div _ngcontent-c11="" class="pin-container">
+      <div _ngcontent-c11="" class="pin-container-inner">
+        <div _ngcontent-c11="" class="embed-preview-container" id="embed-preview-container">
+          <div _ngcontent-c11="" class="embed-preview-content-position">
+            <!---->
+            <div _ngcontent-c11="" class="pin-header">
+              <div _ngcontent-c11="" class="pin-title">
+                <span _ngcontent-c11="" class="title-body">
+                  <!---->
+                  <span _ngcontent-c11="" class="title-icon">
+                    <img _ngcontent-c11="" alt="" class="logo" src="./Dollar Street_files/dollar-street-logo.png" />
+                  </span>
+                </span>
+                <span _ngcontent-c11="" class="title-text">
+                  <span _ngcontent-c11="" class="title-name">Families by income</span>
+                </span>
+              </div>
+
+              <!---->
+              <div _ngcontent-c11="" class="pin-mode-close">
+                <img _ngcontent-c11="" alt="" src="./Dollar Street_files/close-button-embed-black.svg" />
+              </div>
+            </div>
+
+            <div _ngcontent-c11="" class="pin-body-wrap">
+              <div _ngcontent-c11="" class="pin-body">
+                <!---->
+
+                <div _ngcontent-c11="" class="places-container large-images">
+                  <!---->
+
+                  <!---->
+                  <div _ngcontent-c11="" class="pin-place" isimageloaded="">
+                    <div _ngcontent-c11="" class="image-backgroung">
+                      <svg _ngcontent-c11="">
+                        <use _ngcontent-c11="" xlink:href="#camera"></use>
+                      </svg>
+                    </div>
+                    <div _ngcontent-c11="" class="place-image">
+                      <img
+                        _ngcontent-c11=""
+                        alt=""
+                        src="https://static.dollarstreet.org/media/Myanmar 2/image/0d292767-d0c5-49d2-b8f9-6e49b35da643/480x480-0d292767-d0c5-49d2-b8f9-6e49b35da643.jpg"
+                      />
+                    </div>
+
+                    <div _ngcontent-c11="" class="image-description">
+                      <span _ngcontent-c11="" class="place-image-box-income">
+                        $23
+                        <!---->
+                        <span _ngcontent-c11="" class="place-image-time-unit">/month</span>
+                      </span>
+                      <span _ngcontent-c11="" class="place-image-box-country">Myanmar</span>
+                    </div>
+
+                    <!---->
+                  </div>
+                  <div _ngcontent-c11="" class="pin-place" isimageloaded="">
+                    <div _ngcontent-c11="" class="image-backgroung">
+                      <svg _ngcontent-c11="">
+                        <use _ngcontent-c11="" xlink:href="#camera"></use>
+                      </svg>
+                    </div>
+                    <div _ngcontent-c11="" class="place-image">
+                      <img
+                        _ngcontent-c11=""
+                        alt=""
+                        src="https://static.dollarstreet.org/media/Mexico 3/image/daadd4b9-32da-491c-bd4e-3d40ef7c4230/480x480-daadd4b9-32da-491c-bd4e-3d40ef7c4230.jpg"
+                      />
+                    </div>
+
+                    <div _ngcontent-c11="" class="image-description">
+                      <span _ngcontent-c11="" class="place-image-box-income">
+                        $634
+                        <!---->
+                        <span _ngcontent-c11="" class="place-image-time-unit">/month</span>
+                      </span>
+                      <span _ngcontent-c11="" class="place-image-box-country">Mexico</span>
+                    </div>
+
+                    <!---->
+                  </div>
+                  <div _ngcontent-c11="" class="pin-place" isimageloaded="">
+                    <div _ngcontent-c11="" class="image-backgroung">
+                      <svg _ngcontent-c11="">
+                        <use _ngcontent-c11="" xlink:href="#camera"></use>
+                      </svg>
+                    </div>
+                    <div _ngcontent-c11="" class="place-image">
+                      <img
+                        _ngcontent-c11=""
+                        alt=""
+                        src="https://static.dollarstreet.org/media/Sweden 7/image/b40aa015-0de1-4551-ada0-32a7677186ce/480x480-b40aa015-0de1-4551-ada0-32a7677186ce.jpg"
+                      />
+                    </div>
+
+                    <div _ngcontent-c11="" class="image-description">
+                      <span _ngcontent-c11="" class="place-image-box-income">
+                        $1 827
+                        <!---->
+                        <span _ngcontent-c11="" class="place-image-time-unit">/month</span>
+                      </span>
+                      <span _ngcontent-c11="" class="place-image-box-country">Sweden</span>
+                    </div>
+
+                    <!---->
+                  </div>
+                  <!---->
+                </div>
+                <div _ngcontent-c11="" class="street-pinned-wrap">
+                  <!---->
+                  <div _ngcontent-c11="" class="street-pinned-container">
+                    <div _ngcontent-c11="" class="street-pinned-cell">
+                      <street-pinned _ngcontent-c11="" _nghost-c13="">
+                        <div _ngcontent-c13="" class="street-pinned-box-container">
+                          <svg _ngcontent-c13="" id="chart">
+                            <polygon
+                              class="road"
+                              points="0,46 19,32 1340,32 1359,46"
+                              style="fill: rgb(114, 122, 130);"
+                            ></polygon>
+                            <line
+                              class="axis"
+                              x1="1"
+                              y1="46"
+                              x2="1358"
+                              y2="46"
+                              stroke-width="2"
+                              stroke="#525c64"
+                            ></line>
+                            <line
+                              class="dash"
+                              x1="24"
+                              y1="39"
+                              x2="1335"
+                              y2="39"
+                              stroke-dasharray="17"
+                              stroke-width="2"
+                              stroke="white"
+                            ></line>
+                            <polygon
+                              class="point"
+                              points="70.77607854812162,32 70.77607854812162,17 67.77607854812162,17 79.77607854812162,6 91.77607854812162,17 88.77607854812162,17 88.77607854812162,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="744.2561443808013,32 744.2561443808013,17 741.2561443808013,17 753.2561443808013,6 765.2561443808013,17 762.2561443808013,17 762.2561443808013,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="959.1776418839061,32 959.1776418839061,17 956.1776418839061,17 968.1776418839061,6 980.1776418839061,17 977.1776418839061,17 977.1776418839061,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="70.77607854812162,32 70.77607854812162,17 67.77607854812162,17 79.77607854812162,6 91.77607854812162,17 88.77607854812162,17 88.77607854812162,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="744.2561443808013,32 744.2561443808013,17 741.2561443808013,17 753.2561443808013,6 765.2561443808013,17 762.2561443808013,17 762.2561443808013,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="959.1776418839061,32 959.1776418839061,17 956.1776418839061,17 968.1776418839061,6 980.1776418839061,17 977.1776418839061,17 977.1776418839061,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="70.77607854812162,32 70.77607854812162,17 67.77607854812162,17 79.77607854812162,6 91.77607854812162,17 88.77607854812162,17 88.77607854812162,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="744.2561443808013,32 744.2561443808013,17 741.2561443808013,17 753.2561443808013,6 765.2561443808013,17 762.2561443808013,17 762.2561443808013,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="959.1776418839061,32 959.1776418839061,17 956.1776418839061,17 968.1776418839061,6 980.1776418839061,17 977.1776418839061,17 977.1776418839061,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="70.77607854812162,32 70.77607854812162,17 67.77607854812162,17 79.77607854812162,6 91.77607854812162,17 88.77607854812162,17 88.77607854812162,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="744.2561443808013,32 744.2561443808013,17 741.2561443808013,17 753.2561443808013,6 765.2561443808013,17 762.2561443808013,17 762.2561443808013,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="959.1776418839061,32 959.1776418839061,17 956.1776418839061,17 968.1776418839061,6 980.1776418839061,17 977.1776418839061,17 977.1776418839061,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="70.77607854812162,32 70.77607854812162,17 67.77607854812162,17 79.77607854812162,6 91.77607854812162,17 88.77607854812162,17 88.77607854812162,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="744.2561443808013,32 744.2561443808013,17 741.2561443808013,17 753.2561443808013,6 765.2561443808013,17 762.2561443808013,17 762.2561443808013,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="959.1776418839061,32 959.1776418839061,17 956.1776418839061,17 968.1776418839061,6 980.1776418839061,17 977.1776418839061,17 977.1776418839061,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="70.77607854812162,32 70.77607854812162,17 67.77607854812162,17 79.77607854812162,6 91.77607854812162,17 88.77607854812162,17 88.77607854812162,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="744.2561443808013,32 744.2561443808013,17 741.2561443808013,17 753.2561443808013,6 765.2561443808013,17 762.2561443808013,17 762.2561443808013,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                            <polygon
+                              class="point"
+                              points="959.1776418839061,32 959.1776418839061,17 956.1776418839061,17 968.1776418839061,6 980.1776418839061,17 977.1776418839061,17 977.1776418839061,32"
+                              stroke-width="1"
+                              style="fill: rgb(170, 172, 176);"
+                            ></polygon>
+                          </svg>
+                        </div>
+                      </street-pinned>
+                      <span _ngcontent-c11="" class="poorest">POOREST</span>
+                      <span _ngcontent-c11="" class="richest">RICHEST</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div _ngcontent-c11="" class="pin-footer">
+                <!---->
+                <div _ngcontent-c11="" class="embed-footer-text">
+                  <p _ngcontent-c11="">
+                    Imagine the world as a street where everyone lives. The poorest live to the left and the richest, to
+                    the right. Everybody else lives somewhere in between. Visit Dollar Street to see beds, stoves,
+                    toothbrushes and hundreds of other things in homes from all over the World at dollarstreet.org
+                  </p>
+                </div>
+
+                <!---->
+
+                <!---->
+              </div>
+            </div>
+            <div _ngcontent-c11="" class="download-footer-text">
+              <p _ngcontent-c11="">
+                All photos from Dollar Street. Visit
+                <span _ngcontent-c11="" class="download-link-text">www.dollarstreet.org</span>
+                to explore these and hundred of other homes!
+              </p>
+            </div>
+            <div _ngcontent-c11="" class="shared-footer-text">
+              All photos from
+              <span _ngcontent-c11="" class="download-link-text">dollarstreet.org</span>
+              ! Explore homes by income from all over the world!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

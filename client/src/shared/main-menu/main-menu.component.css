@@ -1,0 +1,158 @@
+.main-menu {
+  display: none;
+}
+
+.main-mobile-menu {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .main-menu {
+    display: block;
+  }
+
+  .main-mobile-menu {
+    display: none;
+  }
+}
+
+.main-menu .menu-icon {
+  display: block;
+  width: 62px;
+  height: 62px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.main-menu .menu-icon img {
+  width: 27px;
+  height: 21px;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.main-menu .menu-icon img.unactive {
+  display: block;
+}
+
+.main-menu {
+  z-index: 999;
+}
+
+.main-menu > div {
+  float: right;
+}
+
+.main-menu .open .menu-icon {
+  background-color: #374551;
+}
+
+.main-menu .open img.active {
+  display: block;
+}
+
+.main-menu .open img.unactive {
+  display: none;
+}
+
+.main-menu .dropdown-menu {
+  background-color: #374551;
+  left: inherit;
+  right: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  width: 285px;
+  z-index: 10;
+}
+
+.main-menu .dropdown-menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu .dropdown-menu li {
+  list-style: none;
+  border-bottom: 1px solid #303e4a;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.main-menu .dropdown-menu li a {
+  text-transform: uppercase;
+  color: #edf0f5;
+  font-size: 18px;
+  display: block;
+  padding: 14px 20px;
+}
+
+.main-menu .social-share-content span {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #edf0f5;
+  font-size: 18px;
+}
+
+.main-menu .menu-links {
+  font-size: 14px;
+  line-height: 10px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.main-menu .dropdown-menu li:hover:not(.social-share-container) {
+  background-color: #3d4b58;
+}
+
+.main-menu .dropdown-menu li:hover a {
+  color: #fff;
+}
+
+.main-menu div.social-share-content {
+  padding: 19px 20px;
+}
+
+.main-menu div.social-share-content.long-text {
+  padding: 5px 32px;
+  text-align: center;
+}
+
+.main-menu div.social-share-content.long-text span {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.main-menu social-share-buttons {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.container-menu .language-selector {
+  width: 100%;
+  padding: 9px 10px 1px !important;
+  overflow: visible !important;
+  position: relative;
+  display: inline-block;
+}
+
+@media (max-width: 1023px) {
+  .main-menu .menu-icon {
+    width: 47px;
+    height: 56px;
+  }
+
+  .main-menu div.social-share-content {
+    padding: 19px 19px;
+  }
+}

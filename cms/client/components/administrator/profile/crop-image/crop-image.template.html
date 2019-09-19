@@ -1,0 +1,45 @@
+<div class="inmodal">
+  <div class="modal-header">
+    <p class="modal-title">Upload avatar</p>
+  </div>
+
+  <div class="form-horizontal">
+    <div class="modal-body" ng-if="dataUrl || imageLoader">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content">
+          <div class="crop-image-container">
+            <div ng-if="dataUrl" class="img-container">
+              <img ng-src="{{dataUrl}}"
+                   width="100%"
+                   height="500"
+                   ng-cropper
+                   ng-cropper-proxy="cropperProxy"
+                   ng-cropper-show="showEvent"
+                   ng-cropper-hide="hideEvent"
+                   ng-cropper-options="options">
+            </div>
+
+            <div ng-if="imageLoader" class="spiner-container">
+              <div class="sk-spinner sk-spinner-three-bounce">
+                <div class="sk-bounce1"></div>
+                <div class="sk-bounce2"></div>
+                <div class="sk-bounce3"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <label class="btn btn-w-m btn-info pull-left select-image-for-avatar">Select image
+        <input type="file" onchange="angular.element(this).scope().onFile(this.files[0])">
+      </label>
+      <button type="button" class="btn btn-w-m btn-primary"
+              ng-if="dataUrl"
+              ng-click="save()">Save
+      </button>
+      <button type="button" class="btn btn-w-m" ng-click="cancel()">Close</button>
+    </div>
+  </div>
+</div>

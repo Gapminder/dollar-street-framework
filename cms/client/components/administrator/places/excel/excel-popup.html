@@ -1,0 +1,44 @@
+<div class="inmodal excelPopUp">
+  <div class="show-content" ng-show="showContent">
+    <div class="modal-header">
+      <p class="modal-title" ng-if="isUploaded">Please select your action:</p>
+      <p class="modal-title" ng-if="!isUploaded">Uploading</p>
+    </div>
+
+    <div class="button-container">
+<!-- serverUrl  -->
+      <a class="btn btn-primary btn-lg"
+         href="/places/template"
+         target="_blank"
+         ng-click="cancel()">Download template</a>
+      <label for="upload" class="btn btn-primary btn-lg">Upload data</label>
+      <input style="display: none" id="upload" class="form-control m-b" type="file"/>
+
+      <p class="text-danger" ng-show="incorrectType">Wrong type!</p>
+
+      <div class="ibox spiner-container" ng-hide="isUploaded">
+        <div class="ibox-content">
+          <div class="spiner-example">
+            <div class="sk-spinner sk-spinner-three-bounce">
+              <div class="sk-bounce1"></div>
+              <div class="sk-bounce2"></div>
+              <div class="sk-bounce3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ibox" ng-hide="showContent">
+    <div class="ibox-content">
+      <div class="spiner-example">
+        <div class="sk-spinner sk-spinner-three-bounce">
+          <div class="sk-bounce1"></div>
+          <div class="sk-bounce2"></div>
+          <div class="sk-bounce3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="inmodal">
+  <div class="modal-header">
+    <p class="modal-title">Are you really want to set type this image "{{type}}"?</p>
+  </div>
+  <div class="modal-body modalMediaContainer">
+    <img ng-src="{{replaceUrl(image.image)}}" alt="">
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-w-m btn-primary" ng-click="ok()">Ok</button>
+    <button type="button" class="btn btn-w-m btn-default" ng-click="close()">Cancel</button>
+  </div>
+</div>
+

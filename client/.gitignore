@@ -1,0 +1,36 @@
+# ts generated
+app/**/*.js
+app/**/*.js.map
+app/**/*.d.ts
+
+src/**/*.js
+src/**/*.js.map
+src/**/*.d.ts
+
+!src/assets/js/*.js
+
+#ts typings
+typings
+!typings/require.d.ts
+
+.DS_Store
+app/.DS_Store
+
+# ts generated for e2e
+test-e2e/app/**/*.js
+test-e2e/app/**/*.js.map
+test-e2e/app/**/*.d.ts
+
+#js Contentfull constants
+!app/constants.js
+
+# logs
+**/*.log
+*.log
+
+# AoT
+**/*.ngfactory.ts
+**/*.ngsummary.json
+**/*.ngstyle.ts
+**/*.css.ts
+**/*.shim.ts

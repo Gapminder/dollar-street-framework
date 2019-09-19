@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "outDir": "../../dist",
+    "noImplicitAny": false,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "lib": [
+      "es5",
+      "es6",
+      "es2015"
+    ],
+    "skipLibCheck": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
+  },
+  "include": [
+    "prod-mongodb-status.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

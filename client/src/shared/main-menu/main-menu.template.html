@@ -1,0 +1,131 @@
+<div class="main-menu" id="main-menu" data-e2e="main-menu-dropdown-open">
+  <div class="btn-group" [class.open]="isOpenMenu">
+    <span class="menu-icon" (click)="openMenu(isOpenMenu)">
+      <img
+        [ngClass]="{ unactive: !isOpenMenu, active: isOpenMenu }"
+        [src]="isOpenMenu ? './assets/img/gamburger-menu-white-icon.svg' : './assets/img/gamburger-menu-icon.svg'"
+        alt="menu"
+      />
+    </span>
+
+    <div class="dropdown-menu" data-e2e="main-menu-dropdown-opened">
+      <ul class="header-menu-list">
+        <li>
+          <a (click)="goToPage('/matrix', true)" data-e2e="main-menu-home" routerLink="/matrix">
+            {{ 'HOME' | translate }}
+          </a>
+        </li>
+        <li>
+          <a (click)="openQuickGuide()" data-e2e="main-menu-quick-guide">{{ 'QUICK_GUIDE' | translate }}</a>
+        </li>
+        <li>
+          <a (click)="goToPage('/about', true)" data-e2e="main-menu-about" routerLink="/about">
+            {{ 'ABOUT' | translate }}
+          </a>
+        </li>
+        <li>
+          <a (click)="goToPage('/donate')" data-e2e="main-menu-donate" routerLink="/donate">
+            {{ 'HOW_CAN_HELP' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a (click)="goToPage('/map', true)" data-e2e="main-menu-map" routerLink="/map">{{ 'MAP' | translate }}</a>
+        </li>
+
+        <li class="social-share-container">
+          <div #socialShareContent class="social-share-content">
+            <span>{{ 'SHARE' | translate }}</span>
+            <social-share-buttons [analyticLocation]="analyticLocation"></social-share-buttons>
+          </div>
+        </li>
+
+        <!--<li *ngIf="isMatrixPage">-->
+        <!--<a (click)="SetPinMode()" data-e2e="main-menu-comparison" [class.active]="pinMode || embedMode">-->
+        <!--{{ 'CREATE_A_COMPARISON' | translate }}-->
+        <!--</a>-->
+        <!--</li>-->
+
+        <li>
+          <a (click)="goToPage('https://getsatisfaction.com/gapminder')" data-e2e="main-menu-send-feedback">
+            {{ 'SEND_FEEDBACK' | translate }}
+          </a>
+        </li>
+
+        <li>
+          <a (click)="goToPage('https://www.gapminder.org')" data-e2e="main-menu-more">
+            {{ 'MORE_FROM' | translate }} gapminder
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="main-mobile-menu" class="main-mobile-menu">
+  <div class="btn-group" [class.open]="isOpenMenu">
+    <span class="menu-icon" (click)="openMenu(isOpenMenu)">
+      <img class="unactive" src="./assets/img/gamburger-menu-icon.svg" alt="menu" />
+      <img class="active" src="./assets/img/gamburger-menu-white-icon.svg" alt="menu" />
+    </span>
+
+    <div class="container-menu" *ngIf="isOpenMenu">
+      <div class="menu-header-content">
+        <img src="./assets/img/dollar-street.svg" alt="Dollar Street logo" />
+        <span>Dollar Street</span>
+      </div>
+
+      <img class="close-button pull-right" src="./assets/img/close-button.svg" (click)="openMenu(true)" alt="Close" />
+
+      <ul class="menu-list">
+        <li>
+          <div class="language-selector">
+            <language-selector></language-selector>
+          </div>
+        </li>
+        <li>
+          <a (click)="goToPage('/matrix')">{{ 'HOME' | translate }}</a>
+          <img class="thing-apply-icon" src="./assets/img/apply-icon.svg" alt="Home" />
+        </li>
+        <li>
+          <a (click)="openQuickGuide()">{{ 'QUICK_GUIDE' | translate }}</a>
+          <img class="thing-apply-icon" src="./assets/img/apply-icon.svg" alt="Quick guide" />
+        </li>
+        <li>
+          <a (click)="goToPage('/about')">{{ 'ABOUT' | translate }}</a>
+          <img class="thing-apply-icon" src="./assets/img/apply-icon.svg" alt="About" />
+        </li>
+        <li>
+          <a (click)="goToPage('/donate')">{{ 'HOW_CAN_HELP' | translate }}</a>
+          <img class="thing-apply-icon" src="./assets/img/apply-icon.svg" alt="Donate" />
+        </li>
+        <li>
+          <a (click)="goToPage('/map')">{{ 'MAP' | translate }}</a>
+          <img class="thing-apply-icon" src="./assets/img/apply-icon.svg" alt="Map" />
+        </li>
+
+        <li class="social-share-container">
+          <div class="social-share-content">
+            <div class="share-text">{{ 'SHARE' | translate }}:</div>
+            <social-share-buttons [analyticLocation]="analyticLocation"></social-share-buttons>
+          </div>
+        </li>
+
+        <li class="gapminder-img">
+          <img src="./assets/img/gapminder-logo.png" alt="Gapminder logo" />
+        </li>
+
+        <li class="feedback-container">
+          <img class="feedback-icon" src="./assets/img/like-icon-dark.svg" alt="Send feedback" />
+          <a class="feedback" (click)="goToPage('https://getsatisfaction.com/gapminder')">
+            {{ 'SEND_FEEDBACK' | translate }}
+          </a>
+        </li>
+
+        <li class="gapminder">
+          <a (click)="goToPage('https://www.gapminder.org')">{{ 'MORE_FROM' | translate }} gapminder >></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,274 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-12">
+    <h2>Images <span ng-show="imagesOriginal.length">({{imagesOriginal.length}})</span></h2>
+  </div>
+</div>
+
+<div ng-if="!wide" class="wrapper wrapper-content ecommerce">
+  <div class="ibox-content m-b-sm border-bottom">
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label class="control-label">Select layout:</label>
+
+          <div class="input-group m-b">
+
+            <select class="form-control" ng-model="layout">
+              <option value="">Select layout</option>
+              <option value="wide">Wide</option>
+              <option value="slideshow">Slideshow</option>
+            </select>
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-primary"
+                      ng-click="selectLayout(layout)">Show
+              </button>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label class="control-label">Select all images:</label><br/>
+          <label class="ios7-switch">
+            <input type="checkbox"
+                   ng-model="selectImages.isActive"
+                   ng-change="selectAllImages(selectImages.isActive)">
+            <div></div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5>Filters</h5>
+        </div>
+        <div class="ibox-content">
+          <div class="form-group">
+            <label class="control-label">The number of images displayed:</label>
+            <select class="form-control" ng-model="amount" ng-change="selectAmount(amount)">
+              <option value="All">All</option>
+              <option value="100" selected>100</option>
+              <option value="200">200</option>
+              <option value="500">500</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Country:</label>
+            <ui-select ng-model="country.select">
+              <ui-select-match placeholder="Country">{{$select.selected.name}}</ui-select-match>
+              <ui-select-choices repeat="country in countries | filter: $select.search">
+                <span ng-bind-html="country.name | highlight: $select.search"></span>
+                <small ng-bind-html="country.code | highlight: $select.search"></small>
+              </ui-select-choices>
+            </ui-select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Place:</label>
+            <ui-select ng-model="place.select">
+              <ui-select-match placeholder="Place">{{$select.selected.name}}</ui-select-match>
+              <ui-select-choices repeat="place in places | filter: $select.search">
+                <span ng-bind-html="place.name | highlight: $select.search"></span>
+              </ui-select-choices>
+            </ui-select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Category:</label>
+            <ui-select ng-model="category.select">
+              <ui-select-match placeholder="Category">{{$select.selected.name}}</ui-select-match>
+              <ui-select-choices repeat="category in categories | filter: $select.search">
+                <span ng-bind-html="category.name | highlight: $select.search"></span>
+              </ui-select-choices>
+            </ui-select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Thing:</label>
+            <ui-select ng-model="thing.select">
+              <ui-select-match placeholder="Thing">{{$select.selected.thingName}}</ui-select-match>
+              <ui-select-choices repeat="thing in things | filter: $select.search">
+                <span ng-bind-html="thing.thingName | highlight: $select.search"></span>
+              </ui-select-choices>
+            </ui-select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Rating:</label>
+            <ui-select ng-model="rating.select">
+              <ui-select-match placeholder="Rating">{{$select.selected.star}}</ui-select-match>
+              <ui-select-choices repeat="rating in ratings | filter: $select.search">
+                <span ng-bind-html="rating.star | highlight: $select.search"></span>
+              </ui-select-choices>
+            </ui-select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Income:</label>
+            <ui-select ng-model="income.select">
+              <ui-select-match placeholder="Income">{{$select.selected.range}}</ui-select-match>
+              <ui-select-choices repeat="income in incomes | filter: $select.search">
+                <span ng-bind-html="income.range | highlight: $select.search"></span>
+              </ui-select-choices>
+            </ui-select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Photographer:</label>
+            <ui-select ng-model="photographer.select">
+              <ui-select-match placeholder="Photographer">{{$select.selected.name}}</ui-select-match>
+              <ui-select-choices
+                repeat="photographer in photographers | filter: $select.search">
+                <span ng-bind-html="photographer.name | highlight: $select.search"></span>
+              </ui-select-choices>
+            </ui-select>
+          </div>
+          <div class="form-group">
+            <label class="control-label">Date:</label>
+
+            <p class="input-group">
+              <input type="text" class="form-control"
+                     datepicker-popup="yyyy-MM-dd"
+                     ng-model="date"
+                     is-open="opened"
+                     datepicker-options="dateOptions"
+                     ng-required="true"
+                     close-text="Close"/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="open($event)">
+                          <i class="glyphicon glyphicon-calendar"></i>
+                        </button>
+                    </span>
+            </p>
+          </div>
+          <div class="form-group">
+            <label class="ios7-switch sm">
+              <input type="checkbox" ng-model="onePlace.oneThing" ng-change="onePlaceThingChange()">
+              <div></div>
+              <span class="description">show 1 image for place</span>
+            </label>
+
+            <label class="ios7-switch sm">
+              <input type="checkbox" ng-model="oneThing.oneThing" ng-change="onePlaceThingChange()">
+              <div></div>
+              <span class="description">show 1 image per thing</span>
+            </label>
+          </div>
+          <p ng-if="checked" class="text-center text-danger">Please select the filter.</p>
+          <div class="form-group text-right">
+            <button ng-if="choseImgArr.length"
+                    ng-click="openAllEdit()"
+                    tooltip="Edit media"
+                    class="btn btn-primary btn-circle btn-lg" type="button">
+              <i class="fa fa-pencil"></i>
+            </button>
+            <button class="btn btn btn-success btn-circle btn-lg" type="button"
+                    tooltip="Filter"
+                    ng-click="filter(amount, country.select, place.select, category.select, thing.select, rating.select, income.select, photographer.select, date)">
+              <i class="fa fa-filter"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-9">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title" ng-show="imagesOriginal.length">
+          <h5>{{filterPath}} ({{numberDisplayedImages}}/{{imagesOriginal.length}})</h5>
+
+          <div class="ibox-tools">
+            <p>Click with
+              <span class="label label-info">Ctrl</span> or <span class="label label-info">Cmd</span> selects image
+            </p>
+          </div>
+        </div>
+        <div class="ibox-content">
+          <div ng-if="loadRash" class="spiner-container">
+            <div class="sk-spinner sk-spinner-three-bounce">
+              <div class="sk-bounce1"></div>
+              <div class="sk-bounce2"></div>
+              <div class="sk-bounce3"></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 media-page">
+              <div ng-show="!imagesOriginal">
+                <div class="alert alert-info" role="alert">{{waitingPhrase}}</div>
+              </div>
+              <div ng-show="notFoundImages">
+                <div class="alert alert-danger" role="alert">Not found images.</div>
+              </div>
+              <div ng-if="allImages" class="container-scroll comparisons">
+                <div infinite-scroll="loadMore(images)">
+                  <div class="media-container" ds-images-container></div>
+                </div>
+              </div>
+              <div ng-if="!allImages" class="row allImagesContainer">
+                <div class="media-container" ds-images-container></div>
+                <div ng-if="itemsPerPage < imagesLength" class="paginator">
+                  <pagination total-items="imagesLength" ng-change="nextImages(bigCurrentPage, numPages)"
+                              ng-model="bigCurrentPage" max-size="5" items-per-page="itemsPerPage"
+                              class="pagination-sm"
+                              boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div ng-if="wide" class="allMediaWide gray-bg" media-white-layout="{{row}}">
+  <div ng-if="loadRash" class="spiner-container">
+    <div class="sk-spinner sk-spinner-three-bounce">
+      <div class="sk-bounce1"></div>
+      <div class="sk-bounce2"></div>
+      <div class="sk-bounce3"></div>
+    </div>
+  </div>
+  <div class="imagesContainerBtn">
+    <button class="btn btn-primary btn-sm" ng-click="closeBoxed()">Boxed</button>
+    <div class="btn-group" dropdown is-open="status.isopen">
+      <button type="button" class="btn btn-primary btn-sm dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+        Rows <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li ng-repeat="select in ::rows">
+          <a href="" ng-click="selectRow($index + 1)">{{::select.row}}</a>
+        </li>
+      </ul>
+    </div>
+    <button class="btn btn-primary btn-sm"
+            ng-if="choseImgArr.length > 0"
+            ng-click="openAllEdit()">Edit images
+    </button>
+  </div>
+  <div when-scrolled="loadMoreWideLoyout(images)">
+    <div class="allMediaWideContainer" ng-style="mediaPageStyleContainer()">
+      <div class="column" ng-repeat="column in images">
+        <div ng-repeat="image in ::column.image"
+             ng-style="mediaPageStyleImage()"
+             ng-click="choseImg($event, image._id)">
+          <a id="id{{image._id}}"
+             ng-href="{{amazonPath(image,device)+ imgReload}}"
+             class="fancybox" rel="gallery1" data-image='{{::image}}'>
+            <span class="glyphicon glyphicon-ok-sign select_img" aria-hidden="true"
+                  ng-if="watchImgChosen(image._id)"></span>
+
+            <div class="image"
+                 style="background-image: url('{{::amazonPath(image,typeImageView)  +imgReload}}')"></div>
+            <div ng-if="imageIsRotate(image._id)" class="spiner-container">
+              <div class="sk-spinner sk-spinner-three-bounce">
+                <div class="sk-bounce1"></div>
+                <div class="sk-bounce2"></div>
+                <div class="sk-bounce3"></div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

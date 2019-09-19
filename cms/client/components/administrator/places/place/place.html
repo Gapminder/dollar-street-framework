@@ -1,0 +1,511 @@
+<div class="row wrapper border-bottom white-bg page-heading place-page">
+  <div class="col-lg-3">
+    <h2>{{placeName}}</h2>
+  </div>
+
+  <div class="col-md-4 place-icons">
+    <place-icons place-id="placeId"
+                 active-icon-type="activeIconType"
+                 selected-icon="selectedIcon"></place-icons>
+  </div>
+
+  <div class="col-sm-2">
+    <div class="form-group">
+      <label class="control-label">Show deleted media:</label>
+      <br/>
+      <label class="ios7-switch">
+        <input type="checkbox"
+               ng-model="isTrashMedia"
+               ng-change="showTrashMedia(isTrashMedia)">
+
+        <div></div>
+      </label>
+    </div>
+  </div>
+
+  <div class="col-sm-3 text-right">
+    <div class="form-group addItem">
+      <button class="btn btn-success btn-lg"
+              type="button"
+              ng-if="isAdmin && activeNoApprovedTab && choseImgArr.length"
+              ng-click="approveImagesForPublic(choseImgArr)">
+        Approve media
+      </button>
+
+      <button class="btn btn-success btn-lg"
+              type="button"
+              ng-if="!isAdmin && activeNoApprovedTab && noApproveImages.length"
+              ng-click="approveImages(place)">
+        Send to approve media
+      </button>
+
+      <button class="btn btn-primary btn-circle btn-lg"
+              ng-click="openModalMedia()"
+              tooltip="Add images"
+              type="button">
+        <i class="fa fa-plus"></i>
+      </button>
+
+      <button class="btn btn-primary btn-circle btn-lg"
+              ng-click="editPlace(place)"
+              tooltip="Edit Current Place"
+              type="button">
+        <i class="fa fa-pencil"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content place-page ecommerce">
+  <div class="row place-tabs-container">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content">
+          <div class="table-responsive">
+            <div ng-if="loadPage" class="spiner-container">
+              <div class="sk-spinner sk-spinner-three-bounce">
+                <div class="sk-bounce1"></div>
+                <div class="sk-bounce2"></div>
+                <div class="sk-bounce3"></div>
+              </div>
+            </div>
+
+            <div class="container-scroll tabs-container" ng-style="style()" resize>
+              <div class="ibox-tools" ng-if="isAdmin && activeNoApprovedTab">
+                <p style="margin: 4px 0 0;">Click with
+                  <span class="label label-info">Ctrl</span> or <span class="label label-info">Cmd</span> selects image
+                </p>
+              </div>
+
+              <tabset photos="true" class="placeTabContainer">
+                <tab heading="Photos" select="activeTab('photo')" active="activeTabPhoto">
+                  <div ng-if="activeTabPhoto">
+                    <tabset photos="true" class="placeTabContainer">
+                      <tab heading="Approved" select="activeSubTab('approved')">
+                        <h2 class="title-remove-media" ng-if="isTrashMedia">Deleted media files</h2>
+
+                        <div ng-if="activeApprovedTab">
+                          <div class="place-media-container">
+                            <div class="image row"
+                                 infinite-scroll='nextPlaceImages(30, true)'
+                                 infinite-scroll-container='".tab-content"'>
+                              <div class="col-md-2" ng-repeat-start="image in images" ng-if="image.isApproved">
+                                <span class="glyphicon glyphicon-remove media_remove"
+                                      ng-click="removeMedia(image)"
+                                      tooltip="Delete"></span>
+                                <span class="glyphicon glyphicon-plus media_edit"
+                                      ng-if="isTrashMedia"
+                                      ng-click="restore(image)"
+                                      tooltip="Restore"></span>
+                                <span class="glyphicon glyphicon-pencil media_edit"
+                                      ng-if="!isTrashMedia"
+                                      ng-click="editMedia(image)"
+                                      tooltip="Edit"></span>
+
+                                <a id="{{'id' + image._id}}"
+                                   class="fancybox"
+                                   rel="gallery1"
+                                   ng-if="!isAdmin"
+                                   ng-href="{{amazonPath(image, device) + imgReload}}"
+                                   data-media-title-id="{{::image.src.split('/').join('')}}">
+                                  <img ng-src="{{amazonPath(image, 'thumb-') + imgReload}}" alt="">
+                                </a>
+
+                                <a id="id{{::image._id}}"
+                                   class="fancybox"
+                                   rel="gallery1"
+                                   ng-if="isAdmin"
+                                   ng-href="{{amazonPath(image,device)+ imgReload}}"
+                                   data-image='{{::image}}'>
+                                  <span class="glyphicon glyphicon-ok-sign select_img"
+                                        aria-hidden="true"
+                                        ng-if="watchImgChosen(image._id)"></span>
+                                  <img class="img-responsive"
+                                       ng-src="{{amazonPath(image,'thumb-') + imgReload}}" alt=""
+                                       ng-click="choseImg($event,image._id)"/>
+
+                                  <div class="rotateLoad"
+                                       style="display: block"
+                                       ng-if="imageIsRotate(image._id)">
+                                    <img src="/assets/images/loading.gif" alt="loading">
+                                  </div>
+                                </a>
+
+                                <div class="imageOption">
+                                  <span class="glyphicon glyphicon-repeat"
+                                        ng-click="imageRotate(image, $event)"></span>
+                                </div>
+
+                                <div class="imageTitle">
+                                  <h5>{{::image.filename}}</h5>
+                                </div>
+
+                                <div class="{{image.src.split('/').join('')}} hidden fancybox-description">
+                                  <div class="imageDescription row">
+                                    <div class="col-md-6">
+                                      <h3>{{::image.filename}}</h3>
+
+                                      <div class="tags">
+                                        <span ng-repeat="tags in image.tags">{{tags.text}}<span>, </span></span>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                      <p>Photographer: {{::placesPhotographer.answers}}</p>
+                                    <span class="glyphicon glyphicon-star"
+                                          ng-repeat="i in fancyboxStar(image.rating) track by $index"></span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div ng-repeat-end ng-if="($index + 1) % 6 === 0" class="clearfix"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </tab>
+
+                      <tab heading="Not Approved" select="activeSubTab('noApproved')" active="activeNoApprovedTab">
+                        <h2 class="title-remove-media" ng-if="isTrashMedia">Deleted media files</h2>
+
+                        <div ng-if="activeNoApprovedTab">
+                          <div class="process_image">
+                            <button class="btn btn-primary btn-lg"
+                                    type="button"
+                                    ng-click="addLoadedImages()"
+                                    ng-show="imagesLoaded.length">Show {{imagesLoaded.length}} of processed images
+                            </button>
+                          </div>
+
+                          <div class="place-media-container">
+                            <div class="image row"
+                                 infinite-scroll='nextPlaceImages(30, false)'
+                                 infinite-scroll-container='".tab-content"'>
+                              <div class="col-md-2" ng-repeat-start="image in noApproveImages"
+                                   ng-if="!image.isApproved">
+                                <span class="glyphicon glyphicon-ok-sign select_img" aria-hidden="true"
+                                      ng-if="watchImgChosen(image._id)"></span>
+
+                                <span class="glyphicon glyphicon-remove media_remove"
+                                      ng-click="removeMedia(image)"
+                                      tooltip="Delete"></span>
+
+                                <span class="glyphicon glyphicon-plus media_edit"
+                                      ng-if="isTrashMedia"
+                                      ng-click="restore(image)"
+                                      tooltip="Restore"></span>
+
+                                <a id="{{'id' + image._id}}"
+                                   class="fancybox"
+                                   rel="gallery1"
+                                   ng-if="!isAdmin"
+                                   ng-href="{{amazonPath(image, device) + imgReload}}"
+                                   data-media-title-id="{{::image.src.split('/').join('')}}">
+                                  <img ng-src="{{amazonPath(image, 'thumb-') + imgReload}}" alt="">
+                                </a>
+
+                                <a id="id{{::image._id}}"
+                                   class="fancybox"
+                                   rel="gallery1"
+                                   ng-if="isAdmin"
+                                   ng-href="{{amazonPath(image, device) + imgReload}}"
+                                   ng-click="approveImage($event, image._id)"
+                                   data-image='{{::image}}'>
+                                  <img class="img-responsive"
+                                       ng-src="{{amazonPath(image,'thumb-') + imgReload}}" alt=""/>
+                                </a>
+                              </div>
+
+                              <div ng-repeat-end ng-if="($index + 1) % 6 === 0" class="clearfix"></div>
+                            </div>
+                          </div>
+
+                          <div class="process_image">
+                            <button class="btn btn-primary btn-lg"
+                                    type="button"
+                                    ng-click="addLoadedImages()"
+                                    ng-show="imagesLoaded.length">Show {{imagesLoaded.length}} of processed images
+                            </button>
+                          </div>
+                        </div>
+                      </tab>
+                    </tabset>
+                  </div>
+                </tab>
+
+                <!--Image tagging-->
+                <tab heading="Image tagging" select="activeTab('imageTagging')">
+                  <div class="images-tagging-container" ng-if="activeImageTagging">
+                    <div class="col-md-3 images-filter">
+                      <images-filter place-id="placeId"
+                                     selected-thing="selectedThing"
+                                     is-update="isUpdate"></images-filter>
+                    </div>
+
+                    <div class="col-md-9 images-tagging">
+                      <images-tagging place-id="placeId"
+                                      selected-thing="selectedThing"
+                                      is-update="isUpdate"
+                                      active-icon-type="activeIconType"
+                                      selected-icon="selectedIcon"></images-tagging>
+                    </div>
+                  </div>
+                </tab>
+
+                <!--tab Questionnaire-->
+                <tab heading="Questionnaire" select="activeTab('questionnaire')">
+                  <div class="ibox place-info"
+                       ng-if="cloneQuestions.length > 0 && activeTabQuestionnaire">
+                    <div class="ibox-content">
+                      <form class="form-horizontal"
+                            ng-if="questions.length > 0"
+                            editable-form name="tableform"
+                            onaftersave="saveTable2(activeForm)"
+                            oncancel="cancel()">
+                        <div class="form-group">
+                          <!--edit button-->
+                          <div class="col-sm-2" ng-show="!tableform.$visible">
+                            <button class="btn btn-primary"
+                                    type="button"
+                                    ng-click="tableform.$show()">Edit
+                            </button>
+                          </div>
+                          <!--ok cancel-->
+                          <div class="col-sm-2" ng-show="tableform.$visible">
+                            <button class="btn btn-primary"
+                                    type="submit"
+                                    ng-disabled="tableform.$waiting">Save
+                            </button>
+                            <button class="btn btn-default"
+                                    type="button"
+                                    ng-disabled="tableform.$waiting"
+                                    ng-click="tableform.$cancel()">Cancel
+                            </button>
+                          </div>
+
+                          <div class="col-sm-10 info-active-form">
+                            <span ng-if="isAdmin"
+                                  ng-repeat="form in forms | orderBy:'name'"
+                                  ng-click="checkedSelectForm(form)"
+                                  ng-class="{active: activeForm.name === form.name}">{{form.name}}</span>
+
+                            <span ng-if="!isAdmin"
+                                  ng-repeat="form in forms | orderBy:'name'"
+                                  ng-class="{active: activeForm.name === form.name}">{{form.name}}</span>
+                          </div>
+                        </div>
+
+                        <div class="form-group" ng-if="isAdmin" ng-show="tableform.$visible">
+                          <label class="col-sm-2 control-label">Forms</label>
+
+                          <div class="col-md-10">
+                            <select class="form-control"
+                                    ng-change="checkedSelectForm(activeForm)"
+                                    ng-model="activeForm"
+                                    ng-options="form.name for form in forms">
+                              <option value="" selected disabled>Please select form</option>
+                            </select>
+
+                            <span class="help-block m-b-none">Choose other questionnaire version</span>
+                          </div>
+                        </div>
+
+                        <!--fields-->
+                        <div class="form-group"
+                             ng-repeat="question in questions | orderBy:'position':false track by question._id">
+                          <label class="col-sm-2 control-label">{{::question.name}}</label>
+
+                          <div class="col-sm-10">
+                            <div ng-switch="question.type">
+                              <div ng-switch-when="Date">
+                                <span editable-date="question.answers"
+                                      e-form="tableform">{{ question.answers | date:'yyyy-MM-dd' || 'empty'}}</span>
+                              </div>
+
+                              <div ng-switch-when="GeoMark">
+                                <!--Latitude-->
+                                <div class="input-group m-b">
+                                  <span class="input-group-addon">Latitude</span>
+
+                                  <div ng-class="{'form-control': !tableform.$visible}">
+                                    <span editable-number="question.answers.latitude" e-step="0.0000001"
+                                          e-form="tableform"
+                                          e-placeholder="Latitude">{{ question.answers.latitude || 'empty' }}</span>
+                                  </div>
+                                </div>
+
+                                <!--Longitude:-->
+                                <div class="input-group">
+                                  <span class="input-group-addon">Longitude</span>
+
+                                  <div ng-class="{'form-control': !tableform.$visible}">
+                                    <span editable-number="question.answers.longitude" e-step="0.0000001"
+                                          e-form="tableform"
+                                          e-placeholder="Longitude">{{question.answers.longitude || 'empty'}}</span>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div ng-switch-when="List" ng-class="{'form-control': !tableform.$visible}">
+                                <span editable-select="question.answers" e-form="tableform"
+                                      e-ng-options="list.name as list.name for list in {{infoType(question)}} | orderBy:'name'">
+                                  {{question.answers || 'empty'}}
+                                </span>
+                              </div>
+
+                              <div ng-switch-when="Text" ng-class="{'form-control': !tableform.$visible}">
+                                <span editable-text="question.answers" e-form="tableform" e-placeholder="Text">{{ question.answers || 'empty' }}</span>
+                              </div>
+
+                              <div ng-switch-when="Map" class="infoMap"
+                                   ng-class="{'form-control': !tableform.$visible}">
+                                <span editable-text="question.answers.link"
+                                      e-form="tableform"
+                                      e-placeholder="Link"></span>
+                                <ui-gmap-google-map ng-if="question.answers.link && !tableform.$visible"
+                                                    center="map.center"
+                                                    zoom="map.zoom"
+                                                    options="options">
+                                  <ui-gmap-marker coords="marker.coords"
+                                                  options="marker.options"
+                                                  icon="marker.icon"
+                                                  idkey="marker.id"></ui-gmap-marker>
+                                </ui-gmap-google-map>
+                              <span style="font-style: italic; color: #d14;"
+                                    ng-if="!question.answers && !tableform.$visible">empty</span>
+                              </div>
+
+                              <div ng-switch-when="Textarea" ng-class="{'form-control': !tableform.$visible}">
+                                <span editable-textarea="question.answers"
+                                      e-form="tableform"
+                                      e-placeholder="Description">{{ question.answers || 'empty' }}</span>
+                              </div>
+
+                              <div ng-switch-when="Image">
+                                <img class="img-rounded"
+                                     src="/assets/images/loading.gif"
+                                     ng-if="progres && !tableform.$visible"
+                                     alt=""/>
+                                <img class="img-thumbnail"
+                                     ng-if="!progres && question.answers && !tableform.$visible"
+                                     ng-src="{{amazonPath(question.answers)}}"
+                                     alt=""/>
+                                <input id="imageInfo"
+                                       type="file"
+                                       placeholder="Select image."
+                                       ng-show="tableform.$visible"/>
+                                <span style="font-style: italic; color: #d14;"
+                                      ng-if="!question.answers && !tableform.$visible">empty</span>
+                              </div>
+                            </div>
+
+                            <span class="help-block m-b-none">{{::question.description}}</span>
+                          </div>
+                        </div>
+
+                        <div style="margin: 30px 0" class="btn-edit">
+                          <button class="btn btn-primary"
+                                  type="button"
+                                  ng-show="!tableform.$visible"
+                                  ng-click="tableform.$show()">Edit
+                          </button>
+                        </div>
+
+                        <div style="margin: 30px 0" class="btn-form" ng-show="tableform.$visible">
+                          <button class="btn btn-primary"
+                                  type="submit"
+                                  ng-disabled="tableform.$waiting">Save
+                          </button>
+                          <button class="btn btn-default"
+                                  type="button"
+                                  ng-disabled="tableform.$waiting"
+                                  ng-click="tableform.$cancel()">Cancel
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </tab>
+
+                <!--Family info-->
+                <tab heading="Family info" select="activeTab('familyInfo')">
+                  <div class="ibox place-info" ng-if="activeTabFamilyInfo">
+                    <div class="ibox-content">
+                      <form
+                        class="form-horizontal"
+                        editable-form
+                        name="familyInfoForm"
+                        onaftersave="saveFamilyInfo()"
+                        oncancel="cancel()">
+                        <div class="form-group">
+                          <!--edit button-->
+                          <div class="col-sm-2" ng-show="!familyInfoForm.$visible">
+                            <button type="button" class="btn btn-primary"
+                                    ng-click="familyInfoForm.$show()">Edit
+                            </button>
+                          </div>
+                          <!--ok cancel-->
+                          <div class="col-sm-2" ng-show="familyInfoForm.$visible">
+                            <button type="submit"
+                                    class="btn btn-primary"
+                                    ng-disabled="familyInfoForm.$waiting">Save
+                            </button>
+                            <button type="button"
+                                    class="btn btn-default"
+                                    ng-disabled="familyInfoForm.$waiting"
+                                    ng-click="familyInfoForm.$cancel()">Cancel
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">Family info summary</label>
+
+                          <div class="col-sm-10">
+                            <div>
+                              <div ng-class="{'form-control': !familyInfoForm.$visible}">
+                                <span editable-textarea="place.familyInfoSummary"
+                                      e-form="familyInfoForm"
+                                      e-placeholder="Please, fill out the field">
+                                  {{place.familyInfoSummary || 'empty'}}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-sm-2 control-label">Family info</label>
+
+                          <div class="col-sm-10">
+                            <div>
+                              <div ng-class="{'form-control': !familyInfoForm.$visible}">
+                                <span e-form="familyInfoForm"
+                                      editable-textarea="place.familyInfo"
+                                      e-placeholder="Please, fill out the field">{{place.familyInfo || 'empty'}}</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </tab>
+              </tabset>
+
+              <div ng-if="loadPaging" class="sk-spinner sk-spinner-three-bounce">
+                <div class="sk-bounce1"></div>
+                <div class="sk-bounce2"></div>
+                <div class="sk-bounce3"></div>
+              </div>
+
+              <div class="alert alert-danger" ng-if="!images.length && !loadPage">
+                Images for this place not found.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

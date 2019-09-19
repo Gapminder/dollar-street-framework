@@ -1,0 +1,67 @@
+sudo: required
+dist: trusty
+language: node_js
+node_js: '8'
+notifications:
+  slack:
+    rooms:
+      secure: Khtd1NlhJFvDD+4G5TqabdUlzKN8adg9CMIpdQL76NDmBEqXk8uaXnajU2xxwIU8P/76q770HLF30yzTlrU94EblsbV9cTtkMYV4w8WEtNngU+91/iMgP0wZ+mSG2rAJ8bRY/AgKnw+uk1xLWBlPkIk5p0FWqspNl2nEZN683OVza9GjlA+yLH67b4cHyp8iDVrDo8ILeYyUUDhUzUUroxS1rCN0bGeD+pt1yBH94VPOgyHlUAZ1wfIdzzPGMCXfD4uw0SYyF1UYTtmMiIge4AXtu2r7ILHs/y5iIZtNkhmF+3tKxDEr+3JX/mSCpdzSPZQD5sRE+OTMRYPr/ngQxTACaXqm0pdZ+1TIcuGqykbb8BEY1sLiTpGne1y3PNQtTTAVcvRQ/h3M8VggdWmnly6iZZ5xkXSBn/Da6C6oxmPoDWYBlr3o9hS4WOCcjK5PizvZ26mlJwxh+6n7Pog93ORmxzPxpFa6bPjRKG5F6+4QfBeSF7y6uXU3u1ORlxwYOgNDc5hXJlK2T16boK7j4iMp1Ty3HloVNxjRtXTMJVanac7q7rnAIaGNTVUFIytWpySutASzrelwk4zpdtxxRpj7prxq+uM/Sfaq72Lm3bUdyjrq/EP/WbZPjDNkYcu4A1J3fs2uTbHzIricLTmfPmiIdGvKmjyAlBwQdmwSbMw=
+    on_failure: always
+    on_pull_requests: true
+    on_success: always
+  email: false
+addons:
+  apt:
+    packages:
+    - dpkg
+    - google-chrome-stable
+stages:
+- name: Run All Tests
+- name: Deploy to GCP
+- name: Deploy release branch
+cache:
+  directories:
+  - node_modules
+  - "$HOME/google-cloud-sdk/"
+services:
+- docker
+before_deploy:
+- python2 -c 'import os,sys,fcntl; flags = fcntl.fcntl(sys.stdout, fcntl.F_GETFL);
+  fcntl.fcntl(sys.stdout, fcntl.F_SETFL, flags&~os.O_NONBLOCK);'
+- if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export
+  CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash >/dev/null;
+  fi
+- source /home/travis/google-cloud-sdk/path.bash.inc
+- gcloud --quiet version
+- gcloud --quiet components update
+- gcloud --quiet components update kubectl
+script:
+- echo "skipping tests"
+branches:
+  only:
+  - master
+  - development
+  - "/^release.*$/"
+jobs:
+  fast_finish: true
+  include:
+  - stage: Run All Tests
+    script: "./deployment/files-for-travis/docker-run-all-tests.sh"
+  - stage: Deploy to GCP
+    deploy:
+    - provider: script
+      skip_cleanup: true
+      script: "./deployment/files-for-travis/update-dev-cluster.sh"
+      on:
+        branch: development
+  - stage: Deploy release branch
+    deploy:
+    - provider: script
+      script: "./deployment/gcp/deploy-release.sh -m release -n ds"
+      on:
+        all_branches: true
+        condition: "$TRAVIS_BRANCH =~ ^release.*$"
+before_install:
+- openssl aes-256-cbc -K $encrypted_c48d28a25cae_key -iv $encrypted_c48d28a25cae_iv
+  -in envs.tar.enc -out envs.tar -d
+- tar xvf envs.tar

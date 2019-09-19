@@ -1,0 +1,33 @@
+<div id="images-filter" class="ibox float-e-margins">
+  <div class="ibox-title">
+    <div class="dropdown" dropdown on-toggle="toggled(open)">
+      <a class="dropdown-toggle" href dropdown-toggle>
+        Category: {{selectedCategory.name}}
+      </a>
+      <ul class="dropdown-menu dropdown-user">
+        <li ng-repeat="category in categories"><a href ng-click="selectCategory(category)">{{category.name}}</a></li>
+      </ul>
+    </div>
+
+    <h5>Sort by
+      <span class="sorting"
+            ng-class="{up: activeSort === 'images', down: activeSort === '-images'}"
+            ng-click="sortBy('images')">tag/no-tag</span> |
+      <span class="sorting"
+            ng-class="{up: activeSort === 'thingName', down: activeSort === '-thingName'}"
+            ng-click="sortBy('thingName')">name</span>
+    </h5>
+  </div>
+
+  <div class="ibox-content no-padding">
+    <ul class="list-group">
+      <li class="list-group-item"
+          ng-repeat="thing in thingsByCategory | orderBy:activeSort"
+          ng-class="{active: thing._id === selectedThing._id}"
+          ng-click="selectThing(thing)">
+        <span class="badge badge-success">{{::thing.images}}</span>
+        {{::thing.thingName}}
+      </li>
+    </ul>
+  </div>
+</div>

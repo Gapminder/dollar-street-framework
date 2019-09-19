@@ -1,0 +1,8 @@
+runtime: other
+env: flex
+manual_scaling:
+  instances: 1
+resources:
+  cpu: 2
+  memory_gb: 3
+  disk_size_gb: 30

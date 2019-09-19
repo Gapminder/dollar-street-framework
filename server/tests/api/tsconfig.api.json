@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "allowJs": true,
+    "lib": [
+      "es2017",
+      "dom",
+      "es2015"
+    ],
+    "target": "es2016",
+    "types": [
+      "mocha",
+      "chai",
+      "node"
+    ]
+  },
+  "includes": [
+    "*.api-spec.ts"
+  ]
+}

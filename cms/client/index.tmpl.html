@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" ng-app="job" ng-strict-di>
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <title>Job</title>
+  <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/libs/components-font-awesome/css/font-awesome.min.css">
+
+  <!-- build:css /libs/ds-cms/ds-cms-style.min.css-->
+  <link rel="stylesheet" href="/assets/css/jquery.fancybox.css">
+  <link rel="stylesheet" href="/libs/angular-xeditable/dist/css/xeditable.css">
+  <link rel="stylesheet" href="/libs/ng-tags-input/ng-tags-input.min.css">
+  <link rel="stylesheet" href="/libs/angular-ui-select/dist/select.min.css">
+  <link rel="stylesheet" href="/assets/css/animate.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/switches.css">
+  <link rel="stylesheet" href="/assets/css/awesome-bootstrap-checkbox.css">
+  <link rel="stylesheet" href="/libs/angular-notify/dist/angular-notify.css">
+  <link rel="stylesheet" href="/libs/ng-cropper/dist/ngCropper.all.css">
+  <link rel="stylesheet" href="/assets/css/customStyle.css">
+  <!-- endbuild -->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700&lang=en' rel='stylesheet' type='text/css'>
+
+  <script src="/libs/socket.io-client/dist/socket.io.js"></script>
+</head>
+<!--<body ng-class="{'gray-bg': isPreview}" class="pace-done" id="page-top">-->
+<body class="pace-done" ng-class="responsiveClass" id="page-top" responsive-menu>
+
+<div ui-view></div>
+
+<script src="http://maps.google.com/maps/api/js"></script>
+
+<!-- build:js /libs/ds-cms/ds-cms-ext.min.js -->
+
+<script src="/libs/lodash/lodash.min.js"></script>
+<script src="/libs/jquery/dist/jquery.min.js"></script>
+<script src="/assets/js/jquery.fancybox.pack.js"></script>
+<script src="/libs/metisMenu/jquery.metisMenu.js"></script>
+
+<script src="/assets/js/angular-file-upload-shim.min.js"></script>
+<script src="/libs/tinymce-dist/tinymce.js"></script>
+<script src="/libs/angular/angular.min.js"></script>
+<script src="/libs/angular-ui-tinymce/src/tinymce.js"></script>
+<script src="/libs/angular-resource/angular-resource.min.js"></script>
+<script src="/libs/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="/libs/ngInfiniteScroll/build/ng-infinite-scroll.min.js"></script>
+<script src="/libs/angular-google-maps/dist/angular-google-maps.min.js"></script>
+<script src="/assets/js/angular-file-upload.min.js"></script>
+<script src="/libs/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="/libs/dndLists/angular-drag-and-drop-lists.min.js"></script>
+<script src="/assets/js/ng-breadcrumbs.min.js"></script>
+<script src="/libs/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="/libs/angular-xeditable/dist/js/xeditable.min.js"></script>
+<script src="/libs/ng-tags-input/ng-tags-input.min.js"></script>
+<script src="/libs/device.js/lib/device.min.js"></script>
+<script src="/libs/angular-ui-select/dist/select.min.js"></script>
+<script src="/assets/js/photo-area.js"></script>
+<script src="/libs/async/lib/async.js"></script>
+<script src="/libs/angular-notify/dist/angular-notify.js"></script>
+<script src="/libs/ng-cropper/dist/ngCropper.all.js"></script>
+
+<!-- endbuild -->
+
+<!-- build:js /libs/ds-cms/ds-cms-app.min.js -->
+
+<script src="app.js"></script>
+<script src="/assets/js/dsConst.js"></script>
+<script src="/components/administrator/adminpanel.routing.js"></script>
+
+<script src="/components/service/async.service.js"></script>
+<script src="/components/service/lodash.service.js"></script>
+<script src="/components/service/amazon-path.service.js"></script>
+
+<script src="/components/filter/isHiddenFilter.js"></script>
+<script src="/components/directives/directives.js"></script>
+<script src="/components/directives/sort-table-header.directive.js"></script>
+<script src="/components/directives/ibox-tools/ibox-tools.directive.js"></script>
+
+<script src="/components/account/registrationController.js"></script>
+<script src="/components/account/loginController.js"></script>
+
+<script src="/components/slideshow/slideshowController.js"></script>
+
+<script src="/components/administrator/adminController.js"></script>
+
+<script src="/components/administrator/progressbar/progressbar.directive.js"></script>
+
+<script src="/components/administrator/categories/categoriesController.js"></script>
+<script src="/components/administrator/categories/createAndEditCategoryController.js"></script>
+<script src="/components/administrator/categories/editThingsToCategoryController.js"></script>
+<script src="/components/administrator/categories/categories.service.js"></script>
+
+<script src="/components/administrator/places/form/form.controller.js"></script>
+<script src="/components/administrator/places/adminPlacesController.js"></script>
+<script src="/components/administrator/places/createAndEditPlaceController.js"></script>
+<script src="/components/administrator/places/excel/excel.controller.js"></script>
+<script src="/components/administrator/places/excel/excel.service.js"></script>
+<script src="/components/administrator/places/places.service.js"></script>
+<script src="/components/administrator/places/about-data/about-data.component.js"></script>
+<script src="/components/administrator/places/about-data/about-data.service.js"></script>
+<script src="/components/administrator/places/place/adminPlaceController.js"></script>
+<script src="/components/administrator/places/place/editMediaController.js"></script>
+<script src="/components/administrator/places/place/removeAndRestoreMediaController.js"></script>
+<script src="/components/administrator/places/place/rotateMediaController.js"></script>
+<script src="/components/administrator/places/place/place-admin.service.js"></script>
+<script src="/components/administrator/places/place/images-tagging/images-tagging/confirm-icon/confirm-icon.component.js"></script>
+<script src="/components/administrator/places/place/images-tagging/images-tagging/confirm-image/confirm-image.component.js"></script>
+<script src="/components/administrator/places/place/images-tagging/images-tagging/images-tagging.component.js"></script>
+<script src="/components/administrator/places/place/images-tagging/images-tagging/images-tagging.service.js"></script>
+<script src="/components/administrator/places/place/images-tagging/images-filter/images-filter.component.js"></script>
+<script src="/components/administrator/places/place/images-tagging/images-filter/images-filter.service.js"></script>
+<script src="/components/administrator/places/place/images-tagging/place-icons/place-icons.component.js"></script>
+<script src="/components/administrator/places/place/images-tagging/place-icons/place-icons.service.js"></script>
+
+<script src="/components/administrator/places/place/approve/approve.controller.js"></script>
+
+<script src="/components/administrator/placeType/placeTypeController.js"></script>
+<script src="/components/administrator/placeType/createNewPlaceTypeController.js"></script>
+<script src="/components/administrator/placeType/placeType.service.js"></script>
+
+<script src="/components/administrator/onboarding/onboarding.js"></script>
+<script src="/components/administrator/onboarding/onboarding.service.js"></script>
+<script src="/components/administrator/street/street.js"></script>
+<script src="/components/administrator/things-filter/things-filter.controller.js"></script>
+<script src="/components/administrator/things-filter/things-filter.service.js"></script>
+<script src="/components/administrator/things-filter/thing.search.filter.js"></script>
+<script src="/components/administrator/profile/profile.controller.js"></script>
+<script src="/components/administrator/profile/profile.service.js"></script>
+<script src="/components/administrator/profile/crop-image/crop-image.controller.js"></script>
+
+<script src="/components/administrator/questions-and-forms/questions/questionsController.js"></script>
+<script src="/components/administrator/questions-and-forms/questions/questions.service.js"></script>
+<script src="/components/administrator/questions-and-forms/questions/createNewQuestionController.js"></script>
+<script src="/components/administrator/questions-and-forms/questions/question-validation.directives.js"></script>
+<script src="/components/administrator/questions-and-forms/forms/formsController.js"></script>
+<script src="/components/administrator/questions-and-forms/forms/editQuestionsForm.controller.js"></script>
+<script src="/components/administrator/questions-and-forms/forms/forms-admin.service.js"></script>
+
+<script src="/components/administrator/things/admin-things.controller.js"></script>
+<script src="/components/administrator/things/create-thing.controller.js"></script>
+<script src="/components/administrator/things/things.service.js"></script>
+<script src="/components/administrator/things/thing.service.js"></script>
+<script src="/components/administrator/things/thing.filter.js"></script>
+<script src="/components/administrator/things/remove-thing.controller.js"></script>
+<script src="/components/administrator/things/icon-upload.directive.js"></script>
+
+<script src="/components/administrator/info/info.controller.js"></script>
+<script src="/components/administrator/info/info.service.js"></script>
+
+<script src="/components/administrator/strings/strings.controller.js"></script>
+<script src="/components/administrator/strings/strings.service.js"></script>
+<script src="/components/administrator/strings/actions/createAndEditStringController.js"></script>
+<script src="/components/administrator/strings/actions/removeStringController.js"></script>
+
+<script src="/components/administrator/comparisons/comparison.service.js"></script>
+<script src="/components/administrator/comparisons/filter/imageUrl.filter.js"></script>
+<script src="/components/administrator/comparisons/comparison/comparison.controller.js"></script>
+<script src="/components/administrator/comparisons/comparison/comparison-modal.controller.js"></script>
+
+<script src="/components/administrator/media/allMediaAdminController.js"></script>
+<script src="/components/administrator/media/editMediaModalController.js"></script>
+
+<script src="/components/administrator/countries/countries.controller.js"></script>
+<script src="/components/administrator/countries/countries.service.js"></script>
+
+<script src="/components/administrator/article/article.service.js"></script>
+<script src="/components/administrator/article/article.controller.js"></script>
+
+<script src="/components/administrator/footer/footer.controller.js"></script>
+<script src="/components/administrator/footer/footer.service.js"></script>
+
+<script src="/components/administrator/users/users.controller.js"></script>
+<script src="/components/administrator/users/users.service.js"></script>
+<script src="/components/administrator/users/remove/remove-user.controller.js"></script>
+
+<script src="/components/administrator/users/user/user.controller.js"></script>
+<script src="/components/administrator/users/user/user.service.js"></script>
+
+<script src="/components/administrator/users/types/types.controller.js"></script>
+<script src="/components/administrator/users/types/types.service.js"></script>
+<script src="/components/administrator/users/types/createAndEditUserTypeController.js"></script>
+<script src="/components/administrator/users/types/removeUserTypeController.js"></script>
+
+<script src="/components/administrator/translations/translations.controller.js"></script>
+<script src="/components/administrator/translations/translations.service.js"></script>
+
+<script src="/components/administrator/translations/export/export.controller.js"></script>
+<script src="/components/administrator/translations/import/import.controller.js"></script>
+
+<script src="fancyboxInit.js"></script>
+
+<!-- endbuild -->
+
+</body>
+</html>
+

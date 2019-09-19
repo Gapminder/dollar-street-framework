@@ -1,0 +1,9 @@
+deployment/gcp/puppeteer
+deployment/gcp/s3_upload
+*.log
+**/*.log*
+!**/.gitkeep
+node_modules/**
+dist/**
+sslcert/**
+coverage

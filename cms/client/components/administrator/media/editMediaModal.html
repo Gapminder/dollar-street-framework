@@ -1,0 +1,84 @@
+<div class="inmodal">
+  <div class="modal-header">
+    <p class="modal-title" ng-bind-html="title"></p>
+    <h5 class="modal-title">For {{count}} selected images</h5>
+  </div>
+  <div class="form-horizontal">
+    <div class="modal-body">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content media-page-edit">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Show thing</label>
+
+            <div class="col-sm-10">
+              <label class="ios7-switch">
+                <input type="checkbox" ng-model="thingOptions.hidden">
+                <div></div>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Show image</label>
+
+            <div class="col-sm-10">
+              <label class="ios7-switch">
+                <input type="checkbox" ng-model="imagesDisplay.display">
+                <div></div>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Rating</label>
+
+            <div class="col-sm-10 rating">
+              <rating ng-model="thingOptions.rating" max="5" state-on="'glyphicon-star'"
+                      state-off="'glyphicon-star-empty'"></rating>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Rotate</label>
+
+            <div class="col-sm-10">
+              <span ng-click="imageRotate()" class="glyphicon glyphicon-repeat"></span>
+              <span>{{rotate}}</span>
+            </div>
+          </div>
+          <div class="form-group" ng-if="togetherThings.length">
+            <label class="col-sm-2 control-label">Things</label>
+
+            <div class="col-sm-10">
+              <p ng-repeat="thing in togetherThings">
+                {{thing.thingName}}
+                <span class="label label-danger remove-thing" ng-click="deleteTogetherThings($index)">X</span>
+              </p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Select thing</label>
+
+            <div class="col-sm-10">
+              <ui-select ng-model="thingOptions._id">
+                <ui-select-match placeholder="Select thing">{{$select.selected.thingName}}</ui-select-match>
+                <ui-select-choices repeat="thing._id as thing in things | orderBy:'thingName' | filter: $select.search">
+                  <span ng-bind-html="thing.thingName | highlight: $select.search"></span>
+                </ui-select-choices>
+              </ui-select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Tags</label>
+
+            <div class="col-sm-10">
+              <tags-input ng-model="thingOptions.tags"></tags-input>
+            </div>
+          </div>
+          <p ng-show="errorSelectThing" class="text-danger text-center">Please select thing or rotate!</p>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-w-m btn-primary" ng-click="save()">Save</button>
+      <button type="button" class="btn btn-w-m" ng-click="close()">Close</button>
+    </div>
+  </div>
+</div>

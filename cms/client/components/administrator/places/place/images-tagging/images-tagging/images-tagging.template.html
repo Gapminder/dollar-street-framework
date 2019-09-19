@@ -1,0 +1,37 @@
+<div class="images-tagging-content" ng-class="{'select-icon': activeIconType}">
+  <div class="images-things" ng-show="selectedThing">
+    <div class="images-things-header clearfix">
+      <p class="pull-left">{{selectedThing.thingName}} ({{imagesForThing.length || 0}})</p>
+
+      <div class="save-images-tagging pull-right" ng-if="isSave" ng-show="!activeIconType">
+        <button type="button" class="btn btn-primary" ng-click="save()">Save</button>
+      </div>
+    </div>
+
+    <div class="images-things-container">
+      <div class="images-things-content" ng-if="imagesForThing.length" ng-style="{width: widthImagesContainer + 'px'}">
+        <div class="col-md-1"
+             ng-click="selectIcon(image._id)"
+             ng-style="{width: widthImage + 'px'}"
+             ng-repeat="image in imagesForThing track by $index"
+             tooltip-html-unsafe="{{image.thingsName}}"
+             tooltip-placement="bottom">
+        <span class="glyphicon glyphicon-remove remove"
+              ng-show="!activeIconType"
+              ng-click="removeThingFromImage(image._id)"></span>
+          <div ng-style="{'background-image': image.image}"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="other-images">
+    <div class="col-md-1"
+         ng-repeat="image in imagesWithoutThing track by $index"
+         tooltip-html-unsafe="{{image.thingsName}}"
+         tooltip-placement="bottom"
+         ng-click="addThingForImage(image._id)">
+      <div ng-style="{'background-image': image.image}"></div>
+    </div>
+  </div>
+</div>

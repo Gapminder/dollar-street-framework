@@ -1,0 +1,12 @@
+<ol class="breadcrumb">
+    <li ng-repeat="crumb in breadcrumbs" ng-class="{ active: $last }">
+        <a ui-sref="{{ crumb.route }}" ng-if="!$last&&!crumb.things">{{ crumb.displayName }}&nbsp;</a>
+        <span ng-show="$last&&!crumb.things" ng-class="$last?'active':''"><strong>{{ crumb.displayName }}</strong></span>
+        <select ng-if="crumb.things"  style="display: inline;width: auto" ng-change="crumb.choseThing(crumb.thing)" class="form-control" ng-model="crumb.thing"
+                ng-options="thing.thingName for thing in crumb.things | orderBy:'name'">
+
+        </select>
+
+    </li>
+
+</ol>

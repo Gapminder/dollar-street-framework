@@ -1,0 +1,36 @@
+<div class="row wrapper border-bottom white-bg page-heading">
+  <div class="col-lg-12">
+    <h2>Footer</h2>
+  </div>
+</div>
+
+<div class="wrapper wrapper-content ecommerce info-page">
+  <div class="row dndField">
+    <div class="col-lg-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content">
+          <div class="table-responsive">
+            <div ng-if="loadPage" class="spiner-container">
+              <div class="sk-spinner sk-spinner-three-bounce">
+                <div class="sk-bounce1"></div>
+                <div class="sk-bounce2"></div>
+                <div class="sk-bounce3"></div>
+              </div>
+            </div>
+            <div class="container-scroll" ng-style="style()" resize>
+              <div class="textarea-full-width">
+                <textarea ui-tinymce="tinymceOptions" ng-model="footer.text"></textarea>
+              </div>
+
+              <div ng-hide="isHidden">
+                <div class="save-content">
+                  <button class="btn btn-w-m btn-primary" ng-click="saveFooter(footer)">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

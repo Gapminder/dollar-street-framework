@@ -1,0 +1,18 @@
+<div class="col-md-2 image-content" ng-repeat-start="image in images">
+  <a id="id{{::image._id}}" ng-href="{{amazonPath(image, device) + imgReload}}"
+     class="fancybox" rel="gallery1" data-image='{{::image}}'>
+    <img class="img-responsive"
+         ng-src="{{amazonPath(image,'thumb-') + imgReload}}" alt=""
+         ng-click="choseImg($event, image._id)"/>
+    <span class="glyphicon glyphicon-ok-sign select_img" aria-hidden="true"
+          ng-if="watchImgChosen(image._id)"></span>
+    <div ng-if="imageIsRotate(image._id)" class="spiner-container">
+      <div class="sk-spinner sk-spinner-three-bounce">
+        <div class="sk-bounce1"></div>
+        <div class="sk-bounce2"></div>
+        <div class="sk-bounce3"></div>
+      </div>
+    </div>
+  </a>
+</div>
+<div ng-repeat-end ng-if="($index+1)%6===0" class="clearfix"></div>

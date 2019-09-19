@@ -1,0 +1,166 @@
+<div class="inmodal">
+  <div class="modal-header">
+    <p class="modal-title" ng-bind-html="title"></p>
+  </div>
+  <form class="form-horizontal"
+        name="question_form"
+        ng-submit="submitQuestion(question_form, questionModel)">
+    <div class="modal-body">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content">
+          <!--id-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Id</label>
+
+            <div class="col-sm-10">
+              <input type="text"
+                     name="id"
+                     placeholder="Question id"
+                     class="form-control"
+                     ng-model="questionModel.questionId"
+                     ng-model-options="{updateOn: 'default blur', debounce: {default: 200, blur: 0}}"
+                     unique-question-id
+                     ng-required="true">
+
+              <div class="m-t-xs" ng-show="question_form.id.$dirty && question_form.id.$invalid">
+                <small class="text-danger" ng-if="question_form.id.$error.required">Question Id is required</small>
+                <small class="text-danger"
+                       ng-if="!question_form.id.$error.required && question_form.id.$error.uniqueId">Question Id should
+                  be unique
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <!--name-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Name</label>
+
+            <div class="col-sm-10">
+              <input type="text"
+                     name="name"
+                     class="form-control"
+                     placeholder="Question name"
+                     ng-model="questionModel.name"
+                     ng-model-options="{updateOn: 'default blur', debounce: {default: 150, blur: 0}}"
+                     unique-question-name
+                     ng-required="true">
+
+              <div class="m-t-xs" ng-show="question_form.name.$dirty && question_form.name.$invalid">
+                <small class="text-danger" ng-if="question_form.name.$error.required">Question name is required</small>
+                <small class="text-danger"
+                       ng-if="!question_form.name.$error.required && question_form.name.$error.uniqueName">Question name
+                  should be unique
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <!--description-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Description</label>
+
+            <div class="col-sm-10">
+              <textarea ng-model="questionModel.description"
+                        placeholder="Description of the question"
+                        class="form-control"></textarea>
+            </div>
+          </div>
+
+          <!--Type-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Type</label>
+
+            <div class="col-sm-10" ng-if="types.length">
+              <select
+                class="form-control"
+                name="question_type"
+                ng-model="questionModel.typeFields"
+                ng-required="true"
+                ng-options="type.name for type in ::types">
+                <option value="" disabled selected>Please select answer type</option>
+              </select>
+
+              <div class="m-t-xs" ng-show="question_form.question_type.$dirty && question_form.question_type.$invalid">
+                <small class="text-danger" ng-if="question_form.question_type.$error.required">Question type is
+                  required
+                </small>
+              </div>
+            </div>
+          </div>
+
+          <!--selected type-->
+          <div ng-if="question_form.question_type.$modelValue.name === 'List'">
+            <div class="text-center m-b" ng-if="isShow">
+              <div class="question-list btn-group">
+                <button class="btn btn-primary" type="button" ng-class="{'active': ifListSelect}"
+                        ng-click="listTypeSelect()">Select list
+                </button>
+                <button class="btn btn-primary" type="button" ng-class="{'active': !ifListSelect}"
+                        ng-click="listTypeCreate()">Create list
+                </button>
+              </div>
+            </div>
+
+            <!--select list-->
+            <div class="form-group" ng-if="ifListSelect">
+              <label class="col-sm-2 control-label">Select list</label>
+
+              <div class="col-sm-10">
+                <select class="form-control"
+                        name="select_list"
+                        ng-options="list.name for list in selectListTypeList"
+                        ng-required="true"
+                        ng-model="questionModel.listSelect"></select>
+
+                <div class="m-t-xs" ng-show="question_form.select_list.$invalid">
+                  <small class="text-danger"
+                         ng-if="question_form.select_list.$error.required">Please select list type
+                  </small>
+                </div>
+              </div>
+            </div>
+
+            <!--create list-->
+            <div ng-if="!ifListSelect">
+              <div class="form-group" ng-repeat="list in questionModel.lists">
+                <label class="col-sm-2 control-label">Item {{$index}}</label>
+
+                <div class="col-sm-9">
+                  <input type="text"
+                         class="form-control"
+                         ng-model="list.name"
+                         ng-required="true"/>
+
+                  <small class="text-danger" ng-if="$last && question_form.$invalid">Please fill all fields
+                  </small>
+                </div>
+                <div class="col-md-1">
+                  <button ng-if="questionModel.lists.length > 2" type="button"
+                          class="btn btn-danger btn-circle pull-right"
+                          ng-click="removeFieldsFieldList($index)">
+                    <i class="fa fa-remove"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="text-right">
+                <button type="button"
+                        class="btn btn-success btn-circle"
+                        ng-click="addNewFieldList()"><i class="fa fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div ng-if="errorEnter" class="alert alert-danger" role="alert">Please fill out all fields!</div>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-w-m btn-primary"
+              ng-class="{disabled: question_form.$invalid || question_form.$pending}">Save
+      </button>
+      <button type="button" class="btn btn-w-m" ng-click="cancel()">Close</button>
+    </div>
+  </form>
+
+</div>

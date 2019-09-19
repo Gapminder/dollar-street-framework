@@ -1,0 +1,163 @@
+<div class="inmodal">
+  <div class="modal-header">
+    <p class="modal-title" ng-bind-html="title"></p>
+  </div>
+  <form class="form-horizontal"
+        name="thing_info_form"
+        ng-submit="submitThing(name, plural, description, synonymous, category.selected, relatedThings.selected , tags, rating, list)">
+    <div class="modal-body">
+      <div class="ibox float-e-margins">
+        <div class="ibox-content">
+          <!--name-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Name</label>
+
+            <div class="col-sm-10">
+              <input type="text" ng-change="checkedName(name)"
+                     placeholder="Name of thing" ng-model="name" class="form-control">
+
+              <div class="m-t-xs" ng-show="isValidName === false">
+                <small class="text-danger">Thing should be unique</small>
+              </div>
+            </div>
+          </div>
+
+          <!--name-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Plural</label>
+
+            <div class="col-sm-10">
+              <input type="text"
+                     ng-change="checkedPlural(plural)"
+                     placeholder="Plural of thing name"
+                     ng-model="plural"
+                     class="form-control">
+
+              <div class="m-t-xs" ng-show="isValidPlural === false">
+                <small class="text-danger">Invalid plural</small>
+              </div>
+            </div>
+          </div>
+
+          <!--description-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Description</label>
+
+            <div class="col-sm-10">
+              <textarea ng-model="description"
+                        placeholder="Description of the thing"
+                        class="form-control"></textarea>
+            </div>
+          </div>
+
+
+
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Related things</label>
+
+            <div class="col-sm-10">
+              <ui-select multiple ng-change="checkedRelatedThings(relatedThings.selected)" sortable="true"
+                         reset-search-input=true ng-model="relatedThings.selected" ng-disabled="disabled">
+                <ui-select-match placeholder="Select Related things">{{$item.thingName}}</ui-select-match>
+                <ui-select-choices
+                  repeat="thing._id as thing in thingsListForRelatedThings |  orderBy:'thingName' | propsFilter: {thingName: $select.search}">
+                  <span ng-bind-html="thing.thingName | highlight: $select.search"></span>
+                </ui-select-choices>
+
+              </ui-select>
+
+              <div class="m-t-xs" ng-show="isValidRelatedThing === false">
+                <small class="text-danger">Invalid related thing</small>
+              </div>
+            </div>
+          </div>
+
+
+          <!--categories-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Categories</label>
+
+            <div class="col-sm-10">
+              <ui-select ng-change="checkedCategory(category.selected)" multiple
+                         reset-search-input=true ng-model="category.selected" ng-disabled="disabled">
+                <ui-select-match placeholder="Select Category">{{$item.name}}</ui-select-match>
+                <ui-select-choices
+                  repeat="category._id as category in categories | orderBy:'name' | propsFilter: {name: $select.search}">
+                  <span ng-bind-html="category.name | highlight: $select.search"></span>
+                </ui-select-choices>
+              </ui-select>
+
+
+              <div class="m-t-xs" ng-show="isValidCategory === false">
+                <small class="text-danger">Invalid category</small>
+              </div>
+            </div>
+          </div>
+
+          <!--Synonymous-->
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Synonymous</label>
+
+                <div class="col-sm-10">
+                  <tags-input placeholder="Add a synonymous word"
+                              ng-model="synonymous"
+                              replace-spaces-with-dashes="{true}">
+                  </tags-input>
+                </div>
+              </div>
+
+          <!--tags-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Tags</label>
+
+            <div class="col-sm-10">
+              <tags-input ng-change="checkedTags(tags)" ng-model="tags"></tags-input>
+            </div>
+          </div>
+
+          <!--rating-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Rating</label>
+
+            <div class="col-sm-10 fieldRating">
+              <rating ng-model="rating" max="5" state-on="'glyphicon-star'"
+                      state-off="'glyphicon-star-empty'"></rating>
+            </div>
+          </div>
+
+          <!--List-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label">List</label>
+
+            <div class="col-sm-4">
+              <div class="btn-group">
+                <label class="btn btn-primary" ng-model="list" btn-radio="'black'">Black</label>
+                <label class="btn btn-primary" ng-model="list" btn-radio="'white'">White</label>
+              </div>
+            </div>
+          </div>
+
+          <!--icon-->
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Icon</label>
+
+            <div class="col-sm-10">
+              <div class="btn-group">
+                <file class="thing-icon" start-image="iconImage" validation="validIcon" file-to-upload="fileToUpload"
+                remove-icon="removeIcon"/>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div ng-if="errorEnter" class="alert alert-danger" role="alert">Please fill out all fields!</div>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-w-m btn-primary">Save</button>
+      <button type="button" class="btn btn-w-m" ng-click="cancel()">Close</button>
+    </div>
+  </form>
+
+</div>

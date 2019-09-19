@@ -1,0 +1,31 @@
+<div class="photo-area-box"></div>
+
+<div class="photo-area-lineedit">
+  <a class="photo-area-edit" ng-click="goToEdition()">Edit</a>
+
+  <div class="progress" ng-show="progresShow">
+    <div aria-valuemax="100"
+         aria-valuemin="0"
+         role="progressbar"
+         class="photo-area-progress progress-bar progress-bar-success progress-bar-striped active">
+    </div>
+  </div>
+  <div>{{status_upload}}</div>
+</div>
+
+<div class="photo-area-bad">
+  <div class="row">
+    <p>Sorry, the system does not support the following files</p>
+
+    <div class="photo-area-badFileName col-md-6">File Name:</div>
+    <div class="photo-area-reason col-md-6">Reason:</div>
+  </div>
+</div>
+
+<div class="photo-area-submit-container modal-footer">
+  <span class="photo-area-count"></span>
+  <button type="button" class="btn btn-w-m btn-primary photo-area-submit"
+          ng-click="uploaderMedia()">Add</button>
+  <button type="button" class="btn btn-w-m btn-default"
+          ng-click="[cancelMediaUpload(), photoAreaAfterUpload()]">Cancel</button>
+</div>

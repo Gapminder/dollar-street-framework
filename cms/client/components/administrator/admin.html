@@ -1,0 +1,182 @@
+<div id="wrapper">
+  <nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+      <ul ng-if="removeField" side-navigation class="nav metismenu" id="side-menu">
+        <li class="nav-header nav-header-logo">
+          <a ui-sref="admin.app.places">
+            <img src="/assets/images/dollar-street.png" alt=""/>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.places">
+            <i class="fa fa-home" tooltip-placement="right" tooltip="Places"></i>
+            <span class="nav-label">PLACES</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.things">
+            <i class="fa fa-language" tooltip-placement="right" tooltip="Things"></i>
+            <span class="nav-label">THINGS</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.thingsFilter">
+            <i class="fa fa-language" tooltip-placement="right" tooltip="Things filter"></i>
+            <span class="nav-label">THINGS FILTER</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.categories">
+            <i class="fa fa-share-alt" tooltip-placement="right" tooltip="Categories"></i>
+            <span class="nav-label">CATEGORIES</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.placeType">
+            <i class="fa fa-thumb-tack" tooltip-placement="right" tooltip="Place type"></i>
+            <span class="nav-label">PLACE TYPE</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.media">
+            <i class="fa fa-picture-o" tooltip-placement="right" tooltip="Images"></i>
+            <span class="nav-label">IMAGES</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a>
+            <i class="fa fa-compress" tooltip-placement="right" tooltip="Comparison"></i>
+            <span class="nav-label">COMPARISONS</span>
+          </a>
+          <ul class="nav nav-second-level">
+            <li ui-sref-active="active">
+              <a ui-sref="admin.app.comparison({comparisonType: 'similarities'})">Similarities</a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="admin.app.comparison({comparisonType: 'differences'})">Differences</a>
+            </li>
+          </ul>
+        </li>
+        <li ui-sref-active="active">
+          <a>
+            <i class="fa fa-question" tooltip-placement="right" tooltip="Questions & Forms"></i>
+            <span class="nav-label">QUESTIONS & FORMS</span>
+          </a>
+          <ul class="nav nav-second-level">
+            <li ui-sref-active="active">
+              <a ui-sref="admin.app.questions">Questions</a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="admin.app.form">Forms</a>
+            </li>
+          </ul>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.countries">
+            <i class="fa fa-pie-chart" tooltip-placement="right" tooltip="Countries"></i>
+            <span class="nav-label">COUNTRIES</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.info">
+            <i class="fa fa-info" tooltip-placement="right" tooltip="Info"></i>
+            <span class="nav-label">INFO</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.strings">
+            <i class="fa fa-server" tooltip-placement="right" tooltip="Strings"></i>
+            <span class="nav-label">STRINGS</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.onboarding">
+            <i class="fa fa-graduation-cap" tooltip-placement="right" tooltip="Onboarding"></i>
+            <span class="nav-label">ONBOARDING</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.street">
+            <i class="fa fa-road" tooltip-placement="right" tooltip="Street"></i>
+            <span class="nav-label">STREET SETTINGS</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a>
+            <i class="fa fa-compress" tooltip-placement="right" tooltip="Users"></i>
+            <span class="nav-label">USERS</span>
+          </a>
+          <ul class="nav nav-second-level">
+            <li ui-sref-active="active">
+              <a ui-sref="admin.app.users">PROFILES</a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="admin.app.usersTypes">TYPES</a>
+            </li>
+          </ul>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.footer">
+            <i class="fa fa-pencil" tooltip-placement="right" tooltip="Footer"></i>
+            <span class="nav-label">FOOTER</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.languages">
+            <i class="fa fa-language" tooltip-placement="right" tooltip="Languages"></i>
+            <span class="nav-label">LANGUAGES</span>
+          </a>
+        </li>
+      </ul>
+      <ul ng-if="!removeField" side-navigation class="nav metismenu" id="side-menu">
+        <li class="nav-header nav-header-logo">
+          <a ui-sref="admin.app.places">
+            <img src="/assets/images/dollar-street.png" alt=""/>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.places">
+            <i class="fa fa-pie-chart" tooltip-placement="right" tooltip="Places"></i>
+            <span class="nav-label">PLACES</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.things">
+            <i class="fa fa-pie-chart" tooltip-placement="right" tooltip="Things"></i>
+            <span class="nav-label">THINGS</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="admin.app.categories">
+            <i class="fa fa-pie-chart" tooltip-placement="right" tooltip="Categories"></i>
+            <span class="nav-label">CATEGORIES</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="page-wrapper" class="gray-bg">
+    <div class="row border-bottom">
+      <nav class="navbar navbar-static-top" role="navigation">
+        <div class="navbar-header">
+          <span minimaliza-sidebar></span>
+        </div>
+        <ul class="nav navbar-top-links navbar-right">
+          <li>
+            <a ui-sref="admin.app.profile">
+              <i class="fa fa-user"></i> Profile
+            </a>
+          </li>
+          <li>
+            <a href="" ng-click="logout()">
+              <i class="fa fa-sign-out"></i> Log out
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div ui-view></div>
+  </div>
+</div>
+
+<convert-panel></convert-panel>

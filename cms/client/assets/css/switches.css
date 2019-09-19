@@ -1,0 +1,122 @@
+.ios7-switch {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  font-size: 32px;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+.ios7-switch input {
+  display: none;
+}
+
+.ios7-switch input + div {
+  position: relative;
+  display: inline-block;
+  width: 1.65em;
+  height: 1em;
+  background: white;
+  box-shadow: inset 0 0 0 0.0625em #e9e9e9;
+  border-radius: 0.5em;
+  vertical-align: middle;
+  transition: all 0.40s cubic-bezier(.17,.67,.43,.98);
+}
+
+.ios7-switch:active input + div,
+.ios7-switch input + div:active {
+  box-shadow: inset 0 0 0 0.73em #e9e9e9;
+}
+
+.ios7-switch input + div:after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 0.875em;
+  height: 0.875em;
+  border-radius: 0.4375em;
+  top: 0.0625em;
+  left: 0.0625em;
+  background: white;
+  box-shadow: inset 0 0 0 0.03em rgba(0,0,0,0.1),
+  0 0 0.05em rgba(0,0,0,0.05),
+  0 0.1em 0.2em rgba(0,0,0,0.2);
+  transition: all 0.25s ease-out;
+}
+
+.ios7-switch:active input + div:after,
+.ios7-switch input + div:active:after {
+  width: 1.15em;
+}
+
+.ios7-switch input:checked + div {
+  box-shadow: inset 0 0 0 0.73em #4cd964;
+}
+
+.ios7-switch input:checked + div:after {
+  left: 0.7125em;
+}
+
+.ios7-switch:active input:checked + div:after,
+.ios7-switch input:checked + div:active:after {
+  left: 0.4375em;
+}
+
+/* accessibility styles */
+.ios7-switch input:focus + div:after {
+  box-shadow: inset 0 0 0 0.03em rgba(0,0,0,0.15),
+  0 0 0.05em rgba(0,0,0,0.08),
+  0 0.1em 0.2em rgba(0,0,0,0.3);
+  background: #fff;
+}
+
+.ios7-switch input:focus + div {
+  box-shadow: inset 0 0 0 0.0625em #dadada;
+}
+
+.ios7-switch input:focus:checked + div {
+  box-shadow: inset 0 0 0 0.73em #33be4b;
+}
+
+/* reset accessibility style on hover */
+.ios7-switch:hover input:focus + div:after {
+  box-shadow: inset 0 0 0 0.03em rgba(0,0,0,0.1),
+  0 0 0.05em rgba(0,0,0,0.05),
+  0 0.1em 0.2em rgba(0,0,0,0.2);
+  background: #fff;
+}
+
+.ios7-switch:hover input:focus + div {
+  box-shadow: inset 0 0 0 0.0625em #e9e9e9;
+}
+
+.ios7-switch:hover input:focus:checked + div {
+  box-shadow: inset 0 0 0 0.73em #4cd964;
+}
+
+.ios7-switch .description {
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.ios7-switch.sm {
+  font-size: 18px;
+}
+
+.ios7-switch.lg {
+  font-size: 48px;
+}
+
+.ios7-switch + .ios7-switch {
+  margin-top: 10px;
+}
+
+.ios7-switch:first-child {
+  margin-top: 0;
+}

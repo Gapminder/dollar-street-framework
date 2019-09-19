@@ -1,0 +1,37 @@
+:host-context(#main-mobile-menu) .share-button svg {
+  height: 24px;
+  width: 24px;
+  vertical-align: middle;
+}
+:host-context(#main-mobile-menu) .share-button .cls-1 {
+  fill: #374551;
+}
+:host-context(.main-menu) .share-button svg {
+  width: 21px;
+  height: 21px;
+}
+:host-context(.main-menu) .share-button .cls-1 {
+  fill: #e0e7ef;
+}
+
+
+.share-button-container {
+  padding: 0 8px;
+  display: flex;
+}
+
+.share-button-container > div {
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 1023px) {
+  :host-context(.main-menu) .share-button svg {
+    height: 22px;
+    width: 22px
+  }
+
+  :host-context(.main-menu) .share-button svg .cls-1 {
+    fill: #edf0f5;
+  }
+}

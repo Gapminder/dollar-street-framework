@@ -1,0 +1,20 @@
+.header-position {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #fff;
+  z-index: 999;
+}
+
+.hide-header {
+  visibility: hidden;
+  z-index: 0;
+}
+
+@media (max-width: 1024px) {
+  .header-position {
+    height: 90px;
+  }
+}

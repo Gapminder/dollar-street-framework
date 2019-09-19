@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "esnext",
+    "outDir": "../../../dist/cloud-puppeteer",
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "lib": [ "es2015", "es6", "es5", "dom" ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "experimentalDecorators": true
+  },
+  "include": [
+    "index.ts",
+    "../../../common/credential.service.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "client",
+    "server",
+    "cms"
+  ]
+}

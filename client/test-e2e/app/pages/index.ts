@@ -1,0 +1,9 @@
+export { MatrixPage } from './matrix.page';
+export { PhotographersPage } from './photographers.page';
+export { PhotographerPage } from './photographer.page';
+export { CountryPage } from './country.page';
+export { FamilyPage } from './family.page';
+export { MapPage } from './map.page';
+export { DonatePage } from './donate.page';
+export { AboutPage } from './about.page';
+export { AbstractPage } from './abstract.page';
