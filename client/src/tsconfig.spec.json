@@ -16,7 +16,8 @@
     "baseUrl": "",
     "types": [
       "jasmine",
-      "node"
+      "node",
+      "systemjs"
     ]
   },
   "files": [

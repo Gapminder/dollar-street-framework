@@ -264,6 +264,7 @@
   },
   "devDependencies": {
     "@types/node": "8.10.51",
+    "@types/systemjs": "0.20.6",
     "angular-mocks": "1.4.7",
     "browserstack-wrapper": "1.0.0",
     "browserstacktunnel-wrapper": "2.0.0",
