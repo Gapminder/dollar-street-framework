@@ -1,15 +1,7 @@
 sudo: required
 dist: trusty
 language: node_js
-node_js: '8'
-notifications:
-  slack:
-    rooms:
-      secure: Khtd1NlhJFvDD+4G5TqabdUlzKN8adg9CMIpdQL76NDmBEqXk8uaXnajU2xxwIU8P/76q770HLF30yzTlrU94EblsbV9cTtkMYV4w8WEtNngU+91/iMgP0wZ+mSG2rAJ8bRY/AgKnw+uk1xLWBlPkIk5p0FWqspNl2nEZN683OVza9GjlA+yLH67b4cHyp8iDVrDo8ILeYyUUDhUzUUroxS1rCN0bGeD+pt1yBH94VPOgyHlUAZ1wfIdzzPGMCXfD4uw0SYyF1UYTtmMiIge4AXtu2r7ILHs/y5iIZtNkhmF+3tKxDEr+3JX/mSCpdzSPZQD5sRE+OTMRYPr/ngQxTACaXqm0pdZ+1TIcuGqykbb8BEY1sLiTpGne1y3PNQtTTAVcvRQ/h3M8VggdWmnly6iZZ5xkXSBn/Da6C6oxmPoDWYBlr3o9hS4WOCcjK5PizvZ26mlJwxh+6n7Pog93ORmxzPxpFa6bPjRKG5F6+4QfBeSF7y6uXU3u1ORlxwYOgNDc5hXJlK2T16boK7j4iMp1Ty3HloVNxjRtXTMJVanac7q7rnAIaGNTVUFIytWpySutASzrelwk4zpdtxxRpj7prxq+uM/Sfaq72Lm3bUdyjrq/EP/WbZPjDNkYcu4A1J3fs2uTbHzIricLTmfPmiIdGvKmjyAlBwQdmwSbMw=
-    on_failure: always
-    on_pull_requests: true
-    on_success: always
-  email: false
+node_js: '10'
 addons:
   apt:
     packages:
@@ -62,6 +54,6 @@ jobs:
         all_branches: true
         condition: "$TRAVIS_BRANCH =~ ^release.*$"
 before_install:
-- openssl aes-256-cbc -K $encrypted_c48d28a25cae_key -iv $encrypted_c48d28a25cae_iv
+- openssl aes-256-cbc -K $encrypted_cd0109970fec_key -iv $encrypted_cd0109970fec_iv
   -in envs.tar.enc -out envs.tar -d
 - tar xvf envs.tar
