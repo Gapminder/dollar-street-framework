@@ -73,7 +73,7 @@
     "lint": "npm run lint:server && npm run lint:client",
     "lint:server": "tslint --config ./server/tslint.json --project ./server/tsconfig.json --fix --format stylish",
     "lint:client": "ng lint",
-    "update:travis-envs": "rm -rf envs.tar envs.tar.enc && tar -cvf envs.tar credentials && ./encrypt-travis-plugin.sh before_install -1 3 .travis.yml && travis encrypt-file envs.tar --add && echo \"- tar xvf envs.tar\" >> .travis.yml",
+    "update:travis-envs": "rm -rf envs.tar envs.tar.enc && tar -cvf envs.tar credentials && ./encrypt-travis-plugin.sh before_install -1 3 .travis.yml && travis encrypt-file envs.tar --add --org && echo \"- tar xvf envs.tar\" >> .travis.yml",
     "update:webdriver": "webdriver-manager update --gecko=false",
     "update:codecov": "cat ./coverage/report-lcov/lcov.info | codecov -t $CODECOV_KEY",
     "update:p-queue": "rm -rf node_modules/p-queue/node_modules",
