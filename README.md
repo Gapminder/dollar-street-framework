@@ -18,13 +18,14 @@
 - imagemagick & graphicsmagick
 - mongodb-org-tools v4+
 ```
-sudo apt-get install -y mongodb-org-tools
+apt-get install -y mongodb-org-tools
 ```
 - for deploy: Google Cloud SDK 261.0.0
 - for deploy: kubectl
 - [create S3 bucket with permissions](https://docs.google.com/document/d/1oHrGkqXRs3DUfk5z0X-uBQe29OVdkrSOmgXKoDfHGBM/edit)
 
 ## How to launch
+
 ```
 git clone git@github.com:Gapminder/dollar-street-framework.git
 
@@ -81,7 +82,7 @@ open http://localhost:3000 #street
     - log.ts
  * uploads - temporary storage for uploaded files
 
-# Contributors
+## Contributors
 
 ## Before release
 [![](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/images/0)](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/links/0)[![](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/images/1)](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/links/1)[![](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/images/2)](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/links/2)[![](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/images/3)](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/links/3)[![](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/images/4)](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/links/4)[![](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/images/5)](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/links/5)[![](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/images/6)](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/links/6)[![](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/images/7)](https://sourcerer.io/fame/korel-san/Gapminder/dollar-street-pages/links/7)
