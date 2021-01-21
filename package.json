@@ -246,7 +246,7 @@
     "shelljs": "0.7.8",
     "shorturl-2": "0.0.6",
     "sinon-as-promised": "4.0.3",
-    "socket.io": "2.0.3",
+    "socket.io": "2.4.0",
     "source-map-loader": "0.2.1",
     "stripe": "6.28.0",
     "supertest": "4.0.2",
