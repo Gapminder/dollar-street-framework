@@ -225,7 +225,7 @@
     "ngx-toastr": "8.8.0",
     "node-fetch": "2.1.1",
     "node-uuid": "1.4.8",
-    "nodemailer": "4.0.1",
+    "nodemailer": "6.4.16",
     "p-queue": "6.1.1",
     "passport": "0.3.2",
     "passport-local": "1.0.0",
