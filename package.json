@@ -259,7 +259,7 @@
     "url-loader": "0.5.8",
     "url-parse": "1.4.4",
     "uuid": "3.3.2",
-    "xlsx": "0.11.0",
+    "xlsx": "0.17.0",
     "zone.js": "0.8.12"
   },
   "devDependencies": {
