@@ -289,7 +289,7 @@
     "jasmine-spec-reporter": "4.1.0",
     "joi": "14.3.1",
     "json2yaml": "1.1.0",
-    "karma": "1.7.0",
+    "karma": "6.3.14",
     "karma-browserstack-launcher": "1.2.0",
     "karma-chai": "0.1.0",
     "karma-chai-sinon": "0.1.5",
