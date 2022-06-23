@@ -270,7 +270,7 @@
     "browserstacktunnel-wrapper": "2.0.0",
     "chai": "4.2.0",
     "chai-interface": "2.0.3",
-    "codecov": "2.2.0",
+    "codecov": "3.8.3",
     "codelyzer": "3.2.0",
     "coveralls": "2.13.1",
     "cpy": "5.0.0",
